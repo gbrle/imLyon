@@ -2097,7 +2097,8 @@ label.radios {
 ============================================================*/
 @media (min-width: 1200px) {
   .services,.portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
-    margin-left: 30px;
+    margin-left: 7px;
+    margin-right: 7px;
   }
   .hover_overlay .border h4{
     margin-top: 15px;
@@ -2159,7 +2160,8 @@ label.radios {
       line-height: 32px;
   }
   .services,.portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
-    margin-left: 70px;
+      margin-left: 7px;
+      margin-right: 7px;
   }
   .member_feedback h5{
     margin-bottom: 15px;
@@ -2268,7 +2270,8 @@ label.radios {
      padding: 0px;
   }
   .services,.portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
-    margin-left: 70px;
+      margin-left: 7px;
+      margin-right: 7px;
   }
   .main_title p{
     width: 80%;
@@ -2451,7 +2454,8 @@ label.radios {
   }
   .about_myself,.education_experience,.video_content,.services,
   .portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
-      margin-left: 70px;
+      margin-left: 7px;
+      margin-right: 7px;
   }
   .main_title p{
     width: 90%;
@@ -2580,11 +2584,12 @@ label.radios {
       width: 100%;
   }
   .pattan:after{
-    width: 50%;
+    width: 5%;
   }
   .about_myself,.education_experience,.video_content,.services,
   .portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
-      margin-left: 70px;
+      margin-left: 7px;
+      margin-right: 7px;
   }
   .main_title p{
     width: 100%;
@@ -2668,7 +2673,8 @@ label.radios {
   }
   .about_myself,.education_experience,.video_content,.services,
   .portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
-      margin-left: 55px;
+      margin-left: 7px;
+      margin-right: 7px;
   }
   .main_nav{
     background-color: #818181 !important;
