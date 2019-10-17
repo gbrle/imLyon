@@ -54,6 +54,7 @@ Table of CSS Content arrage with every section name
 /*===================================================================================
 01.		Default Css
 =====================================================================================*/
+
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
@@ -101,13 +102,17 @@ ul{
 ul li{
 	list-style-type: none;
 }
+/*a{*/
+/*	display: inline-block;*/
+/*	font-family: 'Poppins', sans-serif;*/
+/*}*/
 a{
-	display: inline-block;
-	font-family: 'Poppins', sans-serif;
+    color: white;
 }
 a:hover,a:focus,a.active{
 	text-decoration: none !important;
 	box-shadow: none !important;
+    color: white;
 }
 *, ::after, ::before{
 	 outline: none !important;
@@ -249,7 +254,7 @@ a:hover,a:focus,a.active{
     position: relative;
 }
 .overlay_one:before,.overlay_two:before,.overlay_three:before,.overlay_four:before{
-  position: absolute;
+  /*position: absolute;*/
   content:" ";
   top:0;
   left:0;
@@ -574,7 +579,10 @@ ul#menu li a{
 .carousel-caption{
     position: absolute;
     text-align: left;
+    right: 0;
+    left: 0;
     top: 50%;
+    width: 100%;
     z-index: 999
 }
 .carousel-caption p{
@@ -585,6 +593,62 @@ ul#menu li a{
     height: 100vh;
     max-height: 100%;
     object-fit: cover;
+}
+#slider .logoDemain{
+    width: 430px;
+    height: 110px;
+    object-fit: fill;
+}
+#slider .recordingMenu{
+    margin-top: 10%;
+    /*background: url("../../images/homeMenu/recording.png") no-repeat scroll 0 100% / cover ;*/
+    background: url("../../images/homeMenu/recording.png") no-repeat center scroll;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#slider .recordingMenu:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+#slider .recordingMenu:hover p{
+    transition-duration: 1s;
+    font-size: 1.3em;
+
+}
+#slider .artistMenu{
+    background: url("../../images/homeMenu/artist.png") no-repeat center scroll;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#slider .artistMenu:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+#slider .trainingMenu{
+    background: url("../../images/homeMenu/training.png") no-repeat center scroll;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#slider .trainingMenu:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+#slider .eventsMenu{
+    background: url("../../images/homeMenu/event.png") no-repeat center scroll;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#slider .eventsMenu:hover{
+    background-color: rgba(255,255,255,0.1);
 }
 .carousel-caption h1{
     position: relative;
@@ -2095,6 +2159,24 @@ label.radios {
 /*
 // Extra large devices (large desktops, 1200px and up)
 ============================================================*/
+.carousel-caption{
+    top: 38%;
+}
+.carousel-caption p{
+    font-size: 2em;
+}
+.headerAboutSection{
+    background: url("http://imlyon.co/fond-demain.png") no-repeat center / cover;
+    height: 650px;
+    width: 100%;
+}
+.headerAboutSection .logoDemain{
+    width: 300px;
+    height: 75px;
+    object-fit: fill;
+    margin-top: 65px;
+    margin-left: 100px;
+}
 @media (min-width: 1200px) {
   .services,.portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
     margin-left: 7px;
@@ -2222,6 +2304,11 @@ label.radios {
   .share_post h4{
     line-height: 31px;
   }
+    #slider .logoDemain{
+        width: 262px;
+        height: 80px;
+        margin-top: 30px;
+    }
 }
 /*
 // Medium devices (tablets, 768px and up)
@@ -2409,9 +2496,7 @@ label.radios {
       border: 2px solid;
       font-size: 11px;
   }
-  .carousel-caption{
-    top: 40%;
-  }
+
   .contact_massage{
     top: 20px;
     width: 50px;
@@ -2426,9 +2511,7 @@ label.radios {
     line-height: 22px;
     width: 100%;
   }
-  .carousel-caption{
-    left: 15%;
-  }
+
   h1 {
       font-size: 20px;
       line-height: 24px;
@@ -2502,6 +2585,13 @@ label.radios {
   .reply_form{
     margin-bottom: 60px;
   }
+    #slider img{
+        width: 100%;
+        height: 100vh;
+        max-height: 100%;
+        object-fit: cover;
+        background-position: left;
+    }
 }
 
 /*
@@ -2558,9 +2648,7 @@ label.radios {
   .sidebar{
     padding: 30px 10px;
   }
-  .carousel-caption{
-    left: 15%;
-  }
+
   h1{
     font-size: 20px;
     line-height: 24px;
@@ -2577,14 +2665,12 @@ label.radios {
       padding: 5px 15px;
       font-size: 12px;
   }
-  .carousel-caption{
-    top: 43%;
-  }
+
   .carousel-caption p {
       width: 100%;
   }
   .pattan:after{
-    width: 5%;
+    width: 0;
   }
   .about_myself,.education_experience,.video_content,.services,
   .portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
@@ -2654,6 +2740,7 @@ label.radios {
   .replied{
     margin-left: 35px;
   }
+
   
 }
 
