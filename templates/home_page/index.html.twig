@@ -90,17 +90,17 @@
 ==================================================-->
 <nav id="mysidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="flaticon-close-button"></i></a>
-    <img class="nav-logo" src="images/logo/29.png" alt="image">
+{#    <a href="/"><i class="fa fa-home fa-2x pl-5" aria-hidden="true"></i></a>#}
     <ul id="menu">
-        <li data-menuanchor="page1" class="active"><a href="#page1">Home</a></li>
-        <li data-menuanchor="page2"><a href="#page2">About</a></li>
-        <li data-menuanchor="page3"><a href="#page3">Resume</a></li>
-        <li data-menuanchor="page4"><a href="#page4">Services</a></li>
-        <li data-menuanchor="page5"><a href="#page5">Portfolio</a></li>
-        <li data-menuanchor="page6"><a href="#page6">Pricing</a></li>
-        <li data-menuanchor="page7"><a href="#page7">Team</a></li>
-        <li data-menuanchor="page8"><a href="#page8">Testimonial</a></li>
-        <li data-menuanchor="page9"><a href="#page9">Contact</a></li>
+        <li data-menuanchor="page1"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li data-menuanchor="page2"><a onclick="closeNav()" class="text-primary" href="#page2">Recording Studio</a></li>
+        <li data-menuanchor="page3"><a onclick="closeNav()" href="#page3">Artist & Label Services</a></li>
+        <li data-menuanchor="page4"><a onclick="closeNav()" href="#page4">Training</a></li>
+        <li data-menuanchor="page5"><a onclick="closeNav()" href="#page5">Events</a></li>
+        <li data-menuanchor="page6"><a onclick="closeNav()" href="#page6">Pricing</a></li>
+        <li data-menuanchor="page7"><a onclick="closeNav()" href="#page7">Team</a></li>
+        <li data-menuanchor="page8"><a onclick="closeNav()" href="#page8">Testimonial</a></li>
+        <li data-menuanchor="page9"><a onclick="closeNav()" href="#page9">Contact</a></li>
     </ul>
 </nav>
 {#<div class="sidebar bg_deepblack">#}
@@ -198,8 +198,8 @@
                     <div class="col-md-12 col-lg-12">
                         <div class="row">
                             <div class="col-md-12 col-lg-12 headerAboutSection">
-                                <div class="text-center mt_100">
-                                    <img alt="" class="" src="images/logo/upstream.png" style="width: 139px; height: 28px">
+                                <div class="text-center mt_100 containerHeaderAbout">
+                                    <img alt="" class="upStream" src="images/logo/upstream.png">
                                 </div>
                                 <div class="container-fluid">
                                     <img alt="" class="logoDemain mt_100" src="images/logo/logo-demain.png">
@@ -1046,7 +1046,7 @@
     //	Sidebar Nav Menu js
     //=====================================================
     function openNav() {
-        document.getElementById("mysidenav").style.width = "150px";
+        document.getElementById("mysidenav").style.width = "230px";
     }
     function closeNav() {
         document.getElementById("mysidenav").style.width = "0";

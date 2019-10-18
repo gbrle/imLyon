@@ -106,6 +106,9 @@ ul li{
 /*	display: inline-block;*/
 /*	font-family: 'Poppins', sans-serif;*/
 /*}*/
+#pp-nav.right{
+    display: none;
+}
 a{
     color: white;
 }
@@ -262,6 +265,10 @@ a:hover,a:focus,a.active{
   height:100%;
   display: block;
   z-index: 9
+}
+.headerAboutSection .upStream{
+    width: 139px;
+    height: 28px
 }
 /*=======================================================================
 04.   Socal Media
@@ -1309,6 +1316,9 @@ ul#menu li a{
     position: fixed;
     z-index: 9999;
 }
+.headerAboutSection .containerHeaderAbout{
+    margin-top: 30px;
+}
 @keyframes lds-spinner {
   0% {
     opacity: 1;
@@ -2167,14 +2177,14 @@ label.radios {
 }
 .headerAboutSection{
     background: url("http://imlyon.co/fond-demain.png") no-repeat center / cover;
-    height: 650px;
+    height: 30vh;
     width: 100%;
 }
 .headerAboutSection .logoDemain{
     width: 300px;
     height: 75px;
     object-fit: fill;
-    margin-top: 65px;
+    margin-top: 50px;
     margin-left: 100px;
 }
 @media (min-width: 1200px) {
@@ -2438,6 +2448,18 @@ label.radios {
 // Small devices (landscape phones, 576px and up)
 ============================================================*/
 @media (max-width: 767px){
+    .headerAboutSection .containerHeaderAbout{
+        margin-top: 60px;
+    }
+    .headerAboutSection .logoDemain{
+        width: 250px;
+        height: 68px;
+        object-fit: fill;
+        margin-top: 65px;
+        margin-left: 1px;
+        display: flex;
+        justify-content: center;
+    }
   .mainbanner_content p{
     width: 100%;
   }
