@@ -580,7 +580,7 @@ ul#menu li a{
     background-image: url(../images/pattan.png);
     background-color: transparent;
     z-index: 9;
-    width: 40%;
+    width: 0;
     height: auto;
 }
 .carousel-caption{
@@ -2176,8 +2176,8 @@ label.radios {
     font-size: 2em;
 }
 .headerAboutSection{
-    background: url("http://imlyon.co/fond-demain.png") no-repeat center / cover;
-    height: 30vh;
+    background: url("../../images/enteteMenus/recordingMenu.png") no-repeat center / cover;
+    height: 40vh;
     width: 100%;
 }
 .headerAboutSection .logoDemain{
