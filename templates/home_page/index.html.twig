@@ -145,7 +145,7 @@
                     <div class="carousel-caption text-center">
                         <img alt="" class="" src="images/logo/upstream.png" style="width: 139px; height: 28px">
                         <br>
-                        <img alt="" class="logoDemain mt_100" src="images/logo/logo-demain.png">
+                        <a href="/"><img alt="" class="logoDemain mt_100" src="images/logo/logo-demain.png"></a>
                         <a href="#page2">
                         <div class="recordingMenu text-center">
                             <p class="text-center textHomeMenu">RECORDING STUDIOS</p>
@@ -199,31 +199,30 @@
                         <div class="row">
                             <div class="col-md-12 col-lg-12 headerAboutSection">
                                 <div class="text-center mt_100 containerHeaderAbout">
-                                    <img alt="" class="upStream" src="images/logo/upstream.png">
+                                    <img alt="" class="mt_60 upStream" src="images/logo/upstream.png">
                                 </div>
                                 <div class="container-fluid">
-                                    <img alt="" class="logoDemain mt_100" src="images/logo/logo-demain.png">
+                                    <a href="/"><img alt="" class="logoDemain mt_100" src="images/logo/logo-demain.png"></a>
                                 </div>
                             </div>
                             <div class="col-md-12 col-lg-12">
                                 <div class="about_myself pb_60">
                                     <!--	Start Title
                                     ================================-->
-                                    <div class="main_title my_60">
-                                        <h2 class="title color_white">About Me</h2>
-                                        <p class="mt_15 color_lightgray">Interdum a etiam sagittis vehicula porta. Massa felis eros quam blandit nulla dolor habitant.</p>
-                                    </div>
+{#                                    <div class="main_title my_60">#}
+{#                                        <h2 class="title color_white">About Me</h2>#}
+{#                                        <p class="mt_15 color_lightgray">Interdum a etiam sagittis vehicula porta. Massa felis eros quam blandit nulla dolor habitant.</p>#}
+{#                                    </div>#}
                                     <!--	End Title
                                     ================================-->
-                                    <div class="row">
-                                        <div class="col-md-6 col-lg-6">
+                                    <div class="row pt-5">
+                                        <div class="pl-5 col-md-4 col-lg-4">
                                             <div class="myself color_secondery ">
-                                                <p>Sodales iaculis est Scelerisque sociis magna dolor pulvinar magnis. Varius praesent suscipit. Donec morbi feugiat placerat gravida porttitor natoque nonummy parturient posuere. Magnis suspendisse parturient. Magna ultricies nostra nunc magna. Sodales etiam arcu suscipit, mollis. Aenean tempor eu ipsum nisi sociosqu lorem hymenaeos sapien. Aptent maecenas ac ante molestie habitant.</p>
 
-                                                <p class="pt_30">Duis vulputate nisi nam sem penatibus parturient volutpat justo phasellus. Netus. Hac montes tempor lorem tempor tincidunt vehicula velit. Tellus. Class aenean leo elit maecenas. Vehicula sagittis. Curae; eget lacus. Fames neque diam elementum risus eleifend dui tortor netus turpis.</p>
+                                                <p class="pt-5">Duis vulputate nisi nam sem penatibus parturient volutpat justo phasellus. Netus. Hac montes tempor lorem tempor tincidunt vehicula velit. Tellus. Class aenean leo elit maecenas. Vehicula sagittis. Curae; eget lacus. Fames neque diam elementum risus eleifend dui tortor netus turpis.</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 col-lg-6">
+                                        <div class="md-pr-5 col-md-8 col-lg-8">
                                             <div class="personal_info color_lightgray bg_transparent">
                                                 <div class="accordion bg_transparent" id="accordionExample">
                                                     <div style="border: transparent;" class="card bg_transparent">
@@ -1044,13 +1043,17 @@
     var deleteLog = false;
     //	Pagepiling js
     //=====================================================
+
     $(document).ready(function() {
         $('#pagepiling').pagepiling({
             menu: '#menu',
             anchors: ['page1', 'page2', 'page3', 'page4', 'page5','page6', 'page7', 'page8','page9'],
-            loopTop: true,
-            loopBottom: true
+            loopTop: false,
+            loopBottom: false,
+            keyboardScrolling: false,
+            scrollbars: false
         });
+        $.fn.pagepiling.setMouseWheelScrolling(false);
     });
     //	Sidebar Nav Menu js
     //=====================================================

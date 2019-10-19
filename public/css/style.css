@@ -2177,7 +2177,7 @@ label.radios {
 }
 .headerAboutSection{
     background: url("../../images/enteteMenus/recordingMenu.png") no-repeat center / cover;
-    height: 40vh;
+    height: 100vh;
     width: 100%;
 }
 .headerAboutSection .logoDemain{
