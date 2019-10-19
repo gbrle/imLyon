@@ -306,7 +306,7 @@ a:hover,a:focus,a.active{
 .contact_massage a {
     font-size: 24px;
     line-height: 60px;
-    display: block;
+    display: none;
     margin: 0 auto;
     text-align: center;
 }
@@ -618,11 +618,6 @@ ul#menu li a{
 }
 #slider .recordingMenu:hover{
     background-color: rgba(255,255,255,0.1);
-}
-#slider .recordingMenu:hover p{
-    transition-duration: 1s;
-    font-size: 1.3em;
-
 }
 #slider .artistMenu{
     background: url("../../images/homeMenu/artist.png") no-repeat center scroll;
@@ -2442,6 +2437,9 @@ label.radios {
   .replied{
       margin-left: 40px;
   }
+    .contact_massage a {
+        display: block;
+    }
 }
 
 /*
