@@ -2172,8 +2172,24 @@ label.radios {
 }
 .headerAboutSection{
     background: url("../../images/enteteMenus/recordingMenu.png") no-repeat center / cover;
-    height: 100vh;
+    height: 30vh;
     width: 100%;
+}
+/* Buttons Sous catégorie */
+.card-header button{
+    font-size: 12px;
+    border: transparent;
+    border-radius: 120px 0 0 120px;
+    width: 55%;
+    right: 133px;
+    height: 34px;
+    background-color: #662383;
+    position: absolute;
+}
+.card-header button:hover{
+    width: 80%;
+    opacity:0.7;
+    transition-duration: 1s;
 }
 .headerAboutSection .logoDemain{
     width: 300px;
