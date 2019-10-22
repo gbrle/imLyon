@@ -69,8 +69,9 @@ h1{
 	line-height: 48px;
 }
 h2{
-	font-size: 32px;
-	line-height: 44px;
+	font-size: 1.3rem;
+	line-height: 1.5rem;
+    padding-left: 80px;
 }
 h3{
 	font-size: 24px;
@@ -2172,22 +2173,60 @@ label.radios {
 }
 .headerAboutSection{
     background: url("../../images/enteteMenus/recordingMenu.png") no-repeat center / cover;
-    height: 30vh;
+    height: 100vh;
     width: 100%;
 }
+.menu{
+    padding-top: 65px;
+}
+.menuSection{
+
+    height: 100vh;
+}
 /* Buttons Sous catégorie */
+
+.container-buttonSousCat{
+    margin-right: 9rem;
+    text-align: right;
+}
 .card-header button{
-    font-size: 12px;
     border: transparent;
     border-radius: 120px 0 0 120px;
     width: 55%;
-    right: 133px;
     height: 34px;
-    background-color: #662383;
-    position: absolute;
 }
+/* Menu Couleurs */
+.menuColorViolet{
+    color: #662383;
+}
+.menuColorRose{
+    color: #B34575;
+}
+.menuColorOrange{
+    color: #F05A23;
+}
+.menuColorBlanc{
+    color: #FFFFFF;
+}
+.menuColorRouge{
+    color: #EC1C23;
+}
+/* Buttons Couleurs */
+.buttonSousCatViolet{
+    background-color: #662383;
+}
+.buttonSousCatRose{
+    background-color: #B34575;
+}
+.buttonSousCatGris{
+    background-color: #5A3E62;
+}
+.buttonSousCatVioletFonce{
+    background-color: #4B0754;
+}
+
 .card-header button:hover{
-    width: 80%;
+    width: 100%;
     opacity:0.7;
     transition-duration: 1s;
 }
@@ -2335,6 +2374,24 @@ label.radios {
 // Medium devices (tablets, 768px and up)
 ============================================================*/
 @media (max-width: 991px){
+    .card-header button{
+        width: 90%;
+    }
+    .card-header button:hover{
+        width: 120%;
+        opacity:0.7;
+        transition-duration: 1s;
+    }
+    .container-buttonSousCat{
+        margin-right: 0;
+        text-align: right;
+    }
+    /* Menu */
+    .menuSousCat{
+        display: none;
+    }
+
+    /* End Menu */
   .main_nav{
     background-color: #818181;
   }
@@ -2462,6 +2519,7 @@ label.radios {
 // Small devices (landscape phones, 576px and up)
 ============================================================*/
 @media (max-width: 767px){
+
     .headerAboutSection .containerHeaderAbout{
         margin-top: 60px;
     }
