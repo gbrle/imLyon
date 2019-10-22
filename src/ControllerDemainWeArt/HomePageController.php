@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\ControllerDemainWeArt;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -12,7 +12,7 @@ class HomePageController extends AbstractController
      */
     public function index()
     {
-        return $this->render('home_page/index.html.twig', [
+        return $this->render('demainWeArt/index.html.twig', [
             'controller_name' => 'HomePageController',
         ]);
     }

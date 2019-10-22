@@ -610,7 +610,7 @@ ul#menu li a{
 #slider .recordingMenu{
     margin-top: 10%;
     /*background: url("../../images/homeMenu/recording.png") no-repeat scroll 0 100% / cover ;*/
-    background: url("../../images/homeMenu/recording.png") no-repeat center scroll;
+    background: url("../images/homeMenu/recording.png") no-repeat center scroll;
     width: 100%;
     height: 50px;
     display: flex;
@@ -621,7 +621,7 @@ ul#menu li a{
     background-color: rgba(255,255,255,0.1);
 }
 #slider .artistMenu{
-    background: url("../../images/homeMenu/artist.png") no-repeat center scroll;
+    background: url("../images/homeMenu/artist.png") no-repeat center scroll;
     width: 100%;
     height: 50px;
     display: flex;
@@ -632,7 +632,7 @@ ul#menu li a{
     background-color: rgba(255,255,255,0.1);
 }
 #slider .trainingMenu{
-    background: url("../../images/homeMenu/training.png") no-repeat center scroll;
+    background: url("../images/homeMenu/training.png") no-repeat center scroll;
     width: 100%;
     height: 50px;
     display: flex;
@@ -644,7 +644,7 @@ ul#menu li a{
     background-color: rgba(255,255,255,0.1);
 }
 #slider .eventsMenu{
-    background: url("../../images/homeMenu/event.png") no-repeat center scroll;
+    background: url("../images/homeMenu/event.png") no-repeat center scroll;
     width: 100%;
     height: 50px;
     display: flex;
@@ -2173,7 +2173,7 @@ label.radios {
     font-size: 2em;
 }
 .headerAboutSection{
-    background: url("../../images/enteteMenus/recordingMenu.png") no-repeat center / cover;
+    background: url("../images/enteteMenus/recordingMenu.png") no-repeat center / cover;
     height: 100vh;
     width: 100%;
 
