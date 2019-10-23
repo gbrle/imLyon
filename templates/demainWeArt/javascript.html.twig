@@ -1,0 +1,48 @@
+<script src="demainWeArt/js/jquery.min.js"></script>
+<script src="demainWeArt/js/popper.min.js"></script>
+<script src="demainWeArt/js/bootstrap.min.js"></script>
+<script src="demainWeArt/js/plugins.js"></script>
+<script src="demainWeArt/js/jquery.pagepiling.min.js"></script>
+<script src="demainWeArt/js/custom.js"></script>
+<script>
+
+
+    let arrow = document.getElementById('arrowDown');
+    let headerAboutSection = document.getElementById('headerAboutSection');
+    let sectionRecording = document.getElementById('sectionRecording');
+    arrow.addEventListener('click', function (e) {
+        headerAboutSection.style.transitionDuration = "1.3s";
+        headerAboutSection.style.height = "0vw";
+        sectionRecording.style.display = "block";
+        $.fn.pagepiling.setMouseWheelScrolling(false);
+        $.fn.pagepiling.setAllowScrolling(false);
+    })
+
+</script>
+<script>
+    var deleteLog = false;
+    //	Pagepiling js
+    //=====================================================
+
+    $(document).ready(function() {
+        $('#pagepiling').pagepiling({
+            menu: '#menu',
+            anchors: ['homePage', 'recordingPage', 'page3', 'page4', 'page5','page6', 'page7', 'page8','page9'],
+            loopTop: false,
+            loopBottom: false,
+            keyboardScrolling: false,
+            scrollbars: false,
+
+        });
+
+
+    });
+    //	Sidebar Nav Menu js
+    //=====================================================
+    function openNav() {
+        document.getElementById("mysidenav").style.width = "230px";
+    }
+    function closeNav() {
+        document.getElementById("mysidenav").style.width = "0";
+    }
+</script>

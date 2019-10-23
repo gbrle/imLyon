@@ -1,6 +1,6 @@
 <?php
 
-namespace App\ControllerDemainWeArt;
+namespace App\ControllersDemainWeArt;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomePageController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route("/", name="home_demainWeArt")
      */
     public function index()
     {

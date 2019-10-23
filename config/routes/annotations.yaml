@@ -1,7 +1,7 @@
-controllerHome:
-    resource: ../../src/ControllerHome/
+controllersHome:
+    resource: ../../src/ControllersHome/
     type: annotation
 
-controllerDemainWeArt:
-    resource: ../../src/ControllerDemainWeArt/
+controllersDemainWeArt:
+    resource: ../../src/ControllersDemainWeArt/
     type: annotation

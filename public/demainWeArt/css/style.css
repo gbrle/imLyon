@@ -1042,6 +1042,7 @@ ul#menu li a{
 .table{
   border-radius: 20px;
   padding: 40px 30px;
+
 }
 .table h1{
   font-family: 'Poppins', sans-serif;
@@ -1056,6 +1057,14 @@ ul#menu li a{
 /*===========================================================================
 19.   Team
 =============================================================================*/
+.bulleTeam:hover{
+    background: #662383 !important;
+    transition-duration: 0.9s;
+}
+.bullePack:hover{
+    background: #4B0754 !important;
+    transition-duration: 0.9s;
+}
 .member{
   position: relative;
 }
@@ -2175,15 +2184,21 @@ label.radios {
 .headerAboutSection{
     background: url("../images/enteteMenus/recordingMenu.png") no-repeat center / cover;
     height: 100vh;
-    width: 100%;
-
 }
 .menu{
     padding-top: 65px;
+    height: 92vh;
 }
-.menuSection{
-    width: 100vh;
-    height: 100vh;
+.menuRecordingSection{
+    height: 100%;
+    display: none;
+    background: url("http://imlyon.co/wp-content/themes/fukasawa/content-recording-studios.jpg") no-repeat center / cover;
+}
+.footerRecordingSection{
+    display: none;
+    margin-top: 150px;
+
+    width: 100%;
 }
 /* Buttons Sous catégorie */
 
@@ -2212,6 +2227,12 @@ label.radios {
 }
 .menuColorRouge{
     color: #EC1C23;
+}
+.menuColorGris{
+    color: #5A3E62;
+}
+.menuColorVioletFonce{
+    color: #4B0754;
 }
 /* Buttons Couleurs */
 .buttonSousCatViolet{
@@ -2853,6 +2874,7 @@ label.radios {
   }
   body{
     font-size: 14px;
+      margin: auto;
   }
   h1 {
       font-size: 18px;

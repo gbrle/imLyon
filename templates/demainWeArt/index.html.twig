@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <!--===== Meta Tag =====-->
     <meta charset="utf-8">
@@ -86,260 +86,34 @@
 {#</div>#}
 {#<!--  Color Settings End#}
 {#==============================================-->#}
-<!--	Start Sidebar
+
+
+<!--	Menu Responsive
 ==================================================-->
 {% include 'demainWeArt/menuResponsive.html.twig' %}
-{#<div class="sidebar bg_deepblack">#}
-{#    <div class="logo text-center"><a href="#page1"><img class="nav-logo" src="images/logo/29.png" alt="logo"></a></div>#}
-{#    <span style="cursor:pointer" onclick="openNav()">&#9776;</span>#}
-{#    <div class="socal_media mt_60">#}
-{#        <ul>#}
-{#            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>#}
-{#            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>#}
-{#            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>#}
-{#            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>#}
-{#            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>#}
-{#        </ul>#}
-{#    </div>#}
-{#</div>#}
-<div class="contact_massage bg_transparent d-flex align-items-center" style="cursor:pointer" onclick="openNav()">
-    <a href="#"><i class="fa fa-bars fa-1x text-white" aria-hidden="true"></i></a>
-</div>
-<!--	End Sidebar
+
+<!--
 =======================================================-->
+
+
 <div id="pagepiling">
-    <!--	Start Slider
+
+    <!--	HomePage
     ===================================================-->
-    <div id="slider" class="section bg_white">
-        <div class="line-container">
-            <div class="row">
-                <div class="col-md-3 col-lg-3"><div class="liner"></div></div>
-                <div class="col-md-3 col-lg-3"><div class="liner"></div></div>
-                <div class="col-md-3 col-lg-3"><div class="liner"></div></div>
-                <div class="col-md-3 col-lg-3"><div class="liner"></div></div>
-            </div>
-        </div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-{#            <ol class="carousel-indicators">#}
-{#                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>#}
-{#                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>#}
-{#                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>#}
-{#            </ol>#}
-            <div class="carousel-inner overlay_three">
-                <div class="carousel-item active">
-                    <div class="overlay_one pattan"><img  class="" src="demainWeArt/images/slider/fond_home_imLyon.jpg" alt="slide image"></div>
-                    <div class="carousel-caption text-center">
-                        <img alt="" class="" src="demainWeArt/images/logo/upstream.png" style="width: 139px; height: 28px">
-                        <br>
-                        <a href="/"><img alt="" class="logoDemain mt_100" src="demainWeArt/images/logo/logo-demain.png"></a>
-                        <a href="#page2">
-                            <div class="recordingMenu text-center">
-                                <p class="text-center textHomeMenu">RECORDING STUDIOS</p>
-                            </div>
-                        </a>
-                        <a href="#page3">
-                            <div class="artistMenu text-center">
-                                <p class="text-center textHomeMenu">ARTIST & LABEL SERVICES</p>
-                            </div>
-                        </a>
-                        <a href="#page4">
-                            <div class="trainingMenu text-center">
-                                <p class="text-center textHomeMenu">TRAINING</p>
-                            </div>
-                        </a>
-                        <a href="#page5">
-                            <div class="eventsMenu text-center">
-                                <p class="text-center textHomeMenu">EVENTS</p>
-                            </div>
-                        </a>
-                        {#                        <h1 class="mb_20">Awesome solution<br> for <span class="color_default">you Business</span></h1>#}
-{#                        <p class="mb_20">Risus faucibus mollis velit sollicitudin consequat inceptos dictum. Cras quis amet dui inceptos varius, faucibus bibendum fringilla sodales mauris tortor lacus vitae sagittis consequat dapibus consequat justo nostra.</p>#}
-{#                        <a class="btn btn-default" href="#">Start a Project</a>#}
-                    </div>
-                </div>
-{#                <div class="carousel-item">#}
-{#                    <div class="overlay_one pattan"><img src="images/slider/02.jpg" alt="slide image"></div>#}
-{#                    <div class="carousel-caption">#}
-{#                        <h1 class="mb_20">Awesome solution<br> for <span class="color_default">you Business</span></h1>#}
-{#                        <p class="mb_20">Risus faucibus mollis velit sollicitudin consequat inceptos dictum. Cras quis amet dui inceptos varius, faucibus bibendum fringilla sodales mauris tortor lacus vitae sagittis consequat dapibus consequat justo nostra.</p>#}
-{#                        <a class="btn btn-default" href="#">Start a Project</a>#}
-{#                    </div>#}
-{#                </div>#}
-{#                <div class="carousel-item">#}
-{#                    <div class="overlay_one pattan"><img src="images/slider/03.jpg" alt="slide image"></div>#}
-{#                    <div class="carousel-caption">#}
-{#                        <h1 class="mb_20">Awesome solution<br> for <span class="color_default">you Business</span></h1>#}
-{#                        <p class="mb_20">Risus faucibus mollis velit sollicitudin consequat inceptos dictum. Cras quis amet dui inceptos varius, faucibus bibendum fringilla sodales mauris tortor lacus vitae sagittis consequat dapibus consequat justo nostra.</p>#}
-{#                        <a class="btn btn-default" href="#">Start a Project</a>#}
-{#                    </div>#}
-{#                </div>#}
-            </div>
-        </div>
-    </div>
-    <!--	End Slider
+    {% include 'demainWeArt/homePage.html.twig' %}
+    <!--
     ===================================================-->
-    <!--	Start About
+
+
+
+    <!--	Start Recording Stdios
     ===================================================-->
-    <div id="about" class="section bg_black pp-scrollable">
-        <div class="container-fluid aboutSection">
-            <div class="row">
-                <div class="about2">
-                    <div class="col-md-12 col-lg-12">
-                        <div class="row">
-                            <div class="col-md-12 col-lg-12 headerAboutSection" id="headerAboutSection">
-                                <img alt="" class="mt_60 upStream d-block" src="demainWeArt/images/logo/upstream.png">
+    {% include 'demainWeArt/recordingPage.html.twig' %}
 
-                                <a href="/"><img alt="" class="logoDemain mt_100 d-block" src="demainWeArt/images/logo/logo-demain.png"></a>
+    <!--
 
 
 
-                                <i id="arrowDown" class="fa fa-arrow-down fa-5x text-white" aria-hidden="true" style="position: absolute; bottom: 3px"></i>
-                            </div>
-                            <div class="col-md-12 col-lg-12 menuSection" id="sectionRecording">
-                                <div class="about_myself pb_60">
-                                    <!--	Start Title
-                                    ================================-->
-{#                                    <div class="main_title my_60">#}
-{#                                        <h2 class="title color_white">About Me</h2>#}
-{#                                        <p class="mt_15 color_lightgray">Interdum a etiam sagittis vehicula porta. Massa felis eros quam blandit nulla dolor habitant.</p>#}
-{#                                    </div>#}
-                                    <!--	End Title
-                                    ================================-->
-                                    <div class="row pt-5">
-                                        <div class="menuSousCat col-md-3 col-lg-3">
-                                            <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
-                                                <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
-                                                <a href="/"><h2 class="menuColorBlanc">HOME</h2></a>
-                                                <a href="#page2"><h2 class="menuColorViolet">RECORDING STUDIOS</h2></a>
-                                                <a href="#page3"><h2 class="menuColorRose">ARTIST & LABEL SERVICES</h2></a>
-                                                <h2 class="menuColorOrange">TRAINING</h2>
-                                                <h2 class="menuColorRouge">EVENTS</h2>
-                                                <h2 class="menuColorBlanc">PARTANAIRES</h2>
-                                                <h2 class="menuColorBlanc">CONTACT</h2>
-                                                <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
-                                            </div>
-                                        </div>
-                                        <div class="md-pr-5 col-md-12 col-lg-9 col-sm-12">
-                                            <div class="personal_info color_lightgray bg_transparent">
-                                                <div class="accordion bg_transparent" id="accordionExample">
-                                                    <div style="border: transparent;" class="card bg_transparent">
-                                                        <div style="border: transparent;" class="card-header bg_transparent" id="headingOne">
-                                                            <h2 class="container-buttonSousCat">
-                                                                <button class="text-left bg_transparent text-white pl-3 buttonSousCatViolet" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                                    TEAM
-                                                                </button>
-                                                            </h2>
-                                                        </div>
-
-                                                        <div style="border: transparent" id="collapseOne" class="bg_transparent collapse hidden" aria-labelledby="headingOne">
-                                                            <div class="card-body pr-5" style="border: transparent;">
-                                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                            </div>
-                                                        </div>
-
-                                                        <div style="border: transparent;" class="card-header bg_transparent" id="headingTwo">
-                                                            <h2 class="container-buttonSousCat">
-                                                                <button class="text-left bg_transparent text-white pl-3 buttonSousCatRose" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                                                    TEAM
-                                                                </button>
-                                                            </h2>
-                                                        </div>
-
-
-                                                        <div style="border: transparent" id="collapseTwo" class="bg_transparent collapse hidden" aria-labelledby="headingTwo" >
-                                                            <div class="card-body" style="border: transparent;">
-                                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                            </div>
-                                                        </div>
-
-                                                        <div style="border: transparent;" class="card-header bg_transparent" id="headingTwo">
-                                                            <h2 class="container-buttonSousCat">
-                                                                <button class="text-left bg_transparent text-white pl-3 buttonSousCatGris" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                                                    TEAM
-                                                                </button>
-                                                            </h2>
-                                                        </div>
-
-
-                                                        <div style="border: transparent" id="collapseTwo" class="bg_transparent collapse hidden" aria-labelledby="headingTwo" >
-                                                            <div class="card-body" style="border: transparent;">
-                                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                            </div>
-                                                        </div>
-
-                                                        <div style="border: transparent;" class="card-header bg_transparent" id="headingTwo">
-                                                            <h2 class="container-buttonSousCat">
-                                                                <button class="text-left bg_transparent text-white pl-3 buttonSousCatVioletFonce" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                                                    TEAM
-                                                                </button>
-                                                            </h2>
-                                                        </div>
-
-
-                                                        <div style="border: transparent" id="collapseTwo" class="bg_transparent collapse hidden" aria-labelledby="headingTwo" >
-                                                            <div class="card-body" style="border: transparent;">
-                                                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="footer pt_60 background6">
-                                <div class="container">
-                                    <div class="footer_bottom pb_60">
-                                        <div class="row">
-                                            <div class="col-md-12 col-lg-12">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-lg-6">
-                                                        <div class="footer-widget">
-                                                            <div class="footer_title pb_30">
-                                                                <h3 class="widget_title color_white">Latest Tweets</h3>
-                                                            </div>
-                                                            <div class="twite color_secondery pb_30">
-                                                                <p class="color_white">Habitasse auctor proin netus nam maecenas aptent risus. Eu scelerisque pretium amet augue varius rutrum nonummy. <a class="color_default" href="#"> httm://envato/cprxetxyt</a></p>
-                                                                <i class="fa fa-clock-o" aria-hidden="true"></i><span>Posted On 13 Feb 2019</span>
-                                                            </div>
-                                                            <div class="twite color_secondery pb_30">
-                                                                <p class="color_white">Dolor mollis cum mi leo massa, nulla vehicula accumsan nisi etiam tristique fermentum erat purus. <a class="color_default" href="#"> http://envato/sotvoisd</a></p>
-                                                                <i class="fa fa-clock-o" aria-hidden="true"></i><span>Posted On 12 Feb 2019</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-6">
-                                                        <div class="footer-widget">
-                                                            <div class="footer_title pb_30">
-                                                                <h3 class="widget_title color_white">Newsletter Subscribe</h3>
-                                                            </div>
-                                                            <div class="newsletter">
-                                                                <p class="color_white">Cursus iaculis interdum arcu habitant arcu rhoncus felis dictum tortor enim dignissim per. Risus ad sodales lorem habitasse. Dapibus vel litora rutrum dignissim nisi. Vitae, lacus imperdiet placerat volutpat inceptos.</p>
-                                                                <div class="subscribe mt_30">
-                                                                    <div class="input-group">
-                                                                        <input type="email" class="form-control" placeholder="Enter your email">
-                                                                        <button class="btn btn-default" type="submit">Send</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="copyright2 p_20 color_lightgray bg_deepblack text-center"><p>Runaway @ 2019. All Right Reserved.</p></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--	End About
     ===================================================-->
     <!--	Start Education and Experience
     ===================================================-->
@@ -1120,50 +894,6 @@
 </div>
 <!--	Js Links
 ===================================================-->
-<script src="demainWeArt/js/jquery.min.js"></script>
-<script src="demainWeArt/js/popper.min.js"></script>
-<script src="demainWeArt/js/bootstrap.min.js"></script>
-<script src="demainWeArt/js/plugins.js"></script>
-<script src="demainWeArt/js/jquery.pagepiling.min.js"></script>
-<script src="demainWeArt/js/custom.js"></script>
-<script>
-
-
-    let arrow = document.getElementById('arrowDown');
-    let headerAboutSection = document.getElementById('headerAboutSection');
-    arrow.addEventListener('click', function (e) {
-        headerAboutSection.style.transitionDuration = "1.3s";
-        headerAboutSection.style.height = "0vw";
-    })
-
-</script>
-<script>
-    var deleteLog = false;
-    //	Pagepiling js
-    //=====================================================
-
-    $(document).ready(function() {
-        $('#pagepiling').pagepiling({
-            menu: '#menu',
-            anchors: ['page1', 'page2', 'page3', 'page4', 'page5','page6', 'page7', 'page8','page9'],
-            loopTop: false,
-            loopBottom: false,
-            keyboardScrolling: false,
-            scrollbars: false,
-
-        });
-        $.fn.pagepiling.setMouseWheelScrolling(true);
-        $.fn.pagepiling.setAllowScrolling(true);
-
-    });
-    //	Sidebar Nav Menu js
-    //=====================================================
-    function openNav() {
-        document.getElementById("mysidenav").style.width = "230px";
-    }
-    function closeNav() {
-        document.getElementById("mysidenav").style.width = "0";
-    }
-</script>
+{% include 'demainWeArt/javascript.html.twig' %}
 </body>
 </html>
