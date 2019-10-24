@@ -1,0 +1,52 @@
+.bulleTeam:hover{
+    background: #662383 !important;
+    transition-duration: 0.9s;
+}
+.bullePack:hover{
+    background: #4B0754 !important;
+    transition-duration: 0.9s;
+}
+.bulleMao:hover{
+    background: #F05A23 !important;
+    transition-duration: 0.9s;
+}
+.bulleSonorisation:hover{
+    background: #F39200 !important;
+    transition-duration: 0.9s;
+}
+.bulleMusicBusiness:hover{
+    background: #E69F87 !important;
+    transition-duration: 0.9s;
+}
+.bulleStageCourtsAteliers:hover{
+    background: #C59C6C !important;
+    transition-duration: 0.9s;
+}
+.bulleStageCourtsInstruments:hover{
+    background: #F05A23 !important;
+    transition-duration: 0.9s;
+}
+.bulleProjetsPedagogiquesJeunePublic:hover{
+    background: #F39200 !important;
+    transition-duration: 0.9s;
+}
+.bulleWorkShops:hover{
+    background: #EC1C23 !important;
+    transition-duration: 0.9s;
+}
+.bulleCreativeBeatmakingCamps:hover{
+    background: #F05A23 !important;
+    transition-duration: 0.9s;
+}
+.bulleMasterclasse:hover{
+    background: #F39200 !important;
+    transition-duration: 0.9s;
+}
+.bulleRDparty:hover{
+    background: #C59C6C !important;
+    transition-duration: 0.9s;
+}
+.bulleFestival:hover{
+    background: #EC1C23 !important;
+    transition-duration: 0.9s;
+}

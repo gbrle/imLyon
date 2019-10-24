@@ -26,10 +26,18 @@
 .menuColorRoseClaire{
     color: #FF7AAC;
 }
-.menuColorRoseBeige{
+.menuColorBeige{
     color: #B39394;
 }
-
+.menuColorRoseJaune{
+    color: #F39200;
+}
+.menuColorRosePale{
+    color: #E69F87;
+}
+.menuColorOrangePale{
+    color: #C59C6C;
+}
 
 
 
@@ -54,4 +62,19 @@
 }
 .buttonSousCatBeige{
     background-color: #B39394;
+}
+.buttonSousCatOrange{
+    background-color: #F05A23;
+}
+.buttonSousCatJaune{
+    background-color: #F39200;
+}
+.buttonSousCatRosePale{
+    background-color: #E69F87;
+}
+.buttonSousCatOrangePale{
+    background-color: #C59C6C;
+}
+.buttonSousCatRouge{
+    background-color: #EC1C23;
 }

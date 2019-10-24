@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="demainWeArt/css/style.css">
     <link rel="stylesheet" href="demainWeArt/css/styleSections.css">
     <link rel="stylesheet" href="demainWeArt/css/colorsSousCats.css">
+    <link rel="stylesheet" href="demainWeArt/css/bulleHoverBackground.css">
     <link rel="stylesheet" href="demainWeArt/css/color.css" id="color-change">
 
     <!-- Favicon
@@ -117,209 +118,31 @@
 
 
     ===================================================-->
-    <!--	Start Education and Experience
+    <!--	Start Artist Label Services
     ===================================================-->
     {% include 'demainWeArt/artistLabelServices.html.twig' %}
 
-    <!--	End Education and Experience
+    <!--
     ===================================================-->
-    <!--	Start Services
-    ===================================================-->
-    <div id="services" class="section bg_black pp-scrollable">
-        <div class="container">
-            <div class="services my_60">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12">
-                        <!--	Start Title
-                        ================================-->
-                        <div class="main_title pb_60">
-                            <h2 class="title color_white">Services</h2>
-                            <p class="mt_15 color_lightgray">Interdum a etiam sagittis vehicula porta. Massa felis eros quam blandit nulla dolor habitant.</p>
-                        </div>
-                        <!--	End Title
-                        ================================-->
-                    </div>
-                </div>
-                <div class="services_item owl-carousel">
-                    <div class="service_one text-center p_30 bg_deepblack color_secondery">
-                        <div class="srvicon bg_default color_white mx-auto mb_20"><span class="flaticon-website-design-symbol"></span></div>
-                        <h3 class="font-weight-bold color_white">Web Design</h3>
-                        <p>Dignissim iaculis nostra urna congue elit vitae cra convallis. Mollis mollis purus taciti. Pede bibendum. Habitant sit imperdiet ia integer bibendum dui.</p>
-                    </div>
-                    <div class="service_one text-center p_30 bg_deepblack color_secondery">
-                        <div class="srvicon bg_default color_white mx-auto mb_20"><span class="flaticon-programming"></span></div>
-                        <h3 class="font-weight-bold color_white">Web Development</h3>
-                        <p>Dignissim iaculis nostra urna congue elit vitae cra convallis. Mollis mollis purus taciti. Pede bibendum. Habitant sit imperdiet ia integer bibendum dui.</p>
-                    </div>
-                    <div class="service_one text-center p_30 bg_deepblack color_secondery">
-                        <div class="srvicon bg_default color_white mx-auto mb_20"><span class="flaticon-wordpress-logo"></span></div>
-                        <h3 class="font-weight-bold color_white">Wordpress</h3>
-                        <p>Dignissim iaculis nostra urna congue elit vitae cra convallis. Mollis mollis purus taciti. Pede bibendum. Habitant sit imperdiet ia integer bibendum dui.</p>
-                    </div>
-                    <div class="service_one text-center p_30 bg_deepblack color_secondery">
-                        <div class="srvicon bg_default color_white mx-auto mb_20"><span class="flaticon-internet"></span></div>
-                        <h3 class="font-weight-bold color_white">Branding</h3>
-                        <p>Dignissim iaculis nostra urna congue elit vitae cra convallis. Mollis mollis purus taciti. Pede bibendum. Habitant sit imperdiet ia integer bibendum dui.</p>
-                    </div>
-                    <div class="service_one text-center p_30 bg_deepblack color_secondery">
-                        <div class="srvicon bg_default color_white mx-auto mb_20"><span class="flaticon-shopping-cart"></span></div>
-                        <h3 class="font-weight-bold color_white">Opencart</h3>
-                        <p>Dignissim iaculis nostra urna congue elit vitae cra convallis. Mollis mollis purus taciti. Pede bibendum. Habitant sit imperdiet ia integer bibendum dui.</p>
-                    </div>
-                    <div class="service_one text-center p_30 bg_deepblack color_secondery">
-                        <div class="srvicon bg_default color_white mx-auto mb_20"><span class="flaticon-editor"></span></div>
-                        <h3 class="font-weight-bold color_white">Graghic Design</h3>
-                        <p>Dignissim iaculis nostra urna congue elit vitae cra convallis. Mollis mollis purus taciti. Pede bibendum. Habitant sit imperdiet ia integer bibendum dui.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--	End Services
-    ===================================================-->
-    <!--	Start Portfolio
-    ===================================================-->
-    <div id="portfolio" class="section bg_black pp-scrollable">
-        <div class="container">
-            <div class="portfolio2 my_60">
-                <div class="row">
-                    <div class="col-md-12 col-lg-12">
-                        <!--	Start Title
-                        ================================-->
-                        <div class="main_title pb_60">
-                            <h2 class="title color_white">Portfolio</h2>
-                            <p class="mt_15 color_lightgray">Interdum a etiam sagittis vehicula porta. Massa felis eros quam blandit nulla dolor habitant.</p>
-                        </div>
-                        <!--	End Title
-                        ================================-->
-                    </div>
-                    <div class="col-md-12 col-lg-12">
-                        <div class="my_portfolio" id="tab-panel">
-                            <!--Filter-->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="filters mb_30 w-100 color_lightgray">
-                                        <ul class="filter-tabs d-inline-block">
-                                            <li class="active filter" data-role="button" data-filter="all">All</li>
-                                            <li class="filter" data-role="button" data-filter=".design">Web Design</li>
-                                            <li class="filter" data-role="button" data-filter=".wordpress">Wordpress</li>
-                                            <li class="filter" data-role="button" data-filter=".development">Web Development</li>
-                                            <li class="filter" data-role="button" data-filter=".branding">Branding</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="filter-list">
-                                <div class="portfolio-items">
-                                    <div class="row">
-                                        <div class="column mix mix_all graphic development wordpress mb_30 col-md-4 col-lg-4">
-                                            <div class="default-portfolio-item">
-                                                <a href="demainWeArt/images/portfolio/01.jpg" data-fancybox="gallery">
-                                                    <img src="demainWeArt/images/portfolio/01.jpg" alt="image" />
-                                                    <div class="overlay-box">
-                                                        <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                                        <div class="tag">
-                                                            <ul>
-                                                                <li>Web Development,</li>
-                                                                <li>wordpress</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="column mix mix_all graphic branding mb_30 col-md-4 col-lg-4">
-                                            <div class="default-portfolio-item">
-                                                <a href="demainWeArt/images/portfolio/02.jpg" data-fancybox="gallery">
-                                                    <img src="demainWeArt/images/portfolio/02.jpg" alt="image" />
-                                                    <div class="overlay-box">
-                                                        <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                                        <div class="tag">
-                                                            <ul>
-                                                                <li>Branding,</li>
-                                                                <li>Wordpress</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="column mix mix_all design wordpress development mb_30 col-md-4 col-lg-4">
-                                            <div class="default-portfolio-item">
-                                                <a href="demainWeArt/images/portfolio/03.jpg" data-fancybox="gallery">
-                                                    <img src="demainWeArt/images/portfolio/03.jpg" alt="image" />
-                                                    <div class="overlay-box">
-                                                        <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                                        <div class="tag">
-                                                            <ul>
-                                                                <li>Web Design,</li>
-                                                                <li>Web Development</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="column mix mix_all graphic wordpress branding mb_30 col-md-4 col-lg-4">
-                                            <div class="default-portfolio-item">
-                                                <a href="demainWeArt/images/portfolio/04.jpg" data-fancybox="gallery">
-                                                    <img src="demainWeArt/images/portfolio/04.jpg" alt="image" />
-                                                    <div class="overlay-box">
-                                                        <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                                        <div class="tag">
-                                                            <ul>
-                                                                <li>Branding,</li>
-                                                                <li>wordpress</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="column mix mix_all graphic design branding mb_30 col-md-4 col-lg-4">
-                                            <div class="default-portfolio-item">
-                                                <a href="demainWeArt/images/portfolio/05.jpg" data-fancybox="gallery">
-                                                    <img src="demainWeArt/images/portfolio/05.jpg" alt="image" />
-                                                    <div class="overlay-box">
-                                                        <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                                        <div class="tag">
-                                                            <ul>
-                                                                <li>Web Design,</li>
-                                                                <li>wordpress</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="column mix mix_all development wordpress design mb_30 col-md-4 col-lg-4">
-                                            <div class="default-portfolio-item">
-                                                <a href="demainWeArt/images/portfolio/06.jpg" data-fancybox="gallery">
-                                                    <img src="demainWeArt/images/portfolio/06.jpg" alt="image" />
-                                                    <div class="overlay-box">
-                                                        <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                                        <div class="tag">
-                                                            <ul>
-                                                                <li>Web Design,</li>
-                                                                <li>Web Development</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--	End Portfolio
+
+
+    <!--	Start Training
     ===================================================-->
+    {% include 'demainWeArt/training.html.twig' %}
+
+
+
+
+    <!--	Start Training
+===================================================-->
+    {% include 'demainWeArt/events.html.twig' %}
+
+
+
+
+
+
     <!--	Start Pricing
     ===================================================-->
     <div id="pricing" class="section bg_black pp-scrollable">

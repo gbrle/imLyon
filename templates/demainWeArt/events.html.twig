@@ -1,0 +1,246 @@
+<div id="events" class="section bg_black pp-scrollable">
+    <div class="container-fluid pl-0 pr-0">
+
+        <div class="about2">
+            <div class="col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 headerEventsSection d-block flex-column" id="headerEventsSection">
+                        <div class="d-block text-center pt-lg-5 pt-md-5">
+                            <img alt="" class="upStream" src="demainWeArt/images/logo/upstream.png">
+                        </div>
+
+                        <div class="d-block logoDemainContainer">
+                            <a href="{{ path('home_demainWeArt') }}"><img alt="" class="logoDemain" src="demainWeArt/images/logo/logo-demain.png"></a>
+                        </div>
+
+
+
+                        <div class="text-center text-white mt-lg-5 mt-sm-2 container col-12 col-lg-7 col-md-7">
+                            <h2 class="titreEventsMenu text-center">EVENTS</h2>
+                            <p class="text-center descriptifEventsMenu pt-3">
+                                Le Lorem Ipsum est simplement du faux texte employé
+                                dans la composition et la mise en page avant impression.
+                                Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les
+                                années 1500, quand un.
+                            </p>
+                            <div class="text-center pt-4" >
+                                <button type="button" id="moreEvents" class="btn btn-light">En savoir plus</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-12 col-lg-12 menuEventsSection" id="Events">
+                        <div class="about_myself pb_60 pr-sm-5 pl-sm-5">
+                            <!--	Start Title
+                            ================================-->
+                            {#                                    <div class="main_title my_60">#}
+                            {#                                        <h2 class="title color_white">About Me</h2>#}
+                            {#                                        <p class="mt_15 color_lightgray">Interdum a etiam sagittis vehicula porta. Massa felis eros quam blandit nulla dolor habitant.</p>#}
+                            {#                                    </div>#}
+                            <!--	End Title
+                            ================================-->
+                            <div class="row pt-5">
+                                <div class="hauteurSousCat"></div>
+
+                                {% include 'demainWeArt/menu.html.twig' %}
+
+                                <div class="md-pr-1 col-md-12 col-lg-9 col-sm-12">
+                                    <div class="personal_info color_lightgray bg_transparent">
+                                        <div class="accordion bg_transparent" id="eventsCollapse">
+                                            <div style="border: transparent;" class="card bg_transparent">
+
+
+
+
+                                                <!-- ------------------------WORKSHOPS---------------------- -->
+                                                <div style="border: transparent;" class="card-header bg_transparent" id="workShopsCollapseLabel">
+                                                    <h2 class="container-buttonSousCat">
+                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatRouge" type="button" data-toggle="collapse" data-target="#workShopsCollapse" aria-expanded="true" aria-controls="workShopsCollapseLabel">
+                                                            WE ART - WORKSHOPS
+                                                        </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div style="border: transparent" id="workShopsCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="workShopsCollapseLabel">
+                                                    <div class="card-body" style="border: transparent;">
+                                                        <div class="row">
+                                                            <div class="col-md-12 col-lg-12">
+                                                                <div class="price_table">
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-md-4 col-lg-4">
+                                                                            <div class="table text-center bg_deepblack color_secondery bulleWorkShops">
+                                                                                <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
+                                                                                <h5 class="color_lightgray">'BEATMAKER'</h5>
+                                                                                <div class="list">
+                                                                                    <ul>
+                                                                                        <li>'BEATMAKER'</li>
+                                                                                        <li>REALISATEUR ARTISTIQUE</li>
+                                                                                        <li>MUSIC PRODUCER</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- ------------------------CREATIVE BEATMAKING CAMPS---------------------- -->
+                                                <div style="border: transparent;" class="card-header bg_transparent" id="creativeBeatmakingCampsCollapseLabel">
+                                                    <h2 class="container-buttonSousCat">
+                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatOrange" type="button" data-toggle="collapse" data-target="#creativeBeatmakingCampsCollapse" aria-expanded="true" aria-controls="creativeBeatmakingCampsCollapseLabel">
+                                                            WE ART - CREATIVE BEATMAKING CAMPS
+                                                        </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div style="border: transparent" id="creativeBeatmakingCampsCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="creativeBeatmakingCampsCollapseLabel">
+                                                    <div class="card-body" style="border: transparent;">
+                                                        <div class="row">
+                                                            <div class="col-md-12 col-lg-12">
+                                                                <div class="price_table">
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-md-4 col-lg-4">
+                                                                            <div class="table text-center bg_deepblack color_secondery bulleCreativeBeatmakingCamps">
+                                                                                <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
+                                                                                <h5 class="color_lightgray">'BEATMAKER'</h5>
+                                                                                <div class="list">
+                                                                                    <ul>
+                                                                                        <li>'BEATMAKER'</li>
+                                                                                        <li>REALISATEUR ARTISTIQUE</li>
+                                                                                        <li>MUSIC PRODUCER</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- ------------------------MASTERCLASSE---------------------- -->
+                                                <div style="border: transparent;" class="card-header bg_transparent" id="masterclasseCollapseLabel">
+                                                    <h2 class="container-buttonSousCat">
+                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatJaune" type="button" data-toggle="collapse" data-target="#masterclasseCollapse" aria-expanded="true" aria-controls="masterclasseCollapseLabel">
+                                                            WE ART - MASTERCLASSE
+                                                        </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div style="border: transparent" id="masterclasseCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="masterclasseCollapseLabel">
+                                                    <div class="card-body" style="border: transparent;">
+                                                        <div class="row">
+                                                            <div class="col-md-12 col-lg-12">
+                                                                <div class="price_table">
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-md-4 col-lg-4">
+                                                                            <div class="table text-center bg_deepblack color_secondery bulleMasterclasse">
+                                                                                <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
+                                                                                <h5 class="color_lightgray">'BEATMAKER'</h5>
+                                                                                <div class="list">
+                                                                                    <ul>
+                                                                                        <li>'BEATMAKER'</li>
+                                                                                        <li>REALISATEUR ARTISTIQUE</li>
+                                                                                        <li>MUSIC PRODUCER</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- ------------------------R&D PARTY---------------------- -->
+                                                <div style="border: transparent;" class="card-header bg_transparent" id="RDpartyCollapseLabel">
+                                                    <h2 class="container-buttonSousCat">
+                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatOrangePale" type="button" data-toggle="collapse" data-target="#RDpartyCollapse" aria-expanded="true" aria-controls="RDpartyCollapseLabel">
+                                                            WE ART - R&D PARTY
+                                                        </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div style="border: transparent" id="RDpartyCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="RDpartyCollapseLabel">
+                                                    <div class="card-body" style="border: transparent;">
+                                                        <div class="row">
+                                                            <div class="col-md-12 col-lg-12">
+                                                                <div class="price_table">
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-md-4 col-lg-4">
+                                                                            <div class="table text-center bg_deepblack color_secondery bulleRDparty">
+                                                                                <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
+                                                                                <h5 class="color_lightgray">'BEATMAKER'</h5>
+                                                                                <div class="list">
+                                                                                    <ul>
+                                                                                        <li>'BEATMAKER'</li>
+                                                                                        <li>REALISATEUR ARTISTIQUE</li>
+                                                                                        <li>MUSIC PRODUCER</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- ------------------------FESTIVAL---------------------- -->
+                                                <div style="border: transparent;" class="card-header bg_transparent" id="festivalCollapseLabel">
+                                                    <h2 class="container-buttonSousCat">
+                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatRouge" type="button" data-toggle="collapse" data-target="#festivalCollapse" aria-expanded="true" aria-controls="festivalCollapseLabel">
+                                                            WE ART - FESTIVAL
+                                                        </button>
+                                                    </h2>
+                                                </div>
+
+                                                <div style="border: transparent" id="festivalCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="festivalCollapseLabel">
+                                                    <div class="card-body" style="border: transparent;">
+                                                        <div class="row">
+                                                            <div class="col-md-12 col-lg-12">
+                                                                <div class="price_table">
+                                                                    <div class="row justify-content-center">
+                                                                        <div class="col-md-4 col-lg-4">
+                                                                            <div class="table text-center bg_deepblack color_secondery bulleFestival">
+                                                                                <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
+                                                                                <h5 class="color_lightgray">'BEATMAKER'</h5>
+                                                                                <div class="list">
+                                                                                    <ul>
+                                                                                        <li>'BEATMAKER'</li>
+                                                                                        <li>REALISATEUR ARTISTIQUE</li>
+                                                                                        <li>MUSIC PRODUCER</li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

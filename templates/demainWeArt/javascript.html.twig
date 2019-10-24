@@ -21,10 +21,34 @@
 let moreArtistLabelServicesStudios = document.getElementById('moreArtistLabelServicesStudios');
 let headerArtistLabelServicesSection = document.getElementById('headerArtistLabelServicesSection');
 let sectionArtistLabelServices = document.getElementById('ArtistLabelServices');
-moreArtistLabelServicesStudios.addEventListener('click', function (e) {
+    moreArtistLabelServicesStudios.addEventListener('click', function (e) {
     headerArtistLabelServicesSection.style.transitionDuration = "1.3s";
     headerArtistLabelServicesSection.style.height = "0vw";
     sectionArtistLabelServices.style.display = "block";
+    $.fn.pagepiling.setMouseWheelScrolling(false);
+    $.fn.pagepiling.setAllowScrolling(false);
+})
+
+// Logic JS Traning Page
+let moreTraining = document.getElementById('moreTraining');
+let headerTrainingSection = document.getElementById('headerTrainingSection');
+let sectionTraining  = document.getElementById('Training');
+    moreTraining.addEventListener('click', function (e) {
+    headerTrainingSection.style.transitionDuration = "1.3s";
+    headerTrainingSection.style.height = "0vw";
+    sectionTraining.style.display = "block";
+    $.fn.pagepiling.setMouseWheelScrolling(false);
+    $.fn.pagepiling.setAllowScrolling(false);
+})
+
+// Logic JS Events Page
+let moreEvents = document.getElementById('moreEvents');
+let headerEventsSection = document.getElementById('headerEventsSection');
+let sectionEvents  = document.getElementById('Events');
+    moreEvents.addEventListener('click', function (e) {
+    headerEventsSection.style.transitionDuration = "1.3s";
+    headerEventsSection.style.height = "0vw";
+    sectionEvents.style.display = "block";
     $.fn.pagepiling.setMouseWheelScrolling(false);
     $.fn.pagepiling.setAllowScrolling(false);
 })
@@ -38,7 +62,7 @@ moreArtistLabelServicesStudios.addEventListener('click', function (e) {
     $(document).ready(function() {
         $('#pagepiling').pagepiling({
             menu: '#menu',
-            anchors: ['homePage', 'recordingPage', 'artistLabelServices', 'page4', 'page5','page6', 'page7', 'page8','page9'],
+            anchors: ['homePage', 'recordingPage', 'artistLabelServices', 'training', 'events','page6', 'page7', 'page8','page9'],
             loopTop: false,
             loopBottom: false,
             keyboardScrolling: false,
