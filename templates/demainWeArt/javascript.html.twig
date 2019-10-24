@@ -6,17 +6,28 @@
 <script src="demainWeArt/js/custom.js"></script>
 <script>
 
-
-    let arrow = document.getElementById('arrowDown');
-    let headerAboutSection = document.getElementById('headerAboutSection');
+// Logic JS Recording Studios Page
+    let moreRecordingStudios = document.getElementById('moreRecordingStudios');
+    let headerAboutSection = document.getElementById('headerRecordingSection');
     let sectionRecording = document.getElementById('sectionRecording');
-    arrow.addEventListener('click', function (e) {
+    moreRecordingStudios.addEventListener('click', function (e) {
         headerAboutSection.style.transitionDuration = "1.3s";
         headerAboutSection.style.height = "0vw";
         sectionRecording.style.display = "block";
         $.fn.pagepiling.setMouseWheelScrolling(false);
         $.fn.pagepiling.setAllowScrolling(false);
     })
+// Logic JS Artist Label Section Page
+let moreArtistLabelServicesStudios = document.getElementById('moreArtistLabelServicesStudios');
+let headerArtistLabelServicesSection = document.getElementById('headerArtistLabelServicesSection');
+let sectionArtistLabelServices = document.getElementById('ArtistLabelServices');
+moreArtistLabelServicesStudios.addEventListener('click', function (e) {
+    headerArtistLabelServicesSection.style.transitionDuration = "1.3s";
+    headerArtistLabelServicesSection.style.height = "0vw";
+    sectionArtistLabelServices.style.display = "block";
+    $.fn.pagepiling.setMouseWheelScrolling(false);
+    $.fn.pagepiling.setAllowScrolling(false);
+})
 
 </script>
 <script>
@@ -27,7 +38,7 @@
     $(document).ready(function() {
         $('#pagepiling').pagepiling({
             menu: '#menu',
-            anchors: ['homePage', 'recordingPage', 'page3', 'page4', 'page5','page6', 'page7', 'page8','page9'],
+            anchors: ['homePage', 'recordingPage', 'artistLabelServices', 'page4', 'page5','page6', 'page7', 'page8','page9'],
             loopTop: false,
             loopBottom: false,
             keyboardScrolling: false,

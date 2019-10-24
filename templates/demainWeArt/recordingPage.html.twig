@@ -4,17 +4,34 @@
             <div class="about2 ddd">
                 <div class="col-md-12 col-lg-12">
                     <div class="row">
-                        <div class="col-md-12 col-lg-12 headerAboutSection" id="headerAboutSection">
-                            <img alt="" class="mt_60 upStream d-block" src="demainWeArt/images/logo/upstream.png">
+                        <div class="col-md-12 col-lg-12 headerRecordingSection d-block flex-column" id="headerRecordingSection">
+                                <div class="d-block text-center pt-lg-5 pt-md-5">
+                                    <img alt="" class="upStream" src="demainWeArt/images/logo/upstream.png">
+                                </div>
 
-                            <a href="{{ path('home_demainWeArt') }}"><img alt="" class="logoDemain mt_100 d-block" src="demainWeArt/images/logo/logo-demain.png"></a>
+                                <div class="d-block logoDemainContainer">
+                                    <a href="{{ path('home_demainWeArt') }}"><img alt="" class="logoDemain" src="demainWeArt/images/logo/logo-demain.png"></a>
+                                </div>
 
 
 
-                            <i id="arrowDown" class="fa fa-arrow-down fa-5x text-white" aria-hidden="true" style="position: absolute; bottom: 3px"></i>
+                            <div class="text-center text-white mt-lg-5 mt-sm-2 container col-12 col-lg-7 col-md-7">
+                                <h2 class="titreRecordingMenu text-center">RECORDING STUDIOS</h2>
+                                <p class="text-center descriptifRecordingMenu pt-3">
+                                    Le Lorem Ipsum est simplement du faux texte employé
+                                    dans la composition et la mise en page avant impression.
+                                    Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les
+                                    années 1500, quand un.
+                                </p>
+                                <div class="text-center pt-4" id="moreRecordingStudios">
+                                    <button type="button" class="btn btn-light">En savoir plus</button>
+                                </div>
+                            </div>
+
+
                         </div>
                         <div class="col-md-12 col-lg-12 menuRecordingSection" id="sectionRecording">
-                            <div class="about_myself pb_60">
+                            <div class="about_myself pb_60 pr-sm-5 pl-sm-5">
                                 <!--	Start Title
                                 ================================-->
                                 {#                                    <div class="main_title my_60">#}
@@ -24,6 +41,7 @@
                                 <!--	End Title
                                 ================================-->
                                 <div class="row pt-5">
+                                    <div class="hauteurSousCat"></div>
                                     <div class="menuSousCat col-md-3 col-lg-3">
                                         <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
                                             <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
@@ -32,7 +50,7 @@
                                             <a href="#page3"><h2 class="menuColorRose">ARTIST & LABEL SERVICES</h2></a>
                                             <h2 class="menuColorOrange">TRAINING</h2>
                                             <h2 class="menuColorRouge">EVENTS</h2>
-                                            <h2 class="menuColorBlanc">PARTANAIRES</h2>
+                                            <h2 class="menuColorBlanc">PARTENAIRES</h2>
                                             <h2 class="menuColorBlanc">CONTACT</h2>
                                             <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                         </div>
@@ -53,12 +71,12 @@
                                                     </div>
 
                                                     <div style="border: transparent" id="teamCollapse" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="teamCollapseLabel">
-                                                        <div class="card-body pr-5" style="border: transparent;">
+                                                        <div class="card-body" style="border: transparent;">
                                                             <div class="row">
                                                                 <div class="col-md-12 col-lg-12">
                                                                     <div class="price_table">
                                                                         <div class="row justify-content-center">
-                                                                            <div class="col-md-4 col-lg-3">
+                                                                            <div class="col-md-4 col-lg-4">
                                                                                 <div class="table text-center bg_deepblack color_secondery bulleTeam">
                                                                                     <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
                                                                                     <h5 class="color_lightgray">'BEATMAKER'</h5>
@@ -71,7 +89,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-4 col-lg-3">
+                                                                            <div class="col-md-4 col-lg-4">
                                                                                 <div class="table text-center bg_deepblack color_secondery bulleTeam">
                                                                                     <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
                                                                                     <h5 class="color_lightgray">'BEATMAKER'</h5>
@@ -84,7 +102,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-4 col-lg-3">
+                                                                            <div class="col-md-4 col-lg-4">
 
                                                                                 <div class="table text-center bg_deepblack color_secondery bulleTeam">
                                                                                     <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
@@ -98,7 +116,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-4 col-lg-3">
+                                                                            <div class="col-md-4 col-lg-4">
                                                                                 <div class="table text-center bg_deepblack color_secondery bulleTeam">
                                                                                     <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
                                                                                     <h5 class="color_lightgray">'BEATMAKER'</h5>
@@ -111,7 +129,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-md-4 col-lg-3">
+                                                                            <div class="col-md-4 col-lg-4">
                                                                                 <div class="table text-center bg_deepblack color_secondery bulleTeam">
                                                                                     <h1 class="color_default font-weight-bold">{#<sup>I</sup> #}Igoom</h1>
                                                                                     <h5 class="color_lightgray">'BEATMAKER'</h5>
@@ -144,7 +162,7 @@
 
 
                                                     <div style="border: transparent" id="servicesCollapse" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="servicesCollapseLabel" >
-                                                        <div class="card-body" style="border: transparent;">
+                                                        <div class="card-body" style="border: transparent;padding-left: 85px">
                                                             <div><i class="menuColorRose d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline"> Pré-production</p></div>
                                                             <div><i class="menuColorRose d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline"> Recording</p></div>
                                                             <div><i class="menuColorRose d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline"> Mix</p></div>
@@ -167,7 +185,7 @@
 
 
                                                     <div style="border: transparent" id="equipementsCollapse" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="equipementsCollapseLabel" >
-                                                        <div class="card-body" style="border: transparent;">
+                                                        <div class="card-body" style="border: transparent;padding-left: 85px">
                                                             <div><i class="menuColorGris d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline"> Processing</p></div>
                                                             <div><i class="menuColorGris d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline"> Monitoring</p></div>
                                                             <div><i class="menuColorGris d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline"> Pérriphérique Analogiques</p></div>
@@ -190,7 +208,7 @@
 
 
                                                     <div style="border: transparent" id="packsCollapse" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="packsCollapseLabel" >
-                                                        <div class="card-body pr-5" style="border: transparent;">
+                                                        <div class="card-body" style="border: transparent;">
                                                             <div class="row">
                                                                 <div class="col-md-12 col-lg-12">
                                                                     <div class="price_table">

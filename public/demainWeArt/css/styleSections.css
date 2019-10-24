@@ -1,0 +1,158 @@
+/* RECORDING SECTION
+-------------------------------> */
+.headerRecordingSection .upStream{
+    width: 139px;
+    height: 28px
+}
+
+.titreRecordingMenu{
+    margin-top: 130px;
+    text-align: center;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.headerRecordingSection .containerHeaderAbout{
+    margin-top: 30px;
+}
+
+.headerRecordingSection{
+    background: url("http://imlyon.co/wp-content/themes/fukasawa/home-recording-studios.jpg") no-repeat center / cover;
+    height: 100vh;
+}
+
+.menuRecordingSection{
+    height: 100%;
+    display: none;
+    background: url("http://imlyon.co/wp-content/themes/fukasawa/content-recording-studios.jpg") no-repeat center / cover;
+}
+.footerRecordingSection{
+    display: none;
+    margin-top: 150px;
+
+    width: 100%;
+}
+
+.headerRecordingSection .logoDemain{
+    width: 300px;
+    height: 75px;
+    object-fit: fill;
+}
+
+/* ARTISTLABELSERVICES SECTION
+-------------------------------> */
+.headerArtistLabelServicesSection .upStream{
+    width: 139px;
+    height: 28px
+}
+
+.titreArtistLabelServicesMenu{
+    margin-top: 130px;
+    text-align: center;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+.headerArtistLabelServicesSection .containerHeaderAbout{
+    margin-top: 30px;
+}
+
+.headerArtistLabelServicesSection{
+    background: url("http://imlyon.co/wp-content/themes/fukasawa/home-label-services.jpg") no-repeat center / cover;
+    height: 100vh;
+}
+
+.menuArtistLabelServicesSection{
+    height: 100%;
+    display: none;
+    background: url("http://imlyon.co/wp-content/themes/fukasawa/content-label-services.jpg") no-repeat center / cover;
+}
+.footerRecordingSection{
+    display: none;
+    margin-top: 150px;
+
+    width: 100%;
+}
+
+.headerArtistLabelServicesSection .logoDemain{
+    width: 300px;
+    height: 75px;
+    object-fit: fill;
+}
+
+
+
+
+
+@media (max-width: 991px){
+    /* RECORDING SECTION
+-------------------------------> */
+    .titreRecordingMenu{
+        padding-top: 15px;
+    }
+    /* ARTISTLABELSERVICES SECTION
+-------------------------------> */
+    .titreArtistLabelServicesMenu{
+        padding-top: 15px;
+    }
+}
+
+
+
+/*
+// Small devices (landscape phones, 576px and up)
+============================================================*/
+@media (max-width: 767px){
+    /* RECORDING SECTION
+-------------------------------> */
+    .titreRecordingMenu{
+        margin-top: 0;
+    }
+    .headerRecordingSection .upStream{
+        width: 100px;
+        height: 22px;
+        margin-top: 35px;
+        display: none;
+    }
+    .headerRecordingSection .containerHeaderAbout{
+        margin-top: 60px;
+    }
+    .headerRecordingSection .logoDemain{
+        width: 220px;
+        height: 70px;
+        object-fit: fill;
+    }
+    /* ARTISTLABELSERVICES SECTION
+-------------------------------> */
+    .titreArtistLabelServicesMenu{
+        margin-top: 0;
+    }
+    .headerArtistLabelServicesSection .upStream{
+        width: 100px;
+        height: 22px;
+        margin-top: 35px;
+        display: none;
+    }
+    .headerArtistLabelServicesSection .containerHeaderAbout{
+        margin-top: 60px;
+    }
+    .headerArtistLabelServicesSection .logoDemain{
+        width: 220px;
+        height: 70px;
+        object-fit: fill;
+    }
+}
+
+/*
+// Extra small devices (portrait phones, less than 576px)
+============================================================*/
+@media (max-width: 575px){
+
+}
+
+/*
+//  (320x480) iPhone (Original, 3G, 3GS)
+============================================================*/
+@media (max-width: 480px){
+
+}

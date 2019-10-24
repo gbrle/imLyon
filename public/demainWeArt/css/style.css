@@ -108,7 +108,7 @@ ul li{
 /*	font-family: 'Poppins', sans-serif;*/
 /*}*/
 #pp-nav.right{
-    display: none;
+    display: block;
 }
 a{
     color: white;
@@ -158,8 +158,7 @@ a:hover,a:focus,a.active{
 	margin-left: 0px !important;
 }
 .pp-scrollable{
-    overflow-y: scroll;
-    height: 100%;
+    height: 100vh;
 }
 .full_row{
   position: relative;
@@ -266,10 +265,6 @@ a:hover,a:focus,a.active{
   height:100%;
   display: block;
   z-index: 9
-}
-.headerAboutSection .upStream{
-    width: 139px;
-    height: 28px
 }
 /*=======================================================================
 04.   Socal Media
@@ -1322,9 +1317,6 @@ ul#menu li a{
     position: fixed;
     z-index: 9999;
 }
-.headerAboutSection .containerHeaderAbout{
-    margin-top: 30px;
-}
 @keyframes lds-spinner {
   0% {
     opacity: 1;
@@ -1507,6 +1499,9 @@ nav ul li.page-item{
 /*===============================================================================
 27.  Blog Sidebar
 =================================================================================*/
+.hauteurSousCat{
+    height: 100vh;
+}
 .widget .socal_media ul li{
   float: left;
   margin-right: 7px;
@@ -2181,10 +2176,6 @@ label.radios {
 .carousel-caption p{
     font-size: 2em;
 }
-.headerAboutSection{
-    background: url("../images/enteteMenus/recordingMenu.png") no-repeat center / cover;
-    height: 100vh;
-}
 .menu{
     padding-top: 65px;
     height: 92vh;
@@ -2253,12 +2244,10 @@ label.radios {
     opacity:0.7;
     transition-duration: 1s;
 }
-.headerAboutSection .logoDemain{
-    width: 300px;
-    height: 75px;
-    object-fit: fill;
-    margin-top: 50px;
-
+.logoDemainContainer{
+    text-align: left;
+    padding-top: 130px;
+    padding-left: 180px;
 }
 @media (min-width: 1200px) {
   .services,.portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
@@ -2547,17 +2536,13 @@ label.radios {
 ============================================================*/
 @media (max-width: 767px){
 
-    .headerAboutSection .containerHeaderAbout{
-        margin-top: 60px;
+    #pp-nav.right{
+        display: none;
     }
-    .headerAboutSection .logoDemain{
-        width: 250px;
-        height: 68px;
-        object-fit: fill;
-        margin-top: 65px;
-        margin-left: 1px;
-        display: flex;
-        justify-content: center;
+    .logoDemainContainer{
+        padding-bottom: 30px;
+        padding-top: 30px;
+        padding-left: 10vh;
     }
   .mainbanner_content p{
     width: 100%;
