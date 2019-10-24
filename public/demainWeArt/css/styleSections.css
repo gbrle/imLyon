@@ -38,6 +38,9 @@
     height: 75px;
     object-fit: fill;
 }
+.descriptifRecordingMenu{
+
+}
 
 /* ARTISTLABELSERVICES SECTION
 -------------------------------> */
@@ -78,6 +81,11 @@
     width: 300px;
     height: 75px;
     object-fit: fill;
+}
+.descriptifArtistLabelServicesMenu{
+    background-color: red;
+    border-radius: 0 20px 20px 0;
+    opacity: 0.4;
 }
 
 

@@ -1,0 +1,57 @@
+/* Menu Couleurs */
+.menuColorViolet{
+    color: #662383;
+}
+.menuColorRose{
+    color: #B34575;
+}
+.menuColorOrange{
+    color: #F05A23;
+}
+.menuColorBlanc{
+    color: #FFFFFF;
+}
+.menuColorRouge{
+    color: #EC1C23;
+}
+.menuColorGris{
+    color: #5A3E62;
+}
+.menuColorVioletFonce{
+    color: #4B0754;
+}
+.menuColorMarron{
+    color: #834960;
+}
+.menuColorRoseClaire{
+    color: #FF7AAC;
+}
+.menuColorRoseBeige{
+    color: #B39394;
+}
+
+
+
+
+/* Buttons Couleurs */
+.buttonSousCatViolet{
+    background-color: #662383;
+}
+.buttonSousCatRose{
+    background-color: #B34575;
+}
+.buttonSousCatGris{
+    background-color: #5A3E62;
+}
+.buttonSousCatVioletFonce{
+    background-color: #4B0754;
+}
+.buttonSousCatMarron{
+    background-color: #834960;
+}
+.buttonSousCatRoseClaire{
+    background-color: #FF7AAC;
+}
+.buttonSousCatBeige{
+    background-color: #B39394;
+}

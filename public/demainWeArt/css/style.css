@@ -2200,43 +2200,8 @@ label.radios {
 .card-header button{
     border: transparent;
     border-radius: 120px 0 0 120px;
-    width: 55%;
+    width: 75%;
     height: 34px;
-}
-/* Menu Couleurs */
-.menuColorViolet{
-    color: #662383;
-}
-.menuColorRose{
-    color: #B34575;
-}
-.menuColorOrange{
-    color: #F05A23;
-}
-.menuColorBlanc{
-    color: #FFFFFF;
-}
-.menuColorRouge{
-    color: #EC1C23;
-}
-.menuColorGris{
-    color: #5A3E62;
-}
-.menuColorVioletFonce{
-    color: #4B0754;
-}
-/* Buttons Couleurs */
-.buttonSousCatViolet{
-    background-color: #662383;
-}
-.buttonSousCatRose{
-    background-color: #B34575;
-}
-.buttonSousCatGris{
-    background-color: #5A3E62;
-}
-.buttonSousCatVioletFonce{
-    background-color: #4B0754;
 }
 
 .card-header button:hover{
