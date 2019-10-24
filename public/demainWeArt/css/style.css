@@ -2207,6 +2207,64 @@ label.radios {
     padding-top: 130px;
     padding-left: 180px;
 }
+
+/* ROTATE MENU */
+#currentRecording {
+    width: 13px;
+    height: 13px;
+    border: 1px solid;
+    transform-origin: 50% 50%;
+    position: relative;
+    border-radius: 3px;
+    left: 58px;
+    top: 52px;
+}
+#currentArtistLabelServices {
+    width: 13px;
+    height: 13px;
+    border: 1px solid;
+    transform-origin: 50% 50%;
+    position: relative;
+    border-radius: 3px;
+    left: 58px;
+    top: 88px;
+}
+#currentTraining {
+    width: 13px;
+    height: 13px;
+    border: 1px solid;
+    transform-origin: 50% 50%;
+    position: relative;
+    border-radius: 3px;
+    left: 58px;
+    top: 123px;
+}
+#currentEvents {
+    width: 13px;
+    height: 13px;
+    border: 1px solid;
+    transform-origin: 50% 50%;
+    position: relative;
+    border-radius: 3px;
+    left: 58px;
+    top: 159px;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    -webkit-animation: rotating 2s linear infinite;
+}
+
+
+
 @media (min-width: 1200px) {
   .services,.portfolio2,.pricing,.team,.testimonial,.contact,.footer_bottom{
     margin-left: 7px;
