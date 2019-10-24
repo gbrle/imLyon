@@ -65,56 +65,163 @@ function resetAll(){
 
     }
     else if (sectionArtistLabelServices.style.display === "block") {
-        headerArtistLabelServicesSection.style.height = "100vh";
-        sectionArtistLabelServices.style.display = "none";
+        setTimeout(function () {
+                headerArtistLabelServicesSection.style.height = "100vh";
+                sectionArtistLabelServices.style.display = "none";
+            }
+            , 800);
     }
     else if (sectionTraining.style.display === "block") {
-        headerTrainingSection.style.height = "100vh";
-        sectionTraining.style.display = "none";
+        setTimeout(function () {
+                headerTrainingSection.style.height = "100vh";
+                sectionTraining.style.display = "none";
+            }
+            , 800);
     }
     else if (sectionEvents.style.display === "block") {
-        headerEventsSection.style.height = "100vh";
-        sectionEvents.style.display = "none";
+        setTimeout(function () {
+                headerEventsSection.style.height = "100vh";
+                sectionEvents.style.display = "none";
+            }
+            , 800);
     }
 }
 
+// PAGE RECORDING MENU LINKS---------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// HOme Recording
+let homeRecording = document.getElementById('homeRecording');
+    homeRecording.addEventListener('click', function (e) {
+    $.fn.pagepiling.setMouseWheelScrolling(true);
+    $.fn.pagepiling.setAllowScrolling(true);
+        resetAll();
+})
+        // artistLabelServicesRecording
+        let artistLabelServicesRecording = document.getElementById('artistLabelServicesRecording');
+            artistLabelServicesRecording.addEventListener('click', function (e) {
+            $.fn.pagepiling.setMouseWheelScrolling(true);
+            $.fn.pagepiling.setAllowScrolling(true);
+                resetAll();
+        })
+                // trainingRecording
+                let trainingRecording = document.getElementById('trainingRecording');
+                    trainingRecording.addEventListener('click', function (e) {
+                    $.fn.pagepiling.setMouseWheelScrolling(true);
+                    $.fn.pagepiling.setAllowScrolling(true);
+                        resetAll();
+                })
+                        // eventRecording
+                        let eventRecording = document.getElementById('eventRecording');
+                            eventRecording.addEventListener('click', function (e) {
+                            $.fn.pagepiling.setMouseWheelScrolling(true);
+                            $.fn.pagepiling.setAllowScrolling(true);
+                                resetAll();
+                        })
 
-// home
-let menuHome = document.getElementById('menuHome');
-menuHome.addEventListener('click', function (e) {
+// PAGE ARTIST LABEL SERVICES MENU LINKS---------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// home ArtistLabelServices
+let homeArtistLabelServices = document.getElementById('homeArtistLabelServices');
+    homeArtistLabelServices.addEventListener('click', function (e) {
     $.fn.pagepiling.setMouseWheelScrolling(true);
     $.fn.pagepiling.setAllowScrolling(true);
-        resetAll();
+    resetAll();
 })
-// menuRecording
-let menuRecording = document.getElementById('menuRecording');
-    menuRecording.addEventListener('click', function (e) {
-    $.fn.pagepiling.setMouseWheelScrolling(true);
-    $.fn.pagepiling.setAllowScrolling(true);
-        resetAll();
-})
-// menuArtistLabelServices
-let menuArtistLabelServices = document.getElementById('menuArtistLabelServices');
-menuArtistLabelServices.addEventListener('click', function (e) {
-    $.fn.pagepiling.setMouseWheelScrolling(true);
-    $.fn.pagepiling.setAllowScrolling(true);
-        resetAll();
-})
-// menuTraining
-let menuTraining = document.getElementById('menuTraining');
-menuTraining.addEventListener('click', function (e) {
-    $.fn.pagepiling.setMouseWheelScrolling(true);
-    $.fn.pagepiling.setAllowScrolling(true);
-        resetAll();
-})
-// menuEvent
-let menuEvent = document.getElementById('menuEvent');
-menuEvent.addEventListener('click', function (e) {
-    $.fn.pagepiling.setMouseWheelScrolling(true);
-    $.fn.pagepiling.setAllowScrolling(true);
-        resetAll();
-})
+        // artistLabelServicesRecording
+        let recordingArtistLabelServices = document.getElementById('recordingArtistLabelServices');
+            recordingArtistLabelServices.addEventListener('click', function (e) {
+            $.fn.pagepiling.setMouseWheelScrolling(true);
+            $.fn.pagepiling.setAllowScrolling(true);
+            resetAll();
+        })
+                // trainingRecording
+                let trainingArtistLabelServices = document.getElementById('trainingArtistLabelServices');
+                    trainingArtistLabelServices.addEventListener('click', function (e) {
+                    $.fn.pagepiling.setMouseWheelScrolling(true);
+                    $.fn.pagepiling.setAllowScrolling(true);
+                    resetAll();
+                })
+                        // eventRecording
+                        let eventArtistLabelServices = document.getElementById('eventArtistLabelServices');
+                            eventArtistLabelServices.addEventListener('click', function (e) {
+                            $.fn.pagepiling.setMouseWheelScrolling(true);
+                            $.fn.pagepiling.setAllowScrolling(true);
+                            resetAll();
+                        })
 
+// PAGE homeTraining---------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// home Training
+let homeTraining = document.getElementById('homeTraining');
+    homeTraining.addEventListener('click', function (e) {
+    $.fn.pagepiling.setMouseWheelScrolling(true);
+    $.fn.pagepiling.setAllowScrolling(true);
+    resetAll();
+})
+        // artistLabelServicesRecording
+        let recordingTraining = document.getElementById('recordingTraining');
+            recordingTraining.addEventListener('click', function (e) {
+            $.fn.pagepiling.setMouseWheelScrolling(true);
+            $.fn.pagepiling.setAllowScrolling(true);
+            resetAll();
+        })
+                // recording training
+                let artistLabelServicesTraining = document.getElementById('artistLabelServicesTraining');
+                    artistLabelServicesTraining.addEventListener('click', function (e) {
+                    $.fn.pagepiling.setMouseWheelScrolling(true);
+                    $.fn.pagepiling.setAllowScrolling(true);
+                    resetAll();
+                })
+                        // eventRecording
+                        let eventTraining = document.getElementById('eventTraining');
+                            eventTraining.addEventListener('click', function (e) {
+                            $.fn.pagepiling.setMouseWheelScrolling(true);
+                            $.fn.pagepiling.setAllowScrolling(true);
+                            resetAll();
+                        })
+
+// PAGE homeTraining---------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// ------------------------------------------------------------------->
+// home Training
+let homeEvents = document.getElementById('homeEvents');
+homeEvents.addEventListener('click', function (e) {
+    $.fn.pagepiling.setMouseWheelScrolling(true);
+    $.fn.pagepiling.setAllowScrolling(true);
+    resetAll();
+})
+        // artistLabelServicesRecording
+        let recordingEvents = document.getElementById('recordingEvents');
+        recordingEvents.addEventListener('click', function (e) {
+            $.fn.pagepiling.setMouseWheelScrolling(true);
+            $.fn.pagepiling.setAllowScrolling(true);
+            resetAll();
+        })
+                // recording training
+                let artistLabelServicesEvents = document.getElementById('artistLabelServicesEvents');
+                artistLabelServicesEvents.addEventListener('click', function (e) {
+                    $.fn.pagepiling.setMouseWheelScrolling(true);
+                    $.fn.pagepiling.setAllowScrolling(true);
+                    resetAll();
+                })
+                        // eventRecording
+                        let trainingEvents = document.getElementById('trainingEvents');
+                        trainingEvents.addEventListener('click', function (e) {
+                            $.fn.pagepiling.setMouseWheelScrolling(true);
+                            $.fn.pagepiling.setAllowScrolling(true);
+                            resetAll();
+                        })
 
 </script>
 <script>
