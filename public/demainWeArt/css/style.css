@@ -170,6 +170,10 @@ a:hover,a:focus,a.active{
     ::-webkit-scrollbar-track {
       box-shadow: inset 0 0 5px #ececec !important; 
     }
+
+footer h3{
+    line-height: 4px;
+}
 /*=====================================================================================
 02.		Default Margin and Padding
 ========================================================================================*/
@@ -1493,7 +1497,7 @@ nav ul li.page-item{
 27.  Blog Sidebar
 =================================================================================*/
 .hauteurSousCat{
-    height: 100vh;
+    height: 95vh;
 }
 .widget .socal_media ul li{
   float: left;
@@ -2250,105 +2254,54 @@ label.radios {
     top: 159px;
 }
 /* NewsLetter */
-.main {
-    top: -30px;
-    z-index: 2;
-    width: 12vh;
-    height: 4rem;
-    padding: 12px;
-    background-color: white;
-    text-align: center;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: width .6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+
+.newsletter:not( .newsletter--active ) input[type='submit']{
+    /*display: none;*/
+}
+.containerNewsletter{
     position: relative;
-}
-.main>#singular-form {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-}
-.main>#singular-form button {
-    width: 9rem;
-    padding: 0;
-    border: none;
-    outline: none;
-    border-radius: 3rem;
-    cursor: pointer;
-}
-.main>#singular-form>button#subs {
-    padding: 0;
-    width: 100%;
-    color: #fbb016;
-    background-color: transparent;
-    z-index: 3;
-}
-.main>#singular-form>#email-input {
-    z-index: 2;
-}
-.main>#singular-form>#email-input>input {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    padding: 0 26% 0 3%;
-    opacity: 0;
-    transform: scale(0);
-    transition: all .6s ease .4s;
-}
-.main>#singular-form>#email-input>button {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background-color: #fbb016;
-    color: white;
-    opacity: 0;
-    transform: scale(0);
-    transition: all .6s ease .4s;
-}
-.main>#singular-form>#success {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fbb016;
-    font-weight: bold;
-    z-index: 1;
-}
-.main>#singular-form>button#subs,
-.main>#singular-form>#email-input,
-.main>#singular-form>#success {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: scale(0);
-    opacity: 0;
-}
-.main>#singular-form>button#subs {
-    transition: all .6s ease;
-}
-.main>#singular-form>#email-input {
-    transform: scale(1);
-    opacity: 1;
-    transition: all .6s ease .4s;
+    top: -31px;
 }
 
-.main>#singular-form>#success {
-    transition: all .2s ease .6s;
+.newsletter input[type='email']{
+    background: #fff;
+    border-radius: 24px 0 0 24px;
+    padding: 0 20px;
+    display: inline;
+    font-size: 0.9em;
+    color:#8c8c8c;
+    text-decoration: none;
+    border:1px solid #e7e7e4;
+    border-right: none;
+    width: 300px;
+    height: 50px;
 }
-.main>#singular-form>button#subs.shown,
-.main>#singular-form>#email-input.shown,
-.main>#singular-form>#success.shown,
-.main>#singular-form>#email-input>button.shown,
-.main>#singular-form>#email-input>input.shown {
-    transform: scale(1);
-    opacity: 1;
+
+.newsletter input[type='submit']{
+    border-radius: 0 24px 24px 0;
+    padding: 0 20px;
+    margin-left: -5px;
+    display: inline;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: hotpink;
+    text-decoration: none;
+    border:1px solid transparent;
+    border-left: 1px solid transparent;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    height: 50px;
+
+}
+
+.newsletter input[type='submit']:disabled{
+    color: white;
+    cursor: no-drop;
+}
+
+.newsletter input[type='submit']:focus, .newsletter input[type='email']:focus{
+    outline: none;
 }
 /* End NewsLetter */
 
@@ -2978,6 +2931,9 @@ label.radios {
 //  (320x480) iPhone (Original, 3G, 3GS)
 ============================================================*/
 @media (max-width: 480px){
+    .newsletter input[type='email']{
+        width: 120px;
+    }
   h1,h2,h3,h4,h4,h6{
     font-weight: 600
   }
