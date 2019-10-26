@@ -5,3 +5,7 @@ controllersHome:
 controllersDemainWeArt:
     resource: ../../src/ControllersDemainWeArt/
     type: annotation
+
+controllersAdmin:
+    resource: ../../src/ControllersAdmin/
+    type: annotation

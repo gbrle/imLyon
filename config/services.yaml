@@ -27,5 +27,8 @@ services:
         resource: '../src/ControllersDemainWeArt'
         tags: ['controller.service_arguments']
 
+    App\ControllersAdmin\:
+        resource: '../src/ControllersAdmin'
+        tags: ['controller.service_arguments']
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
