@@ -62,7 +62,6 @@ body{
 }
 h1,h2,h3,h4,h5,h6{
    font-family: 'Poppins', sans-serif;
-   font-weight: 700;
 }
 h1{
 	font-size: 40px;
@@ -170,7 +169,10 @@ a:hover,a:focus,a.active{
     ::-webkit-scrollbar-track {
       box-shadow: inset 0 0 5px #ececec !important; 
     }
-
+.paddingCards{
+    padding-right: 100px;
+    padding-left: 100px;
+}
 footer h3{
     line-height: 4px;
 }
@@ -1040,7 +1042,7 @@ ul#menu li a{
 ==============================================================================*/
 .table{
   border-radius: 20px;
-  padding: 40px 30px;
+  padding: 10px;
 
 }
 .table h1{
@@ -1056,7 +1058,10 @@ ul#menu li a{
 /*===========================================================================
 19.   Team
 =============================================================================*/
-
+.logoMusicManufacturing{
+    height: 35px !important;
+    width: 207px !important;
+}
 .member{
   position: relative;
 }
@@ -2189,7 +2194,9 @@ label.radios {
     width: 100%;
 }
 /* Buttons Sous catégorie */
-
+.footerReseauxSociaux{
+    border-left: 1px white solid;
+}
 .container-buttonSousCat{
     margin-right: 9rem;
     text-align: right;
@@ -2198,7 +2205,7 @@ label.radios {
     border: transparent;
     border-radius: 120px 0 0 120px;
     width: 75%;
-    height: 34px;
+    min-height: 34px;
 }
 
 .card-header button:hover{
@@ -2272,9 +2279,9 @@ label.radios {
     font-size: 0.9em;
     color:#8c8c8c;
     text-decoration: none;
-    border:1px solid #e7e7e4;
+    border:1px solid transparent;
     border-right: none;
-    width: 300px;
+    width: 150px;
     height: 50px;
 }
 
@@ -2288,9 +2295,9 @@ label.radios {
     color: hotpink;
     text-decoration: none;
     border:1px solid transparent;
-    border-left: 1px solid transparent;
     transition: all 0.5s ease;
     cursor: pointer;
+    width: 150px;
     height: 50px;
 
 }
@@ -2461,6 +2468,9 @@ label.radios {
 // Medium devices (tablets, 768px and up)
 ============================================================*/
 @media (max-width: 991px){
+    .footerReseauxSociaux{
+        border-left: 0;
+    }
     .card-header h2{
         margin-left: -136px;
     }
@@ -2933,6 +2943,11 @@ label.radios {
 @media (max-width: 480px){
     .newsletter input[type='email']{
         width: 120px;
+    }
+    .newsletter input[type='submit']{
+        width: 120px;
+
+
     }
   h1,h2,h3,h4,h4,h6{
     font-weight: 600
