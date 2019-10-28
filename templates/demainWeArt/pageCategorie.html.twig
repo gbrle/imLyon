@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!--===== Meta Tag =====-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Runaway - Personal Portfolio HTML Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="business, agency, blog, cv, creative, html, one page, personal, portfolio, resume, responsive, bootstrap, photography, designer, developer">
+    <meta name="author" content="root">
+
+    <!--	Css Links
+   ==================================================-->
+    <link rel="stylesheet" href="/demainWeArt/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/demainWeArt/css/jquery.pagepiling.css">
+    <link rel="stylesheet" href="/demainWeArt/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/demainWeArt/fonts/flaticon.css">
+    <link rel="stylesheet" href="/demainWeArt/css/plugins.css">
+    <link rel="stylesheet" href="/demainWeArt/css/style.css">
+    <link rel="stylesheet" href="/demainWeArt/css/styleSections.css">
+    <link rel="stylesheet" href="/demainWeArt/css/colorsSousCats.css">
+    <link rel="stylesheet" href="/demainWeArt/css/bulleHoverBackground.css">
+    <link rel="stylesheet" href="/demainWeArt/css/color.css" id="color-change">
+
+    <!-- Favicon
+   ==================================================-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/demainWeArt/images/favicon.ico">
+
+    <!--	Title
+  ==================================================-->
+    <title>Runaway - Personal Portfolio HTML Template</title>
+
+</head>
+<body id="top" class="page-load">
+<!--	Preloader
+==================================================-->
+<div class="preloader">
+    <div class="lds-css ng-scope">
+        <div class="lds-spinner" style=";height:100%">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<!--	Menu Responsive
+==================================================-->
+
+
+<nav id="mysidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="flaticon-close-button"></i></a>
+    {#    <a href="/"><i class="fa fa-home fa-2x pl-5" aria-hidden="true"></i></a>#}
+    <ul id="menu">
+        <li data-menuanchor="homePage"><a href="#homePage"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+        <li data-menuanchor="recordingPage"><a onclick="closeNav()" class="text-primary" href="#recordingPage">Recording Studio</a></li>
+        <li data-menuanchor="artistLabelServices"><a onclick="closeNav()" href="#artistLabelServices">Artist & Label Services</a></li>
+        <li data-menuanchor="training"><a onclick="closeNav()" href="#training">Training</a></li>
+        <li data-menuanchor="events"><a onclick="closeNav()" href="#events">Events</a></li>
+        <li data-menuanchor="page6"><a onclick="closeNav()" href="#page6">Pricing</a></li>
+        <li data-menuanchor="page7"><a onclick="closeNav()" href="#page7">Team</a></li>
+        <li data-menuanchor="page8"><a onclick="closeNav()" href="#page8">Testimonialdadada</a></li>
+        <li data-menuanchor="page9"><a onclick="closeNav()" href="#page9">Contact</a></li>
+    </ul>
+</nav>
+
+
+<div class="contact_massage bg_transparent d-flex align-items-center" style="cursor:pointer" onclick="openNav()">
+    <a href="#"><i class="fa fa-bars fa-1x text-white" aria-hidden="true"></i></a>
+</div>
+
+<!--
+=======================================================-->
+
+
+
+
+
+
+
+
+    <!--	Start Recording Stdios
+    ===================================================-->
+    <div id="recordingPage" class="section bg_black pp-scrollable">
+        <div class="container-fluid pl-0 pr-0">
+
+            <div class="about2">
+                <div class="col-md-12 col-lg-12">
+                    <div class="row">
+
+                        <div class="col-md-12 col-lg-12 menuRecordingSection d-block" id="sectionRecording">
+                            <div class="about_myself pb_60 pr-sm-5 pl-sm-5">
+                                <!--	Start Title
+                                ================================-->
+                                {#                                    <div class="main_title my_60">#}
+                                {#                                        <h2 class="title color_white">About Me</h2>#}
+                                {#                                        <p class="mt_15 color_lightgray">Interdum a etiam sagittis vehicula porta. Massa felis eros quam blandit nulla dolor habitant.</p>#}
+                                {#                                    </div>#}
+                                <!--	End Title
+                                ================================-->
+                                <div class="row pt-5">
+                                    <div class="hauteurSousCat"></div>
+
+                                    <div class="menuSousCat col-md-3 col-lg-3">
+                                        <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
+                                            <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
+{#                                            <div id="currentRecording" class="rotating Violet"></div>#}
+                                            <a href="{{ path('home_demainWeArt') }}"><h2  id="homeRecording" class="Blanc">HOME</h2></a>
+                                            <a href="{{ path('home_demainWeArt') }}#recordingStudios"><h2 class="Violet">RECORDING STUDIOS</h2></a>
+                                            <a href="{{ path('home_demainWeArt') }}#artistLabelServices"><h2  id="artistLabelServicesRecording" class="Rose">ARTIST & LABEL SERVICES</h2></a>
+                                            <a href="{{ path('home_demainWeArt') }}#training"><h2  id="trainingRecording" class="Orange">TRAINING</h2></a>
+                                            <a href="{{ path('home_demainWeArt') }}#events"><h2 id="eventRecording" class="Rouge">EVENTS</h2></a>
+                                            <h2 class="Blanc">PARTENAIRES</h2>
+                                            <h2 class="Blanc">CONTACT</h2>
+                                            <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="md-pr-1 col-md-12 col-lg-9 col-sm-12 mb-5">
+                                        <div class="personal_info color_lightgray bg_transparent">
+                                            <div class="accordion bg_transparent" id="recordingCollapse">
+                                                <div style="border: transparent;" class="card bg_transparent">
+
+
+
+                                                    <!-- ------------------------CARDS BULLE---------------------- -->
+
+                                                        <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
+                                                            <h2 class="container-buttonSousCat">
+                                                                <button class="text-left bg_transparent text-white pl-3 bg{{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="true" aria-controls="collapseOne">
+                                                                    {{ sousCategorie.titre |upper }}
+                                                                </button>
+                                                            </h2>
+                                                        </div>
+                                                        {% if sousCategorie.format == "bulle" %}
+
+                                                            <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse show" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
+                                                                <div class="card-body" style="border: transparent;">
+                                                                    <div class="row paddingCards justify-content-center">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12 col-lg-12">
+                                                                                <div class="price_table">
+                                                                                    <div class="row justify-content-center">
+                                                                                        {% for article in articles %}
+                                                                                            <div class="ml-1 mr-1">
+                                                                                                <div class="table text-center bg_deepblack color_secondery bulle bg{{ sousCategorie.couleur }}">
+                                                                                                    <div class="justify-content-center">
+                                                                                                        <div class="pt-3">
+                                                                                                            <h5>{{ article.titre }}</h5>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        {% endfor %}
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        {% else %}
+                                                            <!-- ------------------------CARDS LIST---------------------- -->
+                                                            <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse show" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
+                                                                <div class="card-body" style="border: transparent;padding-left: 85px">
+                                                                    {% for article in sousCategorie.article %}
+                                                                        <div><i class="{{ sousCategorie.couleur }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div>
+                                                                    {% endfor %}
+                                                                </div>
+                                                            </div>
+                                                        {% endif %}
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <footer class="container-fluid">
+                                <div  style="background-color: rgba(102, 35, 131, .6);" class="row rounded-top">
+                                    <!-- Newsletter -->
+                                    <div class="d-flex justify-content-center col-12 containerNewsletter">
+                                        <form accept-charset="UTF-8" action="https://www.sendicate.net/subscribe/xxxxxx" method="post" class="newsletter">
+                                            <input type="email" id="subscriber_email" name="subscriber[email]" value="" placeholder="E-mail" />
+                                            <input style="background: #B34575;" type="submit" name="commit" value="NEWSLETTER" disabled="disabled"/>
+                                        </form>
+                                    </div>
+
+
+
+
+                                    <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-center text-sm-center text-lg-left text-white mt-5">
+                                        <div class="col-12 d-flex flex-wrap justify-content-center text-nowrap">
+                                            <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                                <h2 class="pl-0 text-lg-center pb-2">Home</h2>
+                                                <h3 class="small text-lg-center linkFooter">Contact</h3>
+                                                <h3 class="small text-lg-center linkFooter">Partenaires</h3>
+                                            </div>
+                                            <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                                <h2 class="pl-0 text-lg-center pb-2">Recording studios</h2>
+                                                {% for recordingStutio in recordingStutios.sousCategorie %}
+                                                    <a href="{{ path('page_categorie', {'titre': recordingStutio.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                                <h2 class="pl-0 text-lg-center pb-2">Artist & label services</h2>
+                                                {% for artistLabelServices in artistLabelServices.sousCategorie %}
+                                                    <a href="{{ path('page_categorie', {'titre': artistLabelServices.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                                <h2 class="pl-0 text-lg-center pb-2">Events</h2>
+                                                {% for event in event.sousCategorie %}
+                                                    <a href="{{ path('page_categorie', {'titre': event.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ event.titre }}</h3></a>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                                <h2 class="pl-0 text-lg-center pb-2">Training</h2>
+                                                {% for training in training.sousCategorie %}
+                                                    <a href="{{ path('page_categorie', {'titre': training.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ training.titre }}</h3></a>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-12 text-white text-sm-center text-lg-center mt-5">
+                                        <h2 class="pl-0">
+                                            <i class="pl-3 pr-3 fa fa-facebook-official" aria-hidden="true"> Rejoignez nous sur Facebook</i>
+                                            <i class="pl-3 pr-3 fa fa-instagram" aria-hidden="true"> Suivez nous sur Instagram</i>
+                                        </h2>
+                                    </div>
+                                    <div class="col-12 text-white text-center mt-5">
+                                        <img class="logoMusicManufacturing" src="/demainWeArt/images/logo/logo-music.png">
+                                    </div>
+                                    <div class="col-12 text-white text-center mt-5">
+                                        <a href="#">imlyon.co 2019 - 2019 - Mentions légales</a>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!--	End Contact
+    ===================================================-->
+
+<!--	Js Links
+===================================================-->
+<script src="/demainWeArt/js/jquery.min.js"></script>
+<script src="/demainWeArt/js/popper.min.js"></script>
+<script src="/demainWeArt/js/bootstrap.min.js"></script>
+<script src="/demainWeArt/js/plugins.js"></script>
+<script src="/demainWeArt/js/jquery.pagepiling.min.js"></script>
+<script src="/demainWeArt/js/custom.js"></script>
+</body>
+</html>

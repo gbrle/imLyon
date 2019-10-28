@@ -1,137 +1,26 @@
-/* BULLE BACKGROUND */
-.bulleTeam{
-    background: #662383 !important;
-}
-.bullePack{
-    background: #4B0754 !important;
-}
-.bulleMao{
-    background: #F05A23 !important;
-}
-.bulleSonorisation{
-    background: #F39200 !important;
-}
-.bulleMusicBusiness{
-    background: #E69F87 !important;
-}
-.bulleStageCourtsAteliers{
-    background: #C59C6C !important;
-}
-.bulleStageCourtsInstruments{
-    background: #F05A23 !important;
-}
-.bulleProjetsPedagogiquesJeunePublic{
-    background: #F39200 !important;
-}
-.bulleWorkShops{
-    background: #EC1C23 !important;
-}
-.bulleCreativeBeatmakingCamps{
-    background: #F05A23 !important;
-}
-.bulleMasterclasse{
-    background: #F39200 !important;
-}
-.bulleRDparty{
-    background: #C59C6C !important;
-}
-.bulleFestival{
-    background: #EC1C23 !important;
-}
-
-
 
 /* BULLE HOVER */
-.bulleTeam:hover{
-    background: #662383 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bullePack:hover{
-    background: #4B0754 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleMao:hover{
-    background: #F05A23 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleSonorisation:hover{
-    background: #F39200 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleMusicBusiness:hover{
-    background: #E69F87 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleStageCourtsAteliers:hover{
-    background: #C59C6C !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleStageCourtsInstruments:hover{
-    background: #F05A23 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleProjetsPedagogiquesJeunePublic:hover{
-    background: #F39200 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleWorkShops:hover{
-    background: #EC1C23 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleCreativeBeatmakingCamps:hover{
-    background: #F05A23 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleMasterclasse:hover{
-    background: #F39200 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleRDparty:hover{
-    background: #C59C6C !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
-.bulleFestival:hover{
-    background: #EC1C23 !important;
-    transition-duration: 0.9s;
-    opacity: 0.6;
-}
 
-/* Bulle Font Size */
-
-.bulleTeam, .bullePack, .bulleMao, .bulleSonorisation,
-.bulleMusicBusiness, .bulleStageCourtsAteliers, .bulleStageCourtsInstruments,
-.bulleProjetsPedagogiquesJeunePublic, .bulleWorkShops, .bulleCreativeBeatmakingCamps,
-.bulleMasterclasse, .bulleRDparty, .bulleFestival{
+.bulle{
     height: 150px;
     width: 170px;
 }
-
-.bulleTeam h1, .bullePack h1, .bulleMao h1, .bulleSonorisation h1,
-.bulleMusicBusiness h1, .bulleStageCourtsAteliers h1, .bulleStageCourtsInstruments h1,
-.bulleProjetsPedagogiquesJeunePublic h1, .bulleWorkShops h1, .bulleCreativeBeatmakingCamps h1,
-.bulleMasterclasse h1, .bulleRDparty h1, .bulleFestival h1 {
+.bulle:hover{
+    transition-duration: 0.9s;
+    opacity: 0.6;
+}
+.bulle h1{
     font-size: 12px;
     line-height: 1px;
 }
-
-.bulleTeam h5, .bullePack h5, .bulleMao h5, .bulleSonorisation h5,
-.bulleMusicBusiness h5, .bulleStageCourtsAteliers h5, .bulleStageCourtsInstruments h5,
-.bulleProjetsPedagogiquesJeunePublic h5, .bulleWorkShops h5, .bulleCreativeBeatmakingCamps h5,
-.bulleMasterclasse h5, .bulleRDparty h5, .bulleFestival h5{
+.bulle h5{
     font-size: 10px;
     color: white;
     line-height: 15px;
+}
+
+.linkFooter:hover{
+    transition-duration: 0.3s;
+    opacity: 0.6;
 }
 

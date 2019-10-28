@@ -1,80 +1,80 @@
-/* Menu Couleurs */
-.menuColorViolet{
+/* Couleurs  Textes*/
+.Violet{
     color: #662383;
 }
-.menuColorRose{
+.Rose{
     color: #B34575;
 }
-.menuColorOrange{
+.Orange{
     color: #F05A23;
 }
-.menuColorBlanc{
+.Blanc{
     color: #FFFFFF;
 }
-.menuColorRouge{
+.Rouge{
     color: #EC1C23;
 }
-.menuColorGris{
+.Gris{
     color: #5A3E62;
 }
-.menuColorVioletFonce{
+.VioletFonce{
     color: #4B0754;
 }
-.menuColorMarron{
+.Marron{
     color: #834960;
 }
-.menuColorRoseClaire{
+.RoseClaire{
     color: #FF7AAC;
 }
-.menuColorBeige{
+.Beige{
     color: #B39394;
 }
-.menuColorRoseJaune{
+.Jaune{
     color: #F39200;
 }
-.menuColorRosePale{
+.RosePale{
     color: #E69F87;
 }
-.menuColorOrangePale{
+.OrangePale{
     color: #C59C6C;
 }
 
 
 
-/* Buttons Couleurs */
-.buttonSousCatViolet{
-    background-color: #662383;
+/* Background Couleurs */
+.bgViolet{
+    background-color: #662383 !important;
 }
-.buttonSousCatRose{
-    background-color: #B34575;
+.bgRose{
+    background-color: #B34575 !important;
 }
-.buttonSousCatGris{
-    background-color: #5A3E62;
+.bgGris{
+    background-color: #5A3E62 !important;
 }
-.buttonSousCatVioletFonce{
-    background-color: #4B0754;
+.bgVioletFonce{
+    background-color: #4B0754 !important;
 }
-.buttonSousCatMarron{
-    background-color: #834960;
+.bgMarron{
+    background-color: #834960 !important;
 }
-.buttonSousCatRoseClaire{
-    background-color: #FF7AAC;
+.bgRoseClaire{
+    background-color: #FF7AAC !important;
 }
-.buttonSousCatBeige{
-    background-color: #B39394;
+.bgBeige{
+    background-color: #B39394 !important;
 }
-.buttonSousCatOrange{
-    background-color: #F05A23;
+.bgOrange{
+    background-color: #F05A23 !important;
 }
-.buttonSousCatJaune{
-    background-color: #F39200;
+.bgJaune{
+    background-color: #F39200 !important;
 }
-.buttonSousCatRosePale{
-    background-color: #E69F87;
+.bgRosePale{
+    background-color: #E69F87 !important;
 }
-.buttonSousCatOrangePale{
-    background-color: #C59C6C;
+.bgOrangePale{
+    background-color: #C59C6C !important;
 }
-.buttonSousCatRouge{
-    background-color: #EC1C23;
+.bgRouge{
+    background-color: #EC1C23 !important;
 }

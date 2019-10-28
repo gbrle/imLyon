@@ -16,12 +16,9 @@
 
 
                         <div class="text-center text-white mt-lg-5 mt-sm-2 container col-12 col-lg-7 col-md-7">
-                            <h2 class="titreEventsMenu text-center">EVENTS</h2>
+                            <h2 class="titreEventsMenu text-center">{{ event.titre }}</h2>
                             <p class="text-center descriptifEventsMenu pt-3">
-                                Le Lorem Ipsum est simplement du faux texte employé
-                                dans la composition et la mise en page avant impression.
-                                Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les
-                                années 1500, quand un.
+                                {{ event.description }}
                             </p>
                             <div class="text-center pt-4" >
                                 <button type="button" id="moreEvents" class="btn btn-light">En savoir plus</button>
@@ -46,14 +43,14 @@
                                 <div class="menuSousCat col-md-3 col-lg-3">
                                     <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
                                         <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
-                                        <div id="currentEvents" class="rotating menuColorRouge"></div>
-                                        <a href="#homePage"><h2  id="homeEvents" class="menuColorBlanc">HOME</h2></a>
-                                        <a href="#recordingPage"><h2  id="recordingEvents" class="menuColorViolet">RECORDING STUDIOS</h2></a>
-                                        <a href="#artistLabelServices"><h2  id="artistLabelServicesEvents" class="menuColorRose">ARTIST & LABEL SERVICES</h2></a>
-                                        <a href="#training"><h2  id="trainingEvents" class="menuColorOrange">TRAINING</h2></a>
-                                        <h2 id="menuEvent" class="menuColorRouge">EVENTS</h2>
-                                        <h2 class="menuColorBlanc">PARTENAIRES</h2>
-                                        <h2 class="menuColorBlanc">CONTACT</h2>
+                                        <div id="currentEvents" class="rotating Rouge"></div>
+                                        <a href="#homePage"><h2  id="homeEvents" class="Blanc">HOME</h2></a>
+                                        <a href="#recordingPage"><h2  id="recordingEvents" class="Violet">RECORDING STUDIOS</h2></a>
+                                        <a href="#artistLabelServices"><h2  id="artistLabelServicesEvents" class="Rose">ARTIST & LABEL SERVICES</h2></a>
+                                        <a href="#training"><h2  id="trainingEvents" class="Orange">TRAINING</h2></a>
+                                        <h2 id="menuEvent" class="Rouge">EVENTS</h2>
+                                        <h2 class="Blanc">PARTENAIRES</h2>
+                                        <h2 class="Blanc">CONTACT</h2>
                                         <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                     </div>
                                 </div>
@@ -66,180 +63,53 @@
 
 
 
-                                                <!-- ------------------------WORKSHOPS---------------------- -->
-                                                <div style="border: transparent;" class="card-header bg_transparent" id="workShopsCollapseLabel">
-                                                    <h2 class="container-buttonSousCat">
-                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatRouge" type="button" data-toggle="collapse" data-target="#workShopsCollapse" aria-expanded="true" aria-controls="workShopsCollapseLabel">
-                                                            WE ART - WORKSHOPS
-                                                        </button>
-                                                    </h2>
-                                                </div>
+                                                <!-- ------------------------CARDS BULLE---------------------- -->
+                                                {% for sousCategorie in event.souscategorie %}
+                                                    <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
+                                                        <h2 class="container-buttonSousCat">
+                                                            <button class="text-left bg_transparent text-white pl-3 bg{{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="true" aria-controls="collapseOne">
+                                                                {{ sousCategorie.titre |upper }}
+                                                            </button>
+                                                        </h2>
+                                                    </div>
+                                                    {% if sousCategorie.format == "bulle" %}
 
-                                                <div style="border: transparent" id="workShopsCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="workShopsCollapseLabel">
-                                                    <div class="card-body" style="border: transparent;">
-                                                        <div class="row paddingCards justify-content-center">
-                                                            <div class="row">
-                                                                <div class="col-md-12 col-lg-12">
-                                                                    <div class="price_table">
-                                                                        <div class="row justify-content-center">
-
-                                                                            <div class="ml-1 mr-1">
-                                                                                <div class="table text-center bg_deepblack color_secondery bulleWorkShops">
-                                                                                    <div class="justify-content-center">
-                                                                                        <div class="pt-3">
-                                                                                            <h5>Maxtown ‘Guitariste’ Réalisateur artistique – Music Producer</h5>
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
+                                                            <div class="card-body" style="border: transparent;">
+                                                                <div class="row paddingCards justify-content-center">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-lg-12">
+                                                                            <div class="price_table">
+                                                                                <div class="row justify-content-center">
+                                                                                    {% for article in sousCategorie.article %}
+                                                                                        <div class="ml-1 mr-1">
+                                                                                            <div class="table text-center bg_deepblack color_secondery bulle bg{{ sousCategorie.couleur }}">
+                                                                                                <div class="justify-content-center">
+                                                                                                    <div class="pt-3">
+                                                                                                        <h5>{{ article.titre }}</h5>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
                                                                                         </div>
-                                                                                    </div>
+                                                                                    {% endfor %}
                                                                                 </div>
                                                                             </div>
-
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- ------------------------CREATIVE BEATMAKING CAMPS---------------------- -->
-                                                <div style="border: transparent;" class="card-header bg_transparent" id="creativeBeatmakingCampsCollapseLabel">
-                                                    <h2 class="container-buttonSousCat">
-                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatOrange" type="button" data-toggle="collapse" data-target="#creativeBeatmakingCampsCollapse" aria-expanded="true" aria-controls="creativeBeatmakingCampsCollapseLabel">
-                                                            WE ART - CREATIVE BEATMAKING CAMPS
-                                                        </button>
-                                                    </h2>
-                                                </div>
-
-                                                <div style="border: transparent" id="creativeBeatmakingCampsCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="creativeBeatmakingCampsCollapseLabel">
-                                                    <div class="card-body" style="border: transparent;">
-                                                        <div class="row paddingCards justify-content-center">
-                                                            <div class="row">
-                                                                <div class="col-md-12 col-lg-12">
-                                                                    <div class="price_table">
-                                                                        <div class="row justify-content-center">
-
-                                                                            <div class="ml-1 mr-1">
-                                                                                <div class="table text-center bg_deepblack color_secondery bulleCreativeBeatmakingCamps">
-                                                                                    <div class="justify-content-center">
-                                                                                        <div class="pt-3">
-                                                                                            <h5>Maxtown ‘Guitariste’ Réalisateur artistique – Music Producer</h5>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                    {% else %}
+                                                        <!-- ------------------------CARDS LIST---------------------- -->
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
+                                                            <div class="card-body" style="border: transparent;padding-left: 85px">
+                                                                {% for article in sousCategorie.article %}
+                                                                    <div><i class="{{ sousCategorie.couleur }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div>
+                                                                {% endfor %}
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- ------------------------MASTERCLASSE---------------------- -->
-                                                <div style="border: transparent;" class="card-header bg_transparent" id="masterclasseCollapseLabel">
-                                                    <h2 class="container-buttonSousCat">
-                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatJaune" type="button" data-toggle="collapse" data-target="#masterclasseCollapse" aria-expanded="true" aria-controls="masterclasseCollapseLabel">
-                                                            WE ART - MASTERCLASSE
-                                                        </button>
-                                                    </h2>
-                                                </div>
-
-                                                <div style="border: transparent" id="masterclasseCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="masterclasseCollapseLabel">
-                                                    <div class="card-body" style="border: transparent;">
-                                                        <div class="row paddingCards justify-content-center">
-                                                            <div class="row">
-                                                                <div class="col-md-12 col-lg-12">
-                                                                    <div class="price_table">
-                                                                        <div class="row justify-content-center">
-
-                                                                            <div class="ml-1 mr-1">
-                                                                                <div class="table text-center bg_deepblack color_secondery bulleMasterclasse">
-                                                                                    <div class="justify-content-center">
-                                                                                        <div class="pt-3">
-                                                                                            <h5>Maxtown ‘Guitariste’ Réalisateur artistique – Music Producer</h5>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- ------------------------R&D PARTY---------------------- -->
-                                                <div style="border: transparent;" class="card-header bg_transparent" id="RDpartyCollapseLabel">
-                                                    <h2 class="container-buttonSousCat">
-                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatOrangePale" type="button" data-toggle="collapse" data-target="#RDpartyCollapse" aria-expanded="true" aria-controls="RDpartyCollapseLabel">
-                                                            WE ART - R&D PARTY
-                                                        </button>
-                                                    </h2>
-                                                </div>
-
-                                                <div style="border: transparent" id="RDpartyCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="RDpartyCollapseLabel">
-                                                    <div class="card-body" style="border: transparent;">
-                                                        <div class="row paddingCards justify-content-center">
-                                                            <div class="row">
-                                                                <div class="col-md-12 col-lg-12">
-                                                                    <div class="price_table">
-                                                                        <div class="row justify-content-center">
-
-                                                                            <div class="ml-1 mr-1">
-                                                                                <div class="table text-center bg_deepblack color_secondery bulleRDparty">
-                                                                                    <div class="justify-content-center">
-                                                                                        <div class="pt-3">
-                                                                                            <h5>Maxtown ‘Guitariste’ Réalisateur artistique – Music Producer</h5>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- ------------------------FESTIVAL---------------------- -->
-                                                <div style="border: transparent;" class="card-header bg_transparent" id="festivalCollapseLabel">
-                                                    <h2 class="container-buttonSousCat">
-                                                        <button class="text-left bg_transparent text-white pl-3 buttonSousCatRouge" type="button" data-toggle="collapse" data-target="#festivalCollapse" aria-expanded="true" aria-controls="festivalCollapseLabel">
-                                                            WE ART - FESTIVAL
-                                                        </button>
-                                                    </h2>
-                                                </div>
-
-                                                <div style="border: transparent" id="festivalCollapse" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="festivalCollapseLabel">
-                                                    <div class="card-body" style="border: transparent;">
-                                                        <div class="row paddingCards justify-content-center">
-                                                            <div class="row">
-                                                                <div class="col-md-12 col-lg-12">
-                                                                    <div class="price_table">
-                                                                        <div class="row justify-content-center">
-
-                                                                            <div class="ml-1 mr-1">
-                                                                                <div class="table text-center bg_deepblack color_secondery bulleFestival">
-                                                                                    <div class="justify-content-center">
-                                                                                        <div class="pt-3">
-                                                                                            <h5>Maxtown ‘Guitariste’ Réalisateur artistique – Music Producer</h5>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                    {% endif %}
+                                                {% endfor %}
 
 
 
@@ -262,48 +132,47 @@
 
 
 
-                                <div class="col-lg-10 col-sm-12 d-flex flex-wrap text-sm-center text-sm-center text-lg-left pt-5 text-white text-nowrap">
-                                    <div class="col-12 d-flex flex-wrap">
-                                        <div class="col-lg-3 col-sm-12 text-sm-center text-lg-left">
-                                            <h2 class="pl-0">Home</h2>
-                                            <h3 class="small">Contact</h3>
-                                            <h3 class="small">Partenaires</h3>
+                                <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-center text-sm-center text-lg-left text-white mt-5">
+                                    <div class="col-12 d-flex flex-wrap justify-content-center text-nowrap">
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                            <h2 class="pl-0 text-lg-center pb-2">Home</h2>
+                                            <h3 class="small text-lg-center linkFooter">Contact</h3>
+                                            <h3 class="small text-lg-center linkFooter">Partenaires</h3>
                                         </div>
-                                        <div class="col-lg-3 col-sm-12 text-sm-center text-lg-left">
-                                            <h2 class="pl-0">Recording studios</h2>
-                                            <h3 class="small">Team</h3>
-                                            <h3 class="small">Services</h3>
-                                            <h3 class="small">Equipements</h3>
-                                            <h3 class="small">Packs</h3>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                            <h2 class="pl-0 text-lg-center pb-2">Recording studios</h2>
+                                            {% for recordingStutio in recordingStutios.sousCategorie %}
+                                                <a href="{{ path('page_categorie', {'titre': recordingStutio.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                            {% endfor %}
                                         </div>
-                                        <div class="col-lg-3 col-sm-12 text-sm-center text-lg-left">
-                                            <h2 class="pl-0">Artist & label services</h2>
-                                            <h3 class="small">Création</h3>
-                                            <h3 class="small">Diffusion</h3>
-                                            <h3 class="small">Marketing</h3>
-                                            <h3 class="small">Production & supports</h3>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                            <h2 class="pl-0 text-lg-center pb-2">Artist & label services</h2>
+                                            {% for artistLabelServices in artistLabelServices.sousCategorie %}
+                                                <a href="{{ path('page_categorie', {'titre': artistLabelServices.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                            {% endfor %}
                                         </div>
-                                        <div class="col-lg-3 col-sm-12 text-sm-center text-lg-left">
-                                            <h2 class="pl-0">Events</h2>
-                                            <h3 class="small">Demain We Art - Live Broadcasting</h3>
-                                            <h3 class="small">Demain We Art - Festival</h3>
-                                            <h3 class="small">Les Rencontres Demain We Art</h3>
-                                            <h3 class="small">We Art - Casting contest</h3>
-                                            <h3 class="small">We Art - Creative Beatmaking Camps</h3>
-                                            <h3 class="small">We Art - Masterclasse</h3>
-                                            <h3 class="small">We Art - R&D Party</h3>
-                                            <h3 class="small">We Art - Workshops</h3>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                            <h2 class="pl-0 text-lg-center pb-2">Events</h2>
+                                            {% for event in event.sousCategorie %}
+                                                <a href="{{ path('page_categorie', {'titre': event.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ event.titre }}</h3></a>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                            <h2 class="pl-0 text-lg-center pb-2">Training</h2>
+                                            {% for training in training.sousCategorie %}
+                                                <a href="{{ path('page_categorie', {'titre': training.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ training.titre }}</h3></a>
+                                            {% endfor %}
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-2 col-sm-12 text-white text-sm-center text-lg-left footerReseauxSociaux mt-5">
+                                <div class="col-lg-12 col-sm-12 text-white text-sm-center text-lg-center mt-5">
                                     <h2 class="pl-0">
-                                        <i class="fa fa-facebook-official" aria-hidden="true"> Rejoignez nous sur Facebook</i>
-                                        <i class="fa fa-instagram" aria-hidden="true"> Suivez nous sur Instagram</i>
+                                        <i class="pl-3 pr-3 fa fa-facebook-official" aria-hidden="true"> Rejoignez nous sur Facebook</i>
+                                        <i class="pl-3 pr-3 fa fa-instagram" aria-hidden="true"> Suivez nous sur Instagram</i>
                                     </h2>
                                 </div>
                                 <div class="col-12 text-white text-center mt-5">
-                                    <img class="logoMusicManufacturing" src="http://imlyon.co/logo-imlyon.png">
+                                    <img class="logoMusicManufacturing" src="/demainWeArt/images/logo/logo-music.png">
                                 </div>
                                 <div class="col-12 text-white text-center mt-5">
                                     <a href="#">imlyon.co 2019 - 2019 - Mentions légales</a>

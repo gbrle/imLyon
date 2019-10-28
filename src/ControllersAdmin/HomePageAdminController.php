@@ -12,8 +12,11 @@ class HomePageAdminController extends AbstractController
      */
     public function index()
     {
-        return $this->render('admin/index.html.twig', [
-            'controller_name' => 'HomePageAdminController',
+
+        $toto = "adad";
+
+        return $this->render('admin/home.html.twig', [
+            'toto' => $toto,
         ]);
     }
 }

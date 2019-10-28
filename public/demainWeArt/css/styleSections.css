@@ -17,14 +17,14 @@
 }
 
 .headerRecordingSection{
-    background: url("http://imlyon.co/wp-content/themes/fukasawa/home-recording-studios.jpg") no-repeat center / cover;
+    background: url("/demainWeArt/images/backgroundsSections/background-recording.jpg") no-repeat center / cover;
     height: 100vh;
 }
 
 .menuRecordingSection{
     height: 100%;
     display: none;
-    background: url("http://imlyon.co/wp-content/themes/fukasawa/content-recording-studios.jpg") no-repeat center / cover;
+    background: url("/demainWeArt/images/backgroundsSections/background-recording-section.jpg") no-repeat center / cover;
 }
 .footerRecordingSection{
     display: none;
@@ -61,14 +61,14 @@
 }
 
 .headerArtistLabelServicesSection{
-    background: url("http://imlyon.co/wp-content/themes/fukasawa/home-label-services.jpg") no-repeat center / cover;
+    background: url("/demainWeArt/images/backgroundsSections/background-label.jpg") no-repeat center / cover;
     height: 100vh;
 }
 
 .menuArtistLabelServicesSection{
     height: 100%;
     display: none;
-    background: url("http://imlyon.co/wp-content/themes/fukasawa/content-label-services.jpg") no-repeat center / cover;
+    background: url("/demainWeArt/images/backgroundsSections/background-label-section.jpg") no-repeat center / cover;
 }
 .footerRecordingSection{
     display: none;
@@ -107,14 +107,14 @@
 }
 
 .headerTrainingSection{
-    background: url("http://imlyon.co/wp-content/themes/fukasawa/home-training.jpg") no-repeat center / cover;
+    background: url("/demainWeArt/images/backgroundsSections/background-training.jpg") no-repeat center / cover;
     height: 100vh;
 }
 
 .menuTrainingSection{
     height: 100%;
     display: none;
-    background: url("http://imlyon.co/wp-content/themes/fukasawa/content-training.jpg") no-repeat center / cover;
+    background: url("/demainWeArt/images/backgroundsSections/background-training-section.jpg") no-repeat center / cover;
 }
 .footerTrainingSection{
     display: none;
@@ -153,14 +153,14 @@
 }
 
 .headerEventsSection{
-    background: url("http://imlyon.co/wp-content/themes/fukasawa/home-events.jpg") no-repeat center / cover;
+    background: url("/demainWeArt/images/backgroundsSections/background-events.jpg") no-repeat center / cover;
     height: 100vh;
 }
 
 .menuEventsSection{
     height: 100%;
     display: none;
-    background: url("http://imlyon.co/wp-content/themes/fukasawa/content-events.jpg") no-repeat center / cover;
+    background: url("/demainWeArt/images/backgroundsSections/background-events-section.jpg") no-repeat center / cover;
 }
 .footerEventsSection{
     display: none;

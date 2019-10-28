@@ -2194,9 +2194,7 @@ label.radios {
     width: 100%;
 }
 /* Buttons Sous catégorie */
-.footerReseauxSociaux{
-    border-left: 1px white solid;
-}
+
 .container-buttonSousCat{
     margin-right: 9rem;
     text-align: right;

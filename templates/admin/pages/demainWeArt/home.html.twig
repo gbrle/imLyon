@@ -1,0 +1,30 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+    <!-- TITRE -->
+<div class="card">
+    <div class="header">
+        <h4 class="title">Vous êtes sur l'administration du site <span class="text-danger">Demain We Art</span></h4>
+    </div>
+</div>
+
+<div class="card">
+        <h4 class="text-info">Quelle section du site voulez vous administrer ?</h4>
+</div>
+
+    <div class="row">
+{% for categorie in categories %}
+        <div class="col-sm-12 col-lg-2">
+            <div class="thumbnail">
+                <img style="width: 100%" class="img-fluid" src="https://via.placeholder.com/200x150" alt="">
+                <div class="caption">
+                    <h3 style="font-size: 14px; font-weight: bold" class="text-center">{{ categorie.titre }}</h3>
+                    <p class="text-center">...</p>
+                    <p class="text-center"><a href="#" class="btn btn-info" role="button">Administrer</a></p>
+                </div>
+            </div>
+        </div>
+{% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,11 +1,15 @@
+# Home page de imLyon.co (entré des deux site)
 controllersHome:
     resource: ../../src/ControllersHome/
     type: annotation
 
+# Controller du site demain we art (front)
 controllersDemainWeArt:
     resource: ../../src/ControllersDemainWeArt/
     type: annotation
 
+# Controller du Home administrateur
 controllersAdmin:
     resource: ../../src/ControllersAdmin/
     type: annotation
+
