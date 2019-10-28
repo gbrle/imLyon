@@ -7,6 +7,9 @@ use App\Entity\Categorie;
 use App\Entity\SousCategorie;
 use App\Repository\ArticleRepository;
 use App\Repository\CategorieRepository;
+use Cocur\Slugify\Bridge\Symfony\CocurSlugifyBundle;
+use Cocur\Slugify\Slugify;
+use Cocur\Slugify\SlugifyInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -17,8 +20,14 @@ class PageCategorieController extends AbstractController
     /**
      * @Route("/page_categorie/{titre}", name="page_categorie")
      */
-    public function index(CategorieRepository $categorieRepository, SousCategorie $sousCategorie)
+    public function index(CategorieRepository $categorieRepository, SousCategorie $sousCategorie, $titre, SlugifyInterface $slugify)
     {
+
+
+        $nomRout = $this->getDoctrine()->getRepository('Article')->findOneBy(['titre' => $titre]);
+
+        dd($nomRout);
+
 
         $articles = $sousCategorie->getArticle();
 
@@ -42,8 +51,8 @@ class PageCategorieController extends AbstractController
 
             'articles' => $articles,
             'sousCategorie' => $sousCategorie,
-
             // Articles
+
         ]);
     }
 }
