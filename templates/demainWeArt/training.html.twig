@@ -143,25 +143,25 @@
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
                                             <h2 class="pl-0 text-lg-center pb-2">Recording studios</h2>
                                             {% for recordingStutio in recordingStutios.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'titre': recordingStutio.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                                <a href="{{ path('page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-center linkFooter">{{ recordingStutio.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
                                             <h2 class="pl-0 text-lg-center pb-2">Artist & label services</h2>
                                             {% for artistLabelServices in artistLabelServices.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'titre': artistLabelServices.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                                <a href="{{ path('page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-center linkFooter">{{ artistLabelServices.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
                                             <h2 class="pl-0 text-lg-center pb-2">Events</h2>
                                             {% for event in event.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'titre': event.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ event.titre }}</h3></a>
+                                                <a href="{{ path('page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-center linkFooter">{{ event.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
                                             <h2 class="pl-0 text-lg-center pb-2">Training</h2>
                                             {% for training in training.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'titre': training.titre}) }}"><h3 class="small text-lg-center linkFooter">{{ training.titre }}</h3></a>
+                                                <a href="{{ path('page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-center linkFooter">{{ training.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                     </div>

@@ -15,17 +15,16 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 
-class PageCategorieController extends AbstractController
+class PageArticleController extends AbstractController
 {
     /**
-     * @Route("/categorie/{slugifyTitre}", name="page_categorie")
+     * @Route("/article/{slugifyTitre}", name="page_article")
      */
-    public function index(CategorieRepository $categorieRepository, SousCategorie $sousCategorie)
+    public function index(CategorieRepository $categorieRepository, Article $article)
     {
 
-        $articles = $sousCategorie->getArticle();
-        $couleurFooter = $sousCategorie->getCategorie()->getCouleurFooter();
-        $background = $sousCategorie->getCategorie()->getBackgroundImage();
+        $couleurFooter = $article->getSousCategorie()->getCategorie()->getCouleurFooter();
+        $background = $article->getSousCategorie()->getCategorie()->getBackgroundImage();
 
 
         // CATEGORIES
@@ -37,7 +36,7 @@ class PageCategorieController extends AbstractController
 
 
 
-        return $this->render('demainWeArt/pageCategorie.html.twig', [
+        return $this->render('demainWeArt/pageArticle.html.twig', [
             // CATERORIES
             'recordingStutios' => $recordingStutios[0],
             'artistLabelServices' => $artistLabelServices[0],
@@ -45,8 +44,8 @@ class PageCategorieController extends AbstractController
             'event' => $event[0],
             'partenaire' => $partenaire[0],
 
-            'articles' => $articles,
-            'sousCategorie' => $sousCategorie,
+
+            'article' => $article,
             'couleurFooter' => $couleurFooter,
             'background' => $background,
             // Articles

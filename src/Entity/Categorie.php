@@ -39,6 +39,16 @@ class Categorie
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $couleurFooter;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $backgroundImage;
+
     public function __construct()
     {
         $this->sous_categorie = new ArrayCollection();
@@ -112,6 +122,30 @@ class Categorie
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getCouleurFooter(): ?string
+    {
+        return $this->couleurFooter;
+    }
+
+    public function setCouleurFooter(?string $couleurFooter): self
+    {
+        $this->couleurFooter = $couleurFooter;
+
+        return $this;
+    }
+
+    public function getBackgroundImage(): ?string
+    {
+        return $this->backgroundImage;
+    }
+
+    public function setBackgroundImage(?string $backgroundImage): self
+    {
+        $this->backgroundImage = $backgroundImage;
 
         return $this;
     }

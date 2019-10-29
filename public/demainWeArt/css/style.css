@@ -107,7 +107,7 @@ ul li{
 /*	font-family: 'Poppins', sans-serif;*/
 /*}*/
 #pp-nav.right{
-    display: block;
+    display: none;
 }
 a{
     color: white;
@@ -2205,6 +2205,9 @@ label.radios {
     width: 75%;
     min-height: 34px;
 }
+.bulleSousCategorie{
+    width: 100% !important;
+}
 
 .card-header button:hover{
     width: 100%;
@@ -2212,11 +2215,16 @@ label.radios {
     transition-duration: 1s;
 }
 .logoDemainContainer{
-    text-align: left;
-    padding-top: 130px;
-    padding-left: 180px;
+    text-align: center;
+    padding-top: 148px;
 }
+.contenueArticle, .titreArticle{
+    padding-left: 120px;
+}
+.titreArticle{
+    padding-top: 60px;
 
+}
 /* ROTATE MENU */
 #currentRecording {
     width: 13px;
@@ -2466,6 +2474,16 @@ label.radios {
 // Medium devices (tablets, 768px and up)
 ============================================================*/
 @media (max-width: 991px){
+    .contenueArticle, .titreArticle{
+        padding-left: 0;
+    }
+    .titreArticle{
+        padding-top: 20px;
+
+    }
+    .bulleSousCategorie{
+        width: 80% !important;
+    }
     .footerReseauxSociaux{
         border-left: 0;
     }

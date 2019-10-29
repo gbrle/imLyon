@@ -45,6 +45,11 @@ class SousCategorie
      */
     private $format;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $slugifyTitre;
+
     public function __construct()
     {
         $this->article = new ArrayCollection();
@@ -131,6 +136,18 @@ class SousCategorie
     public function setFormat(?string $format): self
     {
         $this->format = $format;
+
+        return $this;
+    }
+
+    public function getSlugifyTitre(): ?string
+    {
+        return $this->slugifyTitre;
+    }
+
+    public function setSlugifyTitre(?string $slugifyTitre): self
+    {
+        $this->slugifyTitre = $slugifyTitre;
 
         return $this;
     }
