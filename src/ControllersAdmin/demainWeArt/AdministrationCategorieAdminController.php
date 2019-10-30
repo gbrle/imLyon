@@ -25,8 +25,13 @@ class AdministrationCategorieAdminController extends AbstractController
      */
     public function index(Categorie $categorie, Request $request, ObjectManager $manager, SlugifyInterface $slugify)
     {
-        $sousCategorie = new SousCategorie();
 
+
+
+
+
+        // Start Créer Form Sous Catégorie ----------------->
+        $sousCategorie = new SousCategorie();
 
         $formSousCategorie = $this->createFormBuilder($sousCategorie)
                     ->add('titre')
@@ -62,19 +67,46 @@ class AdministrationCategorieAdminController extends AbstractController
         $formSousCategorie->handleRequest($request);
 
         if($formSousCategorie->isSubmitted() && $formSousCategorie->isValid()){
+
             $sousCategorie->setSlugifyTitre($slugify->slugify($sousCategorie->getTitre()));
             $sousCategorie->setCategorie($categorie);
+
 
             $manager->persist($sousCategorie);
             $manager->flush();
 
-            }
+            $this->addFlash('message', 'La sous-catégorie "' . $sousCategorie->getTitre() . '" a bien été ajoutée');
+
+            return $this->redirectToRoute('demainWeArt_home');
+
+        }
+        // End Créer Form Sous Catégorie ----------------->
 
 
+        // Start Créer Form Texte Présentation ----------------->
+
+
+        $formTextePresentation = $this->createFormBuilder($categorie)
+            ->add('description')
+            ->getForm();
+        $formTextePresentation->handleRequest($request);
+        if($formTextePresentation->isSubmitted() && $formTextePresentation->isValid()){
+            $categorie->setDescription($categorie->getDescription());
+
+            $manager->persist($categorie);
+            $manager->flush();
+
+            $this->addFlash('message', 'Le texte de présentation de la section "' . $categorie->getTitre() . '" a bien été modifié');
+
+            return $this->redirectToRoute('demainWeArt_home');
+
+        }
+        // End Créer Form Texte Présentation ----------------->
 
         return $this->render('admin/pages/demainWeArt/administrationCategorie.html.twig', [
             'categorie' => $categorie,
             'formSousCategorie' => $formSousCategorie->createView(),
+            'formTextePresentation' => $formTextePresentation->createView(),
 
         ]);
     }

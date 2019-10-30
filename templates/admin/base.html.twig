@@ -146,21 +146,24 @@
     <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
     <script src="/admin/js/demo.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
+    {% for message in app.flashes('message') %}
+        <script type="text/javascript">
+            $(document).ready(function(){
 
-            demo.initChartist();
+                demo.initChartist();
 
-            $.notify({
-                icon: 'pe-7s-gift',
-                message: "Welcome to <b>Light Bootstrap Dashboard</b> - a beautiful freebie for every web developer."
+                $.notify({
 
-            },{
-                type: 'success',
-                timer: 0
+                    message: "{{ message }}"
+
+                },{
+                    type: 'info',
+                    timer: 0
+                });
+
             });
+        </script>
+    {% endfor %}
 
-        });
-    </script>
 
 </html>
