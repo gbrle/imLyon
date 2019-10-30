@@ -3867,3 +3867,84 @@ fieldset[disabled] .btn-neutral.active {
         -webkit-overflow-scrolling: touch;
     }
 }
+
+/* Couleurs  Textes*/
+.Violet{
+    color: #662383;
+}
+.Rose{
+    color: #B34575;
+}
+.Orange{
+    color: #F05A23;
+}
+.Blanc{
+    color: #FFFFFF;
+}
+.Rouge{
+    color: #EC1C23;
+}
+.Gris{
+    color: #5A3E62;
+}
+.VioletFonce{
+    color: #4B0754;
+}
+.Marron{
+    color: #834960;
+}
+.RoseClaire{
+    color: #FF7AAC;
+}
+.Beige{
+    color: #B39394;
+}
+.Jaune{
+    color: #F39200;
+}
+.RosePale{
+    color: #E69F87;
+}
+.OrangePale{
+    color: #C59C6C;
+}
+
+
+
+/* Background Couleurs */
+.bgViolet{
+    background-color: #662383 !important;
+}
+.bgRose{
+    background-color: #B34575 !important;
+}
+.bgGris{
+    background-color: #5A3E62 !important;
+}
+.bgVioletFonce{
+    background-color: #4B0754 !important;
+}
+.bgMarron{
+    background-color: #834960 !important;
+}
+.bgRoseClaire{
+    background-color: #FF7AAC !important;
+}
+.bgBeige{
+    background-color: #B39394 !important;
+}
+.bgOrange{
+    background-color: #F05A23 !important;
+}
+.bgJaune{
+    background-color: #F39200 !important;
+}
+.bgRosePale{
+    background-color: #E69F87 !important;
+}
+.bgOrangePale{
+    background-color: #C59C6C !important;
+}
+.bgRouge{
+    background-color: #EC1C23 !important;
+}

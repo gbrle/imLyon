@@ -67,7 +67,7 @@
                                                 {% for sousCategorie in event.souscategorie %}
                                                     <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
                                                         <h2 class="container-buttonSousCat">
-                                                            <button class="text-left bg_transparent text-white pl-3 bg{{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="true" aria-controls="collapseOne">
+                                                            <button class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="true" aria-controls="collapseOne">
                                                                 {{ sousCategorie.titre |upper }}
                                                             </button>
                                                         </h2>
@@ -83,13 +83,15 @@
                                                                                 <div class="row justify-content-center">
                                                                                     {% for article in sousCategorie.article %}
                                                                                         <div class="ml-1 mr-1">
-                                                                                            <div class="table text-center bg_deepblack color_secondery bulle bg{{ sousCategorie.couleur }}">
-                                                                                                <div class="justify-content-center">
-                                                                                                    <div class="pt-3">
-                                                                                                        <h5>{{ article.titre }}</h5>
+                                                                                            <a href="{{ path('page_article', {'slugifyTitre': article.slugifyTitre}) }}">
+                                                                                                <div class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
+                                                                                                    <div class="justify-content-center">
+                                                                                                        <div class="pt-3">
+                                                                                                            <h5>{{ article.titre }}</h5>
+                                                                                                        </div>
                                                                                                     </div>
                                                                                                 </div>
-                                                                                            </div>
+                                                                                            </a>
                                                                                         </div>
                                                                                     {% endfor %}
                                                                                 </div>
@@ -104,7 +106,7 @@
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
                                                                 {% for article in sousCategorie.article %}
-                                                                    <div><i class="{{ sousCategorie.couleur }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div>
+                                                                    <a href="{{ path('page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
                                                                 {% endfor %}
                                                             </div>
                                                         </div>
