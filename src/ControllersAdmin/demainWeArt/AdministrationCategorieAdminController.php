@@ -2,12 +2,15 @@
 
 namespace App\ControllersAdmin\demainWeArt;
 
+use App\Entity\Article;
 use App\Entity\Categorie;
 use App\Entity\DemainWeArt;
 use App\Entity\SousCategorie;
 use App\Repository\CategorieRepository;
+use App\Repository\SousCategorieRepository;
 use Cocur\Slugify\SlugifyInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
@@ -20,14 +23,46 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdministrationCategorieAdminController extends AbstractController
 {
 
+
+
+    /**
+     * @Route("admin/demainWeArt/supprimerArticle/{id}", name="demainWeArt_administration_supprimer_article")
+     */
+    public function supprimerArticle(Article $article, EntityManagerInterface $manager, $id)
+    {
+
+        $manager->remove($article);
+
+        $manager->flush();
+
+        $this->addFlash('message', 'L\'article" "' . $article->getTitre() . '" a bien été supprimée');
+
+        return $this->redirectToRoute('demainWeArt_home');
+    }
+
+    /**
+     * @Route("admin/demainWeArt/supprimerSousCategorie/{id}", name="demainWeArt_administration_supprimer_categorie")
+     */
+    public function supprimerSousCategorie(SousCategorie $sousCategorie, EntityManagerInterface $manager, $id)
+    {
+
+        $manager->remove($sousCategorie);
+
+        $manager->flush();
+
+        $this->addFlash('message', 'La sous-catégorie "' . $sousCategorie->getTitre() . '" a bien été supprimée');
+
+        return $this->redirectToRoute('demainWeArt_home');
+    }
+
+
     /**
      * @Route("admin/demainWeArt/administrationCatagorie/{titre}", name="demainWeArt_administration_categorie")
      */
     public function index(Categorie $categorie, Request $request, ObjectManager $manager, SlugifyInterface $slugify)
     {
-
-
-
+        // Liste Sous-catégorie
+        $listeSousCategories = $categorie->getSousCategorie();
 
 
         // Start Créer Form Sous Catégorie ----------------->
@@ -107,7 +142,9 @@ class AdministrationCategorieAdminController extends AbstractController
             'categorie' => $categorie,
             'formSousCategorie' => $formSousCategorie->createView(),
             'formTextePresentation' => $formTextePresentation->createView(),
+            'listeSousCategories' => $listeSousCategories,
 
         ]);
+
     }
 }

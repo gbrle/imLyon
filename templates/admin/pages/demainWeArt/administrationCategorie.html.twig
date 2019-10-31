@@ -34,6 +34,9 @@
     <!-- MODIFIER TEXTE PRESENTATION -->
     <div class="collapse" id="ModifierTextePresentation">
         <div style="border: 1px solid #5cb85c; border-radius: 4px; padding: 15px" class="card card-body">
+            <div class="header">
+                <h4 class="title" style="padding-bottom: 25px">MODIFIER TEXTE PRESENTATION</h4>
+            </div>
 
             {{ form_start(formTextePresentation) }}
 
@@ -51,7 +54,9 @@
     <!-- CREER SOUS CATEGORIE -->
     <div class="collapse" id="CreerSousCategorie">
         <div style="border: 1px solid #5cb85c; border-radius: 4px; padding: 15px" class="card card-body">
-
+            <div class="header">
+                <h4 class="title" style="padding-bottom: 25px">CREER UNE SOUS-CATEGORIE</h4>
+            </div>
             {{ form_start(formSousCategorie) }}
 
 
@@ -88,61 +93,24 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Striped Table with Hover</h4>
-                                    <p class="category">Here is a subtitle for this table</p>
+                                    <h4 class="title" style="padding-bottom: 25px">MODIFIER / SUPPRIMER UNE SOUS-CATEGORIE</h4>
                                 </div>
                                 <div class="content table-responsive table-full-width">
                                     <table class="table table-hover table-striped">
                                         <thead>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Country</th>
-                                        <th>City</th>
+                                        <th>TITRE DE LA CATEGORIE</th>
+                                        <th>ACTION</th>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Dakota Rice</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Sage Rodriguez</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Doris Greene</td>
-                                            <td>$63,542</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                        </tr>
+                                        {% for listeSousCategorie in listeSousCategories %}
+                                            <tr>
+                                                <td>{{ listeSousCategorie.titre }}</td>
+                                                <td>
+                                                    <a href="{{ path('modifier_sous_categorie', {'id': listeSousCategorie.id}) }}"><i style="font-size: 23px; padding-right: 80px;" class="text-warning fa fa-pencil-square-o" aria-hidden="true"><span style="font-size: 12px">Modifier</span></i></a>
+                                                    <a href="{{ path('demainWeArt_administration_supprimer_categorie', {'id': listeSousCategorie.id}) }}"><i style="font-size: 23px;" class="text-danger fa fa-trash" aria-hidden="true"><span style="font-size: 12px">Supprimer</span></i></a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
                                         </tbody>
                                     </table>
 
@@ -171,61 +139,28 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="header">
-                                    <h4 class="title">Striped Table with Hover</h4>
-                                    <p class="category">Here is a subtitle for this table</p>
+                                    <h4 class="title" style="padding-bottom: 25px">MODIFIER / SUPPRIMER UN ARTICLE</h4>
                                 </div>
                                 <div class="content table-responsive table-full-width">
                                     <table class="table table-hover table-striped">
                                         <thead>
-                                        <th>ID</th>
-                                        <th>Name</th>
-                                        <th>Salary</th>
-                                        <th>Country</th>
-                                        <th>City</th>
+                                        <th>SOUS-CATEGORIE</th>
+                                        <th>TITRE DE L'ARTICLE</th>
+                                        <th>ACTION</th>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Dakota Rice</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Sage Rodriguez</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Doris Greene</td>
-                                            <td>$63,542</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                        </tr>
+                                        {% for listeSousCategorie in listeSousCategories %}
+                                            {% for article in listeSousCategorie.article %}
+                                            <tr>
+                                                <td>{{ listeSousCategorie.titre }}</td>
+                                                <td>{{ article.titre }}</td>
+                                                <td>
+                                                    <a href="#"><i style="font-size: 23px;padding-right: 80px;" class="text-warning fa fa-pencil-square-o" aria-hidden="true"><span style="font-size: 12px">Modifier</span></i></a>
+                                                    <a href="{{ path('demainWeArt_administration_supprimer_article', {'id': article.id}) }}"><i style="font-size: 23px;" class="text-danger fa fa-trash" aria-hidden="true"><span style="font-size: 12px">Supprimer</span></i></a>
+                                                </td>
+                                            </tr>
+                                            {% endfor %}
+                                        {% endfor %}
                                         </tbody>
                                     </table>
 
