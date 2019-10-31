@@ -11,12 +11,14 @@ use App\Repository\SousCategorieRepository;
 use Cocur\Slugify\SlugifyInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormTypeInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -63,6 +65,7 @@ class AdministrationCategorieAdminController extends AbstractController
     {
         // Liste Sous-catégorie
         $listeSousCategories = $categorie->getSousCategorie();
+
 
 
         // Start Créer Form Sous Catégorie ----------------->

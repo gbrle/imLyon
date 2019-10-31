@@ -106,7 +106,7 @@
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
                                                                 {% for article in sousCategorie.article %}
-                                                                    <a href="{{ path('page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
+                                                                    <a href="{{ path('page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
                                                                 {% endfor %}
                                                             </div>
                                                         </div>

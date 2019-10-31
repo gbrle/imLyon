@@ -73,14 +73,6 @@
         </div>
     </div>
 
-    <!-- CREER ARTICLE -->
-    <div class="collapse" id="CreerArticle">
-        <div style="border: 1px solid #5cb85c; border-radius: 4px; padding: 15px" class="card card-body">
-
-            adsadasd
-
-        </div>
-    </div>
 
     <!-- ModifierSupprimerSousCategorie -->
     <div class="collapse" id="ModifierSupprimerSousCategorie">
@@ -98,7 +90,7 @@
                                 <div class="content table-responsive table-full-width">
                                     <table class="table table-hover table-striped">
                                         <thead>
-                                        <th>TITRE DE LA CATEGORIE</th>
+                                        <th>TITRE DE LA SOUS-CATEGORIE</th>
                                         <th>ACTION</th>
                                         </thead>
                                         <tbody>
@@ -155,7 +147,7 @@
                                                 <td>{{ listeSousCategorie.titre }}</td>
                                                 <td>{{ article.titre }}</td>
                                                 <td>
-                                                    <a href="#"><i style="font-size: 23px;padding-right: 80px;" class="text-warning fa fa-pencil-square-o" aria-hidden="true"><span style="font-size: 12px">Modifier</span></i></a>
+                                                    <a href="{{ path('modifier_article', {'id': article.id}) }}"><i style="font-size: 23px;padding-right: 80px;" class="text-warning fa fa-pencil-square-o" aria-hidden="true"><span style="font-size: 12px">Modifier</span></i></a>
                                                     <a href="{{ path('demainWeArt_administration_supprimer_article', {'id': article.id}) }}"><i style="font-size: 23px;" class="text-danger fa fa-trash" aria-hidden="true"><span style="font-size: 12px">Supprimer</span></i></a>
                                                 </td>
                                             </tr>
@@ -175,6 +167,46 @@
             </div>
 
 
+        </div>
+    </div>
+
+    <!-- CREER ARTICLE -->
+    <div class="collapse" id="CreerArticle">
+    <div style="border: 1px solid #5cb85c; border-radius: 4px; padding: 15px" class="card card-body">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title" style="padding-bottom: 25px">CREER UN ARTICLE (choisir pour quelle sous-catégorie)</h4>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                    <th>TITRE DE LA SOUS-CATEGORIE</th>
+                                    <th>ACTION</th>
+                                    </thead>
+                                    <tbody>
+                                    {% for listeSousCategorie in listeSousCategories %}
+                                        <tr>
+                                            <td>{{ listeSousCategorie.titre }}</td>
+                                            <td>
+                                                <a href="{{ path('creer_article', {'id': listeSousCategorie.id}) }}"><i style="font-size: 23px; padding-right: 80px;" class="text-warning fa fa-plus-circle" aria-hidden="true"><span style="font-size: 12px">Créer</span></i></a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
         </div>
     </div>
 

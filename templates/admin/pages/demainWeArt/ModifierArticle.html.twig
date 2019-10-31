@@ -1,0 +1,26 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block body %}
+    <div class="card">
+        <div class="header">
+            <h4 class="title">Vous modifiez l'article ' <span class="text-danger">{{ article.titre }}</span></h4>
+        </div>
+    </div>
+    <!-- CREER SOUS CATEGORIE -->
+
+
+            {{ form_start(formArticle) }}
+
+
+            {{ form_row(formArticle.titre) }}
+
+            {{ form_row(formArticle.descriptif) }}
+
+            {{ form_row(formArticle.contenu) }}
+
+            <button style="background-color: #5cb85c; color: white; border: 2px solid #5cb85c; border-radius: 4px; padding: 15px" type="submit" class="btn btn-primary">Modifier</button>
+
+            {{ form_end(formArticle) }}
+
+
+{% endblock %}
