@@ -177,11 +177,38 @@ a:hover,a:focus,a.active{
 footer h3{
     line-height: 4px;
 }
+
+
+
+
+
+/* ---------------------- RESEAUS SOCIAUX & CONTACT FIXED --------------------- */
+.contactPage {
+    z-index: 13000;
+    display: none;
+}
+.facebookLink{
+    color: #4267b2;
+    z-index: 3000;
+    font-size: 45px;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    opacity: 0.6;
+}
 /*=====================================================================================
 02.		Default Margin and Padding
 ========================================================================================*/
 /*  Margin 
 ======================*/
+
+
+
+
+
+
+
+
 .mx_10{
 	margin: 0px 10px;
 }

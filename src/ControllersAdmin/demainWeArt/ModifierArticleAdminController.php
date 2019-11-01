@@ -27,7 +27,8 @@ class ModifierArticleAdminController extends AbstractController
             ->add('descriptif')
             ->add('contenu', CKEditorType::class, [
                 'config' => [
-                    'toolbar' => 'full'
+                    'filebrowserBrowseRoute' => 'elfinder',
+                    'filebrowserBrowseRouteParameters' => ['instance' => 'default']
                 ]
             ])
             ->getForm();

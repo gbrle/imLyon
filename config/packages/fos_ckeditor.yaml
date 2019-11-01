@@ -5,6 +5,8 @@ twig:
         - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
 
 fos_ck_editor:
+    filebrowsers:
+        - ImageUploadUrl
     configs:
         my_config:
             toolbar: full
