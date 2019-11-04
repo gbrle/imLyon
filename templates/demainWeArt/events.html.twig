@@ -5,23 +5,23 @@
             <div class="col-md-12 col-lg-12">
                 <div class="row">
                     <div class="col-md-12 col-lg-12 headerEventsSection d-block flex-column" id="headerEventsSection">
-                        <div class="d-block text-center pt-lg-5 pt-md-5">
-                            <img alt="" class="upStream" src="demainWeArt/images/logo/upstream.png">
-                        </div>
-
                         <div class="d-block logoDemainContainer">
                             <a href="{{ path('home_demainWeArt') }}"><img alt="" class="logoDemain" src="demainWeArt/images/logo/logo-demain.png"></a>
+                        </div>
+
+                        <div class="d-block text-center pt-lg-5 pt-md-5">
+                            <img alt="" class="upStream" src="demainWeArt/images/logo/upstream.png">
                         </div>
 
 
 
                         <div class="text-center text-white mt-lg-5 mt-sm-2 container col-12 col-lg-7 col-md-7">
-                            <h2 class="titreEventsMenu text-center">{{ event.titre }}</h2>
-                            <p class="text-center descriptifEventsMenu pt-3">
+                            <h2 class="titreEventsMenu text-center infosHeader">{{ event.titre }}</h2>
+                            <p class="text-center descriptifEventsMenu p-1">
                                 {{ event.description }}
                             </p>
                             <div class="text-center pt-4" >
-                                <button type="button" id="moreEvents" class="btn btn-light">En savoir plus</button>
+                                <button type="button" id="moreEvents" class="buttonEnSavoirPlus btn btn-light">En savoir plus</button>
                             </div>
                         </div>
 
@@ -49,7 +49,7 @@
                                         <a href="#artistLabelServices"><h2  id="artistLabelServicesEvents" class="Rose">ARTIST & LABEL SERVICES</h2></a>
                                         <a href="#training"><h2  id="trainingEvents" class="Orange">TRAINING</h2></a>
                                         <h2 id="menuEvent" class="Rouge">EVENTS</h2>
-                                        <h2 class="Blanc">PARTENAIRES</h2>
+                                        <a href="{{ path('page_partenaires') }}"><h2 class="Blanc">PARTENAIRES</h2></a>
                                         <h2 class="Blanc">CONTACT</h2>
                                         <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                     </div>
@@ -74,7 +74,7 @@
                                                     </div>
                                                     {% if sousCategorie.format == "bulle" %}
 
-                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="{{ sousCategorie.id }}">
                                                             <div class="card-body" style="border: transparent;">
                                                                 <div class="row paddingCards justify-content-center">
                                                                     <div class="row">
@@ -103,7 +103,7 @@
                                                         </div>
                                                     {% else %}
                                                         <!-- ------------------------CARDS LIST---------------------- -->
-                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
                                                                 {% for article in sousCategorie.article %}
                                                                     <a href="{{ path('page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
@@ -135,34 +135,34 @@
 
 
                                 <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-center text-sm-center text-lg-left text-white mt-5">
-                                    <div class="col-12 d-flex flex-wrap justify-content-center text-nowrap">
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
-                                            <h2 class="pl-0 text-lg-center pb-2">Home</h2>
-                                            <h3 class="small text-lg-center linkFooter">Contact</h3>
-                                            <h3 class="small text-lg-center linkFooter">Partenaires</h3>
+                                    <div class="col-12 d-flex flex-wrap justify-content-center">
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left pb-2">Home</h2>
+                                            <h3 class="small text-lg-left linkFooter">Contact</h3>
+                                            <h3 class="small text-lg-left linkFooter">Partenaires</h3>
                                         </div>
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
-                                            <h2 class="pl-0 text-lg-center pb-2">Recording studios</h2>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left pb-2">Recording studios</h2>
                                             {% for recordingStutio in recordingStutios.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-center linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                                <a href="{{ path('page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
-                                            <h2 class="pl-0 text-lg-center pb-2">Artist & label services</h2>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left pb-2">Artist & label services</h2>
                                             {% for artistLabelServices in artistLabelServices.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-center linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                                <a href="{{ path('page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
-                                            <h2 class="pl-0 text-lg-center pb-2">Events</h2>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left pb-2">Events</h2>
                                             {% for event in event.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-center linkFooter">{{ event.titre }}</h3></a>
+                                                <a href="{{ path('page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
-                                            <h2 class="pl-0 text-lg-center pb-2">Training</h2>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left pb-2">Training</h2>
                                             {% for training in training.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-center linkFooter">{{ training.titre }}</h3></a>
+                                                <a href="{{ path('page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                     </div>

@@ -12,7 +12,6 @@
     <!--	Css Links
    ==================================================-->
     <link rel="stylesheet" href="/demainWeArt/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/demainWeArt/css/jquery.pagepiling.css">
     <link rel="stylesheet" href="/demainWeArt/css/font-awesome.min.css">
     <link rel="stylesheet" href="/demainWeArt/fonts/flaticon.css">
     <link rel="stylesheet" href="/demainWeArt/css/plugins.css">
@@ -23,9 +22,7 @@
     <link rel="stylesheet" href="/demainWeArt/css/color.css" id="color-change">
 
     <style type="text/css" media="screen">
-        .menuRecordingSection{
-            background: url("{{ background }}") no-repeat center / cover !important;
-        }
+
         .logoDemain{
             width: 270px !important;
             height: 75px !important;
@@ -136,13 +133,13 @@
                                     <div class="menuSousCat col-md-3 col-lg-3">
                                         <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
                                             <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
-{#                                            <div id="currentRecording" class="rotating Violet"></div>#}
+                                            <div id="currentPartenaires" class="rotating Blanc"></div>
                                             <a href="{{ path('home_demainWeArt') }}"><h2  id="homeRecording" class="Blanc">HOME</h2></a>
                                             <a href="{{ path('home_demainWeArt') }}#recordingStudios"><h2 class="Violet">RECORDING STUDIOS</h2></a>
                                             <a href="{{ path('home_demainWeArt') }}#artistLabelServices"><h2  id="artistLabelServicesRecording" class="Rose">ARTIST & LABEL SERVICES</h2></a>
                                             <a href="{{ path('home_demainWeArt') }}#training"><h2  id="trainingRecording" class="Orange">TRAINING</h2></a>
                                             <a href="{{ path('home_demainWeArt') }}#events"><h2 id="eventRecording" class="Rouge">EVENTS</h2></a>
-                                            <a href="{{ path('page_partenaires') }}"><h2 class="Blanc">PARTENAIRES</h2></a>
+                                            <h2 class="Blanc">PARTENAIRES</h2>
                                             <h2 class="Blanc">CONTACT</h2>
                                             <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                         </div>
@@ -150,44 +147,49 @@
 
                                     <div class="md-pr-1 col-md-12 col-lg-9 col-sm-12 mb-5">
                                         <div class="personal_info color_lightgray bg_transparent">
-                                            <div class="accordion bg_transparent" id="recordingCollapse">
+                                            <div class="accordion bg_transparent" id="PartenaireIdCollapse">
                                                 <div style="border: transparent;" class="card bg_transparent">
 
 
                                                     <!-- ------------------------CARDS BULLE---------------------- -->
 
-                                                        <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
+                                                        <div style="border: transparent;" class="card-header bg_transparent" id="PartenaireId">
 
                                                             <div class="d-block text-left pl-xl-5 pl-sm-0">
                                                                 <a href="{{ path('home_demainWeArt') }}"><img alt="" class="logoDemain" src="/demainWeArt/images/logo/logo-demain.png"></a>
                                                             </div>
 
                                                             <h2 class="container-buttonSousCat">
-                                                                <button class="bulleSousCategorie text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="true" aria-controls="collapseOne">
-                                                                    {{ sousCategorie.titre |upper }}
+                                                                <button class="bulleSousCategorie text-left bg_transparent text-white bgRose pl-3 bgBlanc" type="button" data-toggle="collapse" data-target="#targetPartenaireId" aria-expanded="true" aria-controls="collapseOne">
+                                                                    PARTENAIRES
                                                                 </button>
                                                             </h2>
                                                         </div>
-                                                        {% if sousCategorie.format == "bulle" %}
 
-                                                            <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse show" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
+
+                                                            <div style="border: transparent" id="targetPartenaireId" class="bg_transparent collapse show" data-parent="#PartenaireIdCollapse" aria-labelledby="PartenaireId">
                                                                 <div class="card-body" style="border: transparent;">
                                                                     <div class="row paddingCards justify-content-center">
                                                                         <div class="row">
                                                                             <div class="col-md-12 col-lg-12">
                                                                                 <div class="price_table">
                                                                                     <div class="row justify-content-center">
-                                                                                        {% for article in articles %}
-                                                                                            <div class="ml-1 mr-1">
-                                                                                                <div class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
-                                                                                                    <div class="justify-content-center">
-                                                                                                        <div class="pt-3">
-                                                                                                            <h5>{{ article.titre }}</h5>
-                                                                                                        </div>
-                                                                                                    </div>
+                                                                                        {% for partenaire in partenaires %}
+                                                                                        <div class="ml-1 mr-1">
+
+                                                                                            <div class="justify-content-center">
+                                                                                                <div class="pt-3">
+                                                                                                    <h5 class="text-center">{{ partenaire.nom }}</h5>
                                                                                                 </div>
                                                                                             </div>
+                                                                                            <div class="table text-center bg_deepblack color_secondery bulle" style="background: url('https://transitions-dd.com/wp-content/uploads/2017/08/Logo-partenaire-evian-couleur-site.jpg') no-repeat center / cover;">
+
+                                                                                            </div>
+                                                                                        </div>
                                                                                         {% endfor %}
+
+
+
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -195,16 +197,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        {% else %}
-                                                            <!-- ------------------------CARDS LIST---------------------- -->
-                                                            <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse show" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
-                                                                <div class="card-body" style="border: transparent;padding-left: 85px">
-                                                                    {% for article in sousCategorie.article %}
-                                                                        <a href="{{ path('page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
-                                                                    {% endfor %}
-                                                                </div>
-                                                            </div>
-                                                        {% endif %}
+
 
 
 
@@ -215,7 +208,7 @@
                                 </div>
                             </div>
                             <footer class="container-fluid">
-                                <div  style="background-color: {{ couleurFooter }}" class="row rounded-top">
+                                <div  style="background-color: {{ recordingStutios.couleurfooter }}" class="row rounded-top">
                                     <!-- Newsletter -->
                                     <div class="d-flex justify-content-center col-12 containerNewsletter">
                                         <form accept-charset="UTF-8" action="https://www.sendicate.net/subscribe/xxxxxx" method="post" class="newsletter">
@@ -302,19 +295,7 @@
     //	Pagepiling js
     //=====================================================
 
-    $(document).ready(function() {
-        $('#pagepiling').pagepiling({
-            menu: '#menu',
-            anchors: ['homePage', 'recordingPage', 'artistLabelServices', 'training', 'events','page6', 'page7', 'page8','page9'],
-            loopTop: false,
-            loopBottom: false,
-            keyboardScrolling: false,
-            scrollbars: false,
 
-        });
-
-
-    });
     //	Sidebar Nav Menu js
     //=====================================================
     function openNav() {

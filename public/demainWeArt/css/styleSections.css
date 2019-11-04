@@ -1,12 +1,29 @@
+
+.buttonEnSavoirPlus{
+    border-radius: 17px;
+    opacity: 1;
+
+}
+.buttonEnSavoirPlus:hover{
+    transition-duration: 1.3s;
+    opacity: 0.6;
+}
+.infosHeader{
+    padding-top: 130px;
+    padding-bottom: 40px;
+    line-height: 38px;
+}
 /* RECORDING SECTION
 -------------------------------> */
 .headerRecordingSection .upStream{
     width: 139px;
-    height: 28px
+    height: 28px;
+    margin-top: -55px;
 }
 
 .titreRecordingMenu{
-    margin-top: 130px;
+    text-shadow:0 0 3px black;
+    font-size: 45px;
     text-align: center;
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -39,18 +56,22 @@
     object-fit: fill;
 }
 .descriptifRecordingMenu{
+    border-radius: 3px;
 
+    background-color: rgba(102, 35, 131, 0.8);
 }
 
 /* ARTISTLABELSERVICES SECTION
 -------------------------------> */
 .headerArtistLabelServicesSection .upStream{
     width: 139px;
-    height: 28px
+    height: 28px;
+    margin-top: -55px;
 }
 
 .titreArtistLabelServicesMenu{
-    margin-top: 130px;
+    text-shadow:0 0 3px black;
+    font-size: 45px;
     text-align: center;
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -83,20 +104,21 @@
     object-fit: fill;
 }
 .descriptifArtistLabelServicesMenu{
-    background-color: red;
-    border-radius: 0 20px 20px 0;
-    opacity: 0.4;
+    border-radius: 3px;
+    background-color: rgba(179, 69, 117, .8);
 }
 
 /* TRAINING SECTION
 -------------------------------> */
 .headerTrainingSection .upStream{
     width: 139px;
-    height: 28px
+    height: 28px;
+    margin-top: -55px;
 }
 
 .titreTrainingMenu{
-    margin-top: 130px;
+    text-shadow:0 0 3px black;
+    font-size: 45px;
     text-align: center;
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -129,20 +151,21 @@
     object-fit: fill;
 }
 .descriptifTrainingMenu{
-    background-color: red;
-    border-radius: 0 20px 20px 0;
-    opacity: 0.4;
+    border-radius: 3px;
+    background-color: rgba(240, 90, 35, .8);
 }
 
 /* EVENTS SECTION
 -------------------------------> */
 .headerEventsSection .upStream{
     width: 139px;
-    height: 28px
+    height: 28px;
+    margin-top: -55px;
 }
 
 .titreEventsMenu{
-    margin-top: 130px;
+    text-shadow:0 0 3px black;
+    font-size: 45px;
     text-align: center;
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -175,7 +198,8 @@
     object-fit: fill;
 }
 .descriptifEventsMenu{
-
+    border-radius: 3px;
+    background-color: rgba(236, 28, 35, .8);
 }
 
 
@@ -213,6 +237,11 @@
 @media (max-width: 767px){
     /* RECORDING SECTION
 -------------------------------> */
+    .infosHeader{
+        padding-top: 1px;
+        padding-bottom: 1px;
+        line-height: 38px;
+    }
     .titreRecordingMenu{
         margin-top: 0;
     }
@@ -226,8 +255,8 @@
         margin-top: 60px;
     }
     .headerRecordingSection .logoDemain{
-        width: 220px;
-        height: 70px;
+        width: 201px;
+        height: 51px;
         object-fit: fill;
     }
     /* ARTISTLABELSERVICES SECTION
@@ -245,8 +274,8 @@
         margin-top: 60px;
     }
     .headerArtistLabelServicesSection .logoDemain{
-        width: 220px;
-        height: 70px;
+        width: 201px;
+        height: 51px;
         object-fit: fill;
     }
     /* TRAINING SECTION
@@ -264,8 +293,8 @@
         margin-top: 60px;
     }
     .headerTrainingSection .logoDemain{
-        width: 220px;
-        height: 70px;
+        width: 201px;
+        height: 51px;
         object-fit: fill;
     }
     /* EVENTS SECTION
@@ -283,8 +312,8 @@
         margin-top: 60px;
     }
     .headerEventsSection .logoDemain{
-        width: 220px;
-        height: 70px;
+        width: 201px;
+        height: 51px;
         object-fit: fill;
     }
 }
