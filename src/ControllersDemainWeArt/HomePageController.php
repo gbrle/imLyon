@@ -23,7 +23,6 @@ class HomePageController extends AbstractController
         $artistLabelServices = $categorieRepository->findBy(['titre' => 'ARTIST & LABEL SERVICES']);
         $training = $categorieRepository->findBy(['titre' => 'TRAINING']);
         $event = $categorieRepository->findBy(['titre' => 'EVENTS']);
-        $partenaire = $categorieRepository->findBy(['titre' => 'PARTENAIRES']);
 
 
 
@@ -33,7 +32,6 @@ class HomePageController extends AbstractController
             'artistLabelServices' => $artistLabelServices[0],
             'training' => $training[0],
             'event' => $event[0],
-            'partenaire' => $partenaire[0],
         ]);
     }
 }

@@ -12,7 +12,6 @@
     <!--	Css Links
    ==================================================-->
     <link rel="stylesheet" href="/demainWeArt/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/demainWeArt/css/jquery.pagepiling.css">
     <link rel="stylesheet" href="/demainWeArt/css/font-awesome.min.css">
     <link rel="stylesheet" href="/demainWeArt/fonts/flaticon.css">
     <link rel="stylesheet" href="/demainWeArt/css/plugins.css">
@@ -23,8 +22,14 @@
     <link rel="stylesheet" href="/demainWeArt/css/color.css" id="color-change">
 
     <style type="text/css" media="screen">
-        .menuRecordingSection{
-            background: url("{{ background }}") no-repeat center / cover !important;
+
+        .logoDemain{
+            width: 270px !important;
+            height: 75px !important;
+            margin-top: 30px!important;
+            margin-bottom: 30px!important;
+            object-fit: fill !important;
+
         }
     </style>
 
@@ -52,6 +57,7 @@
     </div>
 </div>
 
+<!-- Menu Responsive==================================================-->
 <nav id="mysidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="flaticon-close-button"></i></a>
     {#    <a href="/"><i class="fa fa-home fa-2x pl-5" aria-hidden="true"></i></a>#}
@@ -63,9 +69,10 @@
         <li data-menuanchor="events" id="eventRecordingResponsive"><a onclick="closeNav()" class="Rouge font-weight-bold" href="{{ path('home_demainWeArt') }}#events">Events</a></li>
         <li><a onclick="closeNav()" class="Blanc font-weight-bold" href="{{ path('demainweart_page_partenaires') }}">Partenaires</a></li>
         <li><a onclick="closeNav()" class="Blanc font-weight-bold" href="{{ path('demainweart_page_contact') }}">Contact</a></li>
+
         {#        <li data-menuanchor="page7"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page7">Team</a></li>#}
-        {#        <li data-menuanchor="page8"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page8">Testimonialdadada</a></li>#}
-        {#        <li data-menuanchor="page9"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page9">Contact</a></li>#}
+{#        <li data-menuanchor="page8"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page8">Testimonialdadada</a></li>#}
+{#        <li data-menuanchor="page9"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page9">Contact</a></li>#}
     </ul>
 </nav>
 
@@ -85,6 +92,9 @@
 <div class="contact_massage bg_transparent d-flex align-items-center" style="cursor:pointer" onclick="openNav()">
     <a href="#"><i class="fa fa-bars fa-1x text-white" aria-hidden="true"></i></a>
 </div>
+
+<!--
+=======================================================-->
 
 
 
@@ -118,27 +128,61 @@
                                     <div class="menuSousCat col-md-3 col-lg-3">
                                         <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
                                             <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
-{#                                            <div id="currentRecording" class="rotating Violet"></div>#}
+                                            <div id="currentContact" class="rotating Blanc"></div>
                                             <a href="{{ path('home_demainWeArt') }}"><h2  id="homeRecording" class="Blanc">HOME</h2></a>
                                             <a href="{{ path('home_demainWeArt') }}#recordingStudios"><h2 class="Violet">RECORDING STUDIOS</h2></a>
                                             <a href="{{ path('home_demainWeArt') }}#artistLabelServices"><h2  id="artistLabelServicesRecording" class="Rose">ARTIST & LABEL SERVICES</h2></a>
                                             <a href="{{ path('home_demainWeArt') }}#training"><h2  id="trainingRecording" class="Orange">TRAINING</h2></a>
                                             <a href="{{ path('home_demainWeArt') }}#events"><h2 id="eventRecording" class="Rouge">EVENTS</h2></a>
                                             <a href="{{ path('demainweart_page_partenaires') }}"><h2 class="Blanc">PARTENAIRES</h2></a>
-                                            <a href="{{ path('demainweart_page_contact') }}"><h2 class="Blanc">CONTACT</h2></a>
+                                            <h2 class="Blanc">CONTACT</h2>
                                             <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                         </div>
                                     </div>
 
                                     <div class="md-pr-1 col-md-12 col-lg-9 col-sm-12 mb-5">
                                         <div class="personal_info color_lightgray bg_transparent">
-                                            <div class="accordion bg_transparent" id="recordingCollapse">
-                                                <div style="border: transparent;" class="card bg_transparent page_article">
+                                            <div class="accordion bg_transparent" id="PartenaireIdCollapse">
+                                                <div style="border: transparent;" class="card bg_transparent">
 
 
-                                                    <h1 class="titreArticle text-left pl-3 {{ backgroundColor }}">{{ article.titre|upper }}</h1>
+                                                    <!-- ------------------------CARDS BULLE---------------------- -->
 
-                                                    <p class="contenueArticle text-left">{{ article.contenu|raw }}</p>
+                                                        <div style="border: transparent;" class="card-header bg_transparent" id="PartenaireId">
+
+                                                            <div class="d-block text-left pl-xl-5 pl-sm-0">
+                                                                <a href="{{ path('home_demainWeArt') }}"><img alt="" class="logoDemain" src="/demainWeArt/images/logo/logo-demain.png"></a>
+                                                            </div>
+
+                                                            <h2 class="container-buttonSousCat">
+                                                                <button class="bulleSousCategorie text-left bg_transparent text-white bgRose pl-3 bgBlanc" type="button" data-toggle="collapse" data-target="#targetPartenaireId" aria-expanded="true" aria-controls="collapseOne">
+                                                                    Contact
+                                                                </button>
+                                                            </h2>
+                                                        </div>
+
+
+                                                            <div style="border: transparent" id="targetPartenaireId" class="bg_transparent collapse show" data-parent="#PartenaireIdCollapse" aria-labelledby="PartenaireId">
+                                                                <div class="card-body" style="border: transparent;">
+                                                                    <div class="row paddingCards justify-content-center">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12 col-lg-12">
+                                                                                <div class="price_table">
+                                                                                    <div class="row justify-content-center">
+
+                                                                                        <div style="overflow:hidden;width: 100%;position: relative;"><iframe width="700" height="440" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Paris%2C%20France+(Titre)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/fr/">https://embedgooglemaps.com/fr/</a> & <a href="https://newyorkhoponhopoffbus.nl">new york city freestyle pass: hop-on, hop-off tour en ferry</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
+
+
+
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
 
 
 
@@ -149,7 +193,7 @@
                                 </div>
                             </div>
                             <footer class="container-fluid">
-                                <div  style="background-color: {{ couleurFooter }}" class="row rounded-top">
+                                <div  style="background-color: {{ recordingStutios.couleurfooter }}" class="row rounded-top">
                                     <!-- Newsletter -->
                                     <div class="d-flex justify-content-center col-12 containerNewsletter">
                                         <form accept-charset="UTF-8" action="https://www.sendicate.net/subscribe/xxxxxx" method="post" class="newsletter">
@@ -163,7 +207,7 @@
 
                                     <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-center text-sm-center text-lg-left text-white mt-5">
                                         <div class="col-12 d-flex flex-wrap justify-content-center text-nowrap">
-                                            <div class="pr-3 col-lg-2 col-sm-12 text-sm-center text-lg-left">
+                                            <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                                 <h2 class="pl-0 text-lg-left pb-2">Home</h2>
                                                 <a href="{{ path('demainweart_page_contact') }}"><h3 class="small text-lg-left linkFooter">Contact</h3></a>
                                                 <a href="{{ path('demainweart_page_partenaires') }}"><h3 class="small text-lg-left linkFooter">Partenaires</h3></a>
@@ -236,19 +280,7 @@
     //	Pagepiling js
     //=====================================================
 
-    $(document).ready(function() {
-        $('#pagepiling').pagepiling({
-            menu: '#menu',
-            anchors: ['homePage', 'recordingPage', 'artistLabelServices', 'training', 'events','page6', 'page7', 'page8','page9'],
-            loopTop: false,
-            loopBottom: false,
-            keyboardScrolling: false,
-            scrollbars: false,
 
-        });
-
-
-    });
     //	Sidebar Nav Menu js
     //=====================================================
     function openNav() {

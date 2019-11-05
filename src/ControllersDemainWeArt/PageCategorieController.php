@@ -18,7 +18,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class PageCategorieController extends AbstractController
 {
     /**
-     * @Route("/categorie/{slugifyTitre}", name="page_categorie")
+     * @Route("demainweart/categorie/{slugifyTitre}", name="demainweart_page_categorie")
      */
     public function index(CategorieRepository $categorieRepository, SousCategorie $sousCategorie)
     {
@@ -33,7 +33,6 @@ class PageCategorieController extends AbstractController
         $artistLabelServices = $categorieRepository->findBy(['titre' => 'ARTIST & LABEL SERVICES']);
         $training = $categorieRepository->findBy(['titre' => 'TRAINING']);
         $event = $categorieRepository->findBy(['titre' => 'EVENTS']);
-        $partenaire = $categorieRepository->findBy(['titre' => 'PARTENAIRES']);
 
 
 
@@ -43,7 +42,6 @@ class PageCategorieController extends AbstractController
             'artistLabelServices' => $artistLabelServices[0],
             'training' => $training[0],
             'event' => $event[0],
-            'partenaire' => $partenaire[0],
 
             'articles' => $articles,
             'sousCategorie' => $sousCategorie,

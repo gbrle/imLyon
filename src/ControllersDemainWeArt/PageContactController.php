@@ -17,10 +17,10 @@ use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 
-class PagePartenairesController extends AbstractController
+class PageContactController extends AbstractController
 {
     /**
-     * @Route("demainweart/partenaires", name="demainweart_page_partenaires")
+     * @Route("/demainweart/contact", name="demainweart_page_contact")
      */
     public function index(CategorieRepository $categorieRepo, PartenaireRepository $partenaireRepository)
     {
@@ -32,18 +32,16 @@ class PagePartenairesController extends AbstractController
         $artistLabelServices = $categorieRepo->findBy(['titre' => 'ARTIST & LABEL SERVICES']);
         $training = $categorieRepo->findBy(['titre' => 'TRAINING']);
         $event = $categorieRepo->findBy(['titre' => 'EVENTS']);
-        $partenaires = $partenaireRepository->findAll();
 
 
 
 
-        return $this->render('demainWeArt/pagePartenaires.html.twig', [
+        return $this->render('demainWeArt/pageContact.html.twig', [
             // CATERORIES
             'recordingStutios' => $recordingStutios[0],
             'artistLabelServices' => $artistLabelServices[0],
             'training' => $training[0],
             'event' => $event[0],
-            'partenaires' => $partenaires,
 
 
 

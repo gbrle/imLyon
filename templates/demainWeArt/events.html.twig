@@ -49,8 +49,8 @@
                                         <a href="#artistLabelServices"><h2  id="artistLabelServicesEvents" class="Rose">ARTIST & LABEL SERVICES</h2></a>
                                         <a href="#training"><h2  id="trainingEvents" class="Orange">TRAINING</h2></a>
                                         <h2 id="menuEvent" class="Rouge">EVENTS</h2>
-                                        <a href="{{ path('page_partenaires') }}"><h2 class="Blanc">PARTENAIRES</h2></a>
-                                        <h2 class="Blanc">CONTACT</h2>
+                                        <a href="{{ path('demainweart_page_partenaires') }}"><h2 class="Blanc">PARTENAIRES</h2></a>
+                                        <a href="{{ path('demainweart_page_contact') }}"><h2 class="Blanc">CONTACT</h2></a>
                                         <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                     </div>
                                 </div>
@@ -83,7 +83,7 @@
                                                                                 <div class="row justify-content-center">
                                                                                     {% for article in sousCategorie.article %}
                                                                                         <div class="ml-1 mr-1">
-                                                                                            <a href="{{ path('page_article', {'slugifyTitre': article.slugifyTitre}) }}">
+                                                                                            <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}">
                                                                                                 <div class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
                                                                                                     <div class="justify-content-center">
                                                                                                         <div class="pt-3">
@@ -106,7 +106,7 @@
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
                                                                 {% for article in sousCategorie.article %}
-                                                                    <a href="{{ path('page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
+                                                                    <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
                                                                 {% endfor %}
                                                             </div>
                                                         </div>
@@ -138,31 +138,31 @@
                                     <div class="col-12 d-flex flex-wrap justify-content-center">
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                             <h2 class="pl-0 text-lg-left pb-2">Home</h2>
-                                            <h3 class="small text-lg-left linkFooter">Contact</h3>
-                                            <h3 class="small text-lg-left linkFooter">Partenaires</h3>
+                                            <a href="{{ path('demainweart_page_contact') }}"><h3 class="small text-lg-left linkFooter">Contact</h3></a>
+                                            <a href="{{ path('demainweart_page_partenaires') }}"><h3 class="small text-lg-left linkFooter">Partenaires</h3></a>
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                             <h2 class="pl-0 text-lg-left pb-2">Recording studios</h2>
                                             {% for recordingStutio in recordingStutios.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                             <h2 class="pl-0 text-lg-left pb-2">Artist & label services</h2>
                                             {% for artistLabelServices in artistLabelServices.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                             <h2 class="pl-0 text-lg-left pb-2">Events</h2>
                                             {% for event in event.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                             <h2 class="pl-0 text-lg-left pb-2">Training</h2>
                                             {% for training in training.sousCategorie %}
-                                                <a href="{{ path('page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                     </div>

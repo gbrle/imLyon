@@ -18,13 +18,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class PageArticleController extends AbstractController
 {
     /**
-     * @Route("/article/{slugifyTitre}", name="page_article")
+     * @Route("demainweart/article/{slugifyTitre}", name="demainweart_page_article")
      */
     public function index(CategorieRepository $categorieRepository, Article $article)
     {
 
         $couleurFooter = $article->getSousCategorie()->getCategorie()->getCouleurFooter();
         $background = $article->getSousCategorie()->getCategorie()->getBackgroundImage();
+        $backgroundColor = $article->getSousCategorie()->getCouleur();
 
 
         // CATEGORIES
@@ -32,7 +33,6 @@ class PageArticleController extends AbstractController
         $artistLabelServices = $categorieRepository->findBy(['titre' => 'ARTIST & LABEL SERVICES']);
         $training = $categorieRepository->findBy(['titre' => 'TRAINING']);
         $event = $categorieRepository->findBy(['titre' => 'EVENTS']);
-        $partenaire = $categorieRepository->findBy(['titre' => 'PARTENAIRES']);
 
 
 
@@ -42,12 +42,12 @@ class PageArticleController extends AbstractController
             'artistLabelServices' => $artistLabelServices[0],
             'training' => $training[0],
             'event' => $event[0],
-            'partenaire' => $partenaire[0],
 
 
             'article' => $article,
             'couleurFooter' => $couleurFooter,
             'background' => $background,
+            'backgroundColor' => $backgroundColor,
             // Articles
 
         ]);
