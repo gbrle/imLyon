@@ -7,7 +7,6 @@
         "ext-iconv": "*",
         "cocur/slugify": "^3.2",
         "friendsofsymfony/ckeditor-bundle": "^2.1",
-        "helios-ag/fm-elfinder-bundle": "^9.3",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/asset": "4.3.*",
         "symfony/console": "4.3.*",

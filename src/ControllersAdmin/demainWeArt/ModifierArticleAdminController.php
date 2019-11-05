@@ -25,12 +25,7 @@ class ModifierArticleAdminController extends AbstractController
         $formArticle = $this->createFormBuilder($article)
             ->add('titre')
             ->add('descriptif')
-            ->add('contenu', CKEditorType::class, [
-                'config' => [
-                    'filebrowserBrowseRoute' => 'elfinder',
-                    'filebrowserBrowseRouteParameters' => ['instance' => 'default']
-                ]
-            ])
+            ->add('contenu', CKEditorType::class)
             ->getForm();
 
         $formArticle->handleRequest($request);
