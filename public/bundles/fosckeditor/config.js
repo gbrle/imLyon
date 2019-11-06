@@ -19,7 +19,8 @@ CKEDITOR.editorConfig = function( config ) {
     config.bootstrapBuilder_ckfinder_path = '/bundles/ckfinder/ckfinder.js';
     config.filebrowserUploadUrl = '/bundles/ckfinder/ckfinder.html';
     config.filebrowserBrowseUrl = '/bundles/ckfinder/ckfinder.html';
-
+    config.language = 'fr';
+    config.height = 1000
 
 
 };
