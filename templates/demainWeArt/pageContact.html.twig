@@ -162,26 +162,62 @@
                                                         </div>
 
 
-                                                            <div style="border: transparent" id="targetPartenaireId" class="bg_transparent collapse show" data-parent="#PartenaireIdCollapse" aria-labelledby="PartenaireId">
-                                                                <div class="card-body" style="border: transparent;">
-                                                                    <div class="row paddingCards justify-content-center">
+                                                    <div class="container">
+                                                        <div class="contact ">
+                                                            <div class="row">
+                                                                <div class="col-md-12 col-lg-12">
+
+                                                                    <!--	Start Title
+                                                                    ================================-->
+                                                                    <div class="main_title">
+                                                                        <p class="mt_15 mb-lg-5 pl-lg-5 color_lightgray">Interdum a etiam sagittis vehicula porta. Massa felis eros quam blandit nulla dolor habitant.</p>
+                                                                    </div>
+                                                                    <!--	End Title
+                                                                    ================================-->
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+
+                                                                <div class="col-md-10 col-lg-10 te">
+                                                                    <form class="form contact_message pl-lg-5" id="contact-form" action="email.php" method="post">
                                                                         <div class="row">
+                                                                            <div class="col-md-6 col-lg-6">
+                                                                                <div class="form-group">
+                                                                                    <input class="formContact form-control bg_white" type="text" name="name" placeholder="Nom / Prénom" />
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-6 col-lg-6">
+                                                                                <div class="form-group">
+                                                                                    <input class="formContact form-control bg_white" type="email" name="email" placeholder="Email Address" />
+                                                                                </div>
+                                                                            </div>
                                                                             <div class="col-md-12 col-lg-12">
-                                                                                <div class="price_table">
-                                                                                    <div class="row justify-content-center">
-
-                                                                                        <div style="overflow:hidden;width: 100%;position: relative;"><iframe width="700" height="440" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Paris%2C%20France+(Titre)&amp;ie=UTF8&amp;t=&amp;z=10&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a href="https://embedgooglemaps.com/fr/">https://embedgooglemaps.com/fr/</a> & <a href="https://newyorkhoponhopoffbus.nl">new york city freestyle pass: hop-on, hop-off tour en ferry</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><br />
-
-
-
-
-                                                                                    </div>
+                                                                                <div class="form-group">
+                                                                                    <input class="formContact form-control bg_white" type="text" name="subject" placeholder="Subject"/>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12 col-lg-12">
+                                                                                <div class="form-group">
+                                                                                    <textarea class="form-control bg_white" name="message" rows="7" placeholder="Message"></textarea>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12 col-lg-12">
+                                                                                <div class="form-group">
+                                                                                    <input class="formContact btn btn-default bgRose" id="send" value="Envoyer" type="submit"/>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-md-12 col-lg-12">
+                                                                                <div class="error-handel">
+                                                                                    <div id="success">Your email sent Successfully, Thank you.</div>
+                                                                                    <div id="error"> Error occurred while sending email. Please try again later.</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </form>
                                                                 </div>
                                                             </div>
+                                                        </div>
+                                                    </div>
 
 
 

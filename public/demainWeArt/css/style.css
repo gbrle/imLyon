@@ -177,7 +177,10 @@ a:hover,a:focus,a.active{
 footer h3{
     line-height: 4px;
 }
-
+.formContact{
+    border-radius: 50px!important;
+    border: 0!important;
+}
 
 
 
@@ -341,7 +344,7 @@ footer h3{
   width: 60%;
 }
 .main_title p{
-  width: 40%;
+  width: 100%;
 }
 .line_double{
     position: relative;
