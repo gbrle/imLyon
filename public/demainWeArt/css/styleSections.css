@@ -34,14 +34,14 @@
 }
 
 .headerRecordingSection{
-    background: url("../demainWeArt/images/backgroundsSections/background-recording.jpg") no-repeat center / cover;
+    background: url("../../demainWeArt/images/backgroundsSections/background-recording.jpg") no-repeat center / cover;
     height: 100vh;
 }
 
 .menuRecordingSection{
     height: 100%;
     display: none;
-    background: url("../demainWeArt/images/backgroundsSections/background-recording-section.jpg") no-repeat center / cover;
+    background: url("../../demainWeArt/images/backgroundsSections/background-recording-section.jpg") no-repeat center / cover;
 }
 .footerRecordingSection{
     display: none;
@@ -82,14 +82,14 @@
 }
 
 .headerArtistLabelServicesSection{
-    background: url("../demainWeArt/images/backgroundsSections/background-label.jpg") no-repeat center / cover;
+    background: url("../../demainWeArt/images/backgroundsSections/background-label.jpg") no-repeat center / cover;
     height: 100vh;
 }
 
 .menuArtistLabelServicesSection{
     height: 100%;
     display: none;
-    background: url("../demainWeArt/images/backgroundsSections/background-label-section.jpg") no-repeat center / cover;
+    background: url("../../demainWeArt/images/backgroundsSections/background-label-section.jpg") no-repeat center / cover;
 }
 .footerRecordingSection{
     display: none;
@@ -129,14 +129,14 @@
 }
 
 .headerTrainingSection{
-    background: url("../demainWeArt/images/backgroundsSections/background-training.jpg") no-repeat center / cover;
+    background: url("../../demainWeArt/images/backgroundsSections/background-training.jpg") no-repeat center / cover;
     height: 100vh;
 }
 
 .menuTrainingSection{
     height: 100%;
     display: none;
-    background: url("../demainWeArt/images/backgroundsSections/background-training-section.jpg") no-repeat center / cover;
+    background: url("../../demainWeArt/images/backgroundsSections/background-training-section.jpg") no-repeat center / cover;
 }
 .footerTrainingSection{
     display: none;
@@ -176,14 +176,14 @@
 }
 
 .headerEventsSection{
-    background: url("../demainWeArt/images/backgroundsSections/background-events.jpg") no-repeat center / cover;
+    background: url("../../demainWeArt/images/backgroundsSections/background-events.jpg") no-repeat center / cover;
     height: 100vh;
 }
 
 .menuEventsSection{
     height: 100%;
     display: none;
-    background: url("../demainWeArt/images/backgroundsSections/background-events-section.jpg") no-repeat center / cover;
+    background: url("../../demainWeArt/images/backgroundsSections/background-events-section.jpg") no-repeat center / cover;
 }
 .footerEventsSection{
     display: none;
