@@ -2165,6 +2165,11 @@ label.radios {
     width: 75%;
     min-height: 34px;
 }
+.card-header button:focus{
+
+    width: 100%;
+
+}
 .bulleSousCategorie{
     width: 100% !important;
 }
