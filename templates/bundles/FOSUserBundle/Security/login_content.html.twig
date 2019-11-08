@@ -1,0 +1,31 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+<div class="container text-center" style="margin-top: 20vh">
+<form action="{{ path("fos_user_security_check") }}" method="post">
+    {% if csrf_token %}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+
+    <div class="text-center">
+        <label class="d-block text-white" for="username">{#{{ 'security.login.username'|trans }}#}Nom d'utilisateur</label>
+        <input style="border-radius: 20px" class="d-inline-block pl-3 pr-3" type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
+    </div>
+    <div class="mt-2">
+        <label class="d-block text-white" for="password">{#{{ 'security.login.password'|trans }}#}Mot de passe</label>
+        <input style="border-radius: 20px" class="d-inline-block  pl-3 pr-3" type="password" id="password" name="_password" required="required" autocomplete="current-password" />
+    </div>
+    {% if error %}
+        <div>{#{{ error.messageKey|trans(error.messageData, 'security') }}#}
+            <p class="text-danger">Erreur en remplissant le formulaire</p>
+        </div>
+    {% endif %}
+    <div class="mt-2">
+        <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+        <label class="text-white" for="remember_me">{#{{ 'security.login.remember_me'|trans }}#}Se souvenir de moi</label>
+    </div>
+
+    <input class="mt-2" type="submit" id="_submit" name="_submit" value="{#{{ 'security.login.submit'|trans }}#}Se connecter" />
+</form>
+</div>
+
