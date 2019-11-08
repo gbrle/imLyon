@@ -13,7 +13,18 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class HomePageController extends AbstractController
 {
     /**
-     * @Route("/", name="home_demainWeArt")
+     * @Route("/", name="homeComming")
+     */
+    public function homeComing()
+    {
+
+
+        return $this->render('demainWeArt/homeComing.html.twig');
+    }
+
+
+    /**
+     * @Route("/homePrivisoire", name="home_demainWeArt")
      */
     public function index(CategorieRepository $categorieRepository)
     {
