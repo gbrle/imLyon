@@ -33,7 +33,6 @@
 }
 
 .titreRecordingMenu{
-    text-shadow:0 0 3px black;
     font-size: 45px;
     text-align: center;
     margin-left: -152px !important;
@@ -93,7 +92,6 @@
 }
 
 .titreArtistLabelServicesMenu{
-    text-shadow:0 0 3px black;
     font-size: 45px;
     text-align: center;
     margin-left: 0 !important;
@@ -148,7 +146,6 @@
 }
 
 .titreTrainingMenu{
-    text-shadow:0 0 3px black;
     font-size: 45px;
     text-align: center;
     margin-left: -226px !important;
@@ -195,7 +192,6 @@
 }
 
 .titreEventsMenu{
-    text-shadow:0 0 3px black;
     font-size: 45px;
     text-align: center;
     margin-left: 0 !important;
