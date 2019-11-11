@@ -21,7 +21,7 @@
 }
 
 .linkFooter{
-
+    line-height: normal;
 }
 .linkFooter:hover{
     transition-duration: 0.3s;
