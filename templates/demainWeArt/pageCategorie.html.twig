@@ -131,13 +131,13 @@
                                         <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
                                             <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
 {#                                            <div id="currentRecording" class="rotating Violet"></div>#}
-                                            <a href="/"><h2  id="homeRecording" class="Blanc">HOME</h2></a>
-                                            <a href="/#recordingStudios"><h2 class="Violet">RECORDING STUDIOS</h2></a>
+                                            <a href="/"><h2  id="homeRecording" class="Blanc petitTitreMenu">HOME</h2></a>
+                                            <a href="/#recordingPage"><h2 class="Violet">RECORDING STUDIOS</h2></a>
                                             <a href="/#artistLabelServices"><h2  id="artistLabelServicesRecording" class="Rose">ARTIST & LABEL SERVICES</h2></a>
-                                            <a href="/#training"><h2  id="trainingRecording" class="Orange">TRAINING</h2></a>
+                                            <a href="/#training"><h2  id="trainingRecording" class="Orange">FORMATION & TRAINING</h2></a>
                                             <a href="/#events"><h2 id="eventRecording" class="Rouge">EVENTS</h2></a>
-                                            <a href="{{ path('demainweart_page_partenaires') }}"><h2 class="Blanc">PARTENAIRES</h2></a>
-                                            <a href="{{ path('demainweart_page_contact') }}"><h2 class="Blanc">CONTACT</h2></a>
+                                            <a href="{{ path('demainweart_page_partenaires') }}"><h2 class="Blanc petitTitreMenu">PARTENAIRES</h2></a>
+                                            <a href="{{ path('demainweart_page_contact') }}"><h2 class="Blanc petitTitreMenu">CONTACT</h2></a>
                                             <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                         </div>
                                     </div>
@@ -223,8 +223,8 @@
 
 
 
-                                    <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-center text-sm-center text-lg-left text-white mt-5">
-                                        <div class="col-12 d-flex flex-wrap justify-content-center text-nowrap">
+                                    <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-left text-sm-center text-lg-left text-white mt-5">
+                                        <div class="col-12 d-flex flex-wrap justify-content-center">
                                             <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                                 <h2 class="pl-0 text-lg-left pb-2">Home</h2>
                                                 <a href="{{ path('demainweart_page_contact') }}"><h3 class="small text-lg-left linkFooter">Contact</h3></a>
@@ -249,7 +249,7 @@
                                                 {% endfor %}
                                             </div>
                                             <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                                <h2 class="pl-0 text-lg-left pb-2">Training</h2>
+                                                <h2 class="pl-0 text-lg-left pb-2">Formation & Training</h2>
                                                 {% for training in training.sousCategorie %}
                                                     <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
                                                 {% endfor %}
@@ -266,7 +266,7 @@
                                         <img class="logoMusicManufacturing" src="../../../demainWeArt/images/logo/logo-music.png">
                                     </div>
                                     <div class="col-12 text-white text-center mt-5">
-                                        <a href="#">imlyon.co 2019 - 2019 - Mentions légales</a>
+                                        imlyon.co 2019 - 2019 - <a href="{{ path('demainweart_page_mentions_legales') }}"> Mentions légales</a> - <a href="{{ path('demainweart_page_CGU') }}">CGU DemainWeArt</a>
                                     </div>
                                 </div>
                             </footer>

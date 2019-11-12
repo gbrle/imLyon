@@ -13,10 +13,11 @@
                             <img alt="" class="upStream" src="demainWeArt/images/logo/upstream.png">
                         </div>
 
+                        <div class="backgroundEventTitre"></div>
 
 
                         <div class="text-center text-white mt-lg-5 mt-sm-2 container col-12 col-lg-7 col-md-7">
-                            <h2 class="titreEventsMenu text-center infosHeader">{{ event.titre }}</h2>
+                            <h2 class="titreEventsMenu text-center infosHeader fontAvenirDemi">{{ event.titre }}</h2>
                             <p class="text-center descriptifEventsMenu p-1">
                                 {{ event.description }}
                             </p>
@@ -44,13 +45,13 @@
                                     <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
                                         <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                         <div id="currentEvents" class="rotating Rouge"></div>
-                                        <a href="#homePage"><h2  id="homeEvents" class="Blanc">HOME</h2></a>
+                                        <a href="#homePage"><h2  id="homeEvents" class="Blanc petitTitreMenu">HOME</h2></a>
                                         <a href="#recordingPage"><h2  id="recordingEvents" class="Violet">RECORDING STUDIOS</h2></a>
                                         <a href="#artistLabelServices"><h2  id="artistLabelServicesEvents" class="Rose">ARTIST & LABEL SERVICES</h2></a>
-                                        <a href="#training"><h2  id="trainingEvents" class="Orange">TRAINING</h2></a>
+                                        <a href="#training"><h2  id="trainingEvents" class="Orange">FORMATION & TRAINING</h2></a>
                                         <h2 id="menuEvent" class="Rouge">EVENTS</h2>
-                                        <a href="{{ path('demainweart_page_partenaires') }}"><h2 class="Blanc">PARTENAIRES</h2></a>
-                                        <a href="{{ path('demainweart_page_contact') }}"><h2 class="Blanc">CONTACT</h2></a>
+                                        <a href="{{ path('demainweart_page_partenaires') }}"><h2 class="Blanc petitTitreMenu">PARTENAIRES</h2></a>
+                                        <a href="{{ path('demainweart_page_contact') }}"><h2 class="Blanc petitTitreMenu">CONTACT</h2></a>
                                         <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                     </div>
                                 </div>
@@ -160,7 +161,7 @@
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left pb-2">Training</h2>
+                                            <h2 class="pl-0 text-lg-left pb-2">Formation & Training</h2>
                                             {% for training in training.sousCategorie %}
                                                 <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
                                             {% endfor %}
@@ -177,7 +178,7 @@
                                     <img class="logoMusicManufacturing" src="demainWeArt/images/logo/logo-music.png">
                                 </div>
                                 <div class="col-12 text-white text-center mt-5">
-                                    <a href="#">imlyon.co 2019 - 2019 - Mentions légales</a>
+                                    imlyon.co 2019 - 2019 - <a href="{{ path('demainweart_page_mentions_legales') }}"> Mentions légales</a> - <a href="{{ path('demainweart_page_CGU') }}">CGU DemainWeArt</a>
                                 </div>
                             </div>
                         </footer>
