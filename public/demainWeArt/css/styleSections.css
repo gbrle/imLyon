@@ -13,18 +13,20 @@
     opacity: 0.6;
 }
 .infosHeader{
-    padding-top: 130px;
+    padding-top: 90px;
     padding-bottom: 40px;
     line-height: 38px;
 }
 /* RECORDING SECTION
 -------------------------------> */
+.backgroundRecordingStudioTitre, .backgroundArtisteLabelServicesTitre, .backgroundEventTitre, .backgroundTrainingTitre{
+    top: 334px!important;
+}
 .backgroundRecordingStudioTitre{
     position: fixed;
     background: url('/demainWeArt/images/homeMenu/recording.png') no-repeat center / cover;
     height:65px;
     width: 100%;
-    top: 374px;
     left: 0;
 }
 .headerRecordingSection .upStream{
@@ -67,11 +69,14 @@
     object-fit: fill;
 }
 .descriptifRecordingMenu{
+    padding-left: 230px!important;
+    padding-right: 230px!important;
+    padding-bottom: 40px!important;
+    padding-top: 40px!important;
     position: fixed;
-    bottom: 14px;
+    top: 480px;
     right: 0;
     width: 100%;
-
     background-color: rgba(140, 69, 117, .7);
 }
 
@@ -83,7 +88,6 @@
     background: url('/demainWeArt/images/homeMenu/artist.png') no-repeat center / cover;
     height:65px;
     width: 100%;
-    top: 378px;
     left: 0;
 }
 .headerArtistLabelServicesSection .upStream{
@@ -126,7 +130,15 @@
     object-fit: fill;
 }
 .descriptifArtistLabelServicesMenu{
-    border-radius: 30px;
+    padding-left: 230px!important;
+    padding-right: 230px!important;
+    padding-bottom: 40px!important;
+    padding-top: 40px!important;
+    position: fixed;
+    top: 480px;
+    right: 0;
+    width: 100%;
+
     background-color: rgba(179, 69, 117, .6);
 }
 
@@ -137,7 +149,6 @@
     background: url('/demainWeArt/images/homeMenu/training.png') no-repeat center / cover;
     height:65px;
     width: 100%;
-    top: 374px;
     left: 0;
 }
 .headerTrainingSection .upStream{
@@ -180,7 +191,15 @@
     object-fit: fill;
 }
 .descriptifTrainingMenu{
-    border-radius: 30px;
+    padding-left: 230px!important;
+    padding-right: 230px!important;
+    padding-bottom: 40px!important;
+    padding-top: 40px!important;
+    position: fixed;
+    top: 480px;
+    right: 0;
+    width: 100%;
+
     background-color: rgba(240, 90, 35, .6);
 }
 
@@ -234,7 +253,15 @@
     object-fit: fill;
 }
 .descriptifEventsMenu{
-    border-radius: 30px;
+    padding-left: 230px!important;
+    padding-right: 230px!important;
+    padding-bottom: 40px!important;
+    padding-top: 40px!important;
+    position: fixed;
+    top: 480px;
+    right: 0;
+    width: 100%;
+
     background-color: rgba(200, 28, 35, .6);
 }
 
@@ -245,6 +272,15 @@
 @media (max-width: 991px){
     /* RECORDING SECTION
 -------------------------------> */
+    .descriptifEventsMenu, .descriptifArtistLabelServicesMenu, .descriptifRecordingMenu, .descriptifTrainingMenu{
+        padding-left: 35px!important;
+        padding-right: 35px!important;
+        padding-bottom: 35px!important;
+        padding-top: 35px!important;
+
+        top: 292px;
+
+    }
     .backgroundRecordingStudioTitre{
         display: none;
     }.backgroundEventTitre{
@@ -291,6 +327,15 @@
 @media (max-width: 767px){
     /* RECORDING SECTION
 -------------------------------> */
+    .descriptifEventsMenu, .descriptifArtistLabelServicesMenu, .descriptifRecordingMenu, .descriptifTrainingMenu{
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+        padding-bottom: 5px!important;
+        padding-top: 5px!important;
+
+        top: 235px;
+
+    }
     .infosHeader{
         padding-top: 1px;
         padding-bottom: 1px;

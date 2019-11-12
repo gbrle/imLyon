@@ -161,7 +161,7 @@
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left pb-2">Training</h2>
+                                            <h2 class="pl-0 text-lg-left pb-2">Formation & Training</h2>
                                             {% for training in training.sousCategorie %}
                                                 <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
                                             {% endfor %}
@@ -178,7 +178,7 @@
                                     <img class="logoMusicManufacturing" src="demainWeArt/images/logo/logo-music.png">
                                 </div>
                                 <div class="col-12 text-white text-center mt-5">
-                                    <a href="#">imlyon.co 2019 - 2019 - Mentions légales</a>
+                                    imlyon.co 2019 - 2019 - <a href="{{ path('demainweart_page_mentions_legales') }}"> Mentions légales</a> - <a href="{{ path('demainweart_page_CGU') }}">CGU DemainWeArt</a>
                                 </div>
                             </div>
                         </footer>

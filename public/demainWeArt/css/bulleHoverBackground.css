@@ -21,6 +21,7 @@
 }
 
 .linkFooter{
+    margin-bottom: 1px;
     line-height: normal;
 }
 .linkFooter:hover{
