@@ -12,8 +12,10 @@ use Doctrine\Common\Persistence\ObjectManager;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Validator\Constraints\File;
 
 class CreerArticleAdminController extends AbstractController
 {
@@ -29,6 +31,23 @@ class CreerArticleAdminController extends AbstractController
         $formArticle = $this->createFormBuilder($article)
             ->add('titre')
             ->add('descriptif')
+            ->add('photo', FileType::class, [
+                'label' => 'Image de bulle (Reste vide si aucune)',
+                'required' => false,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '5024k',
+                        'mimeTypes' => [
+                            'image/png',
+                            'image/jpeg',
+                            'image/jpg',
+                            'image/gif',
+                        ],
+                        'mimeTypesMessage' => 'Le fichier est invalide',
+                    ])
+                ],
+
+            ])
             ->add('contenu', CKEditorType::class)
             ->getForm();
 
@@ -38,6 +57,13 @@ class CreerArticleAdminController extends AbstractController
 
             $article->setSlugifyTitre($slugify->slugify($article->getTitre()));
             $article->setSousCategorie($sousCategorie);
+
+            if($formArticle->get('photo')->getData() !== null){
+            $file = $formArticle->get('photo')->getData();
+            $fileName = md5(uniqid()).'.'.$file->getClientOriginalExtension();
+            $file->move($this->getParameter('upload_directory'), $fileName);
+            $article->setPhoto($fileName);
+            }
 
 
             $manager->persist($article);
