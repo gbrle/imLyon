@@ -91,7 +91,7 @@
                                                                                     {% for article in sousCategorie.article %}
                                                                                         <div class="ml-1 mr-1">
                                                                                             <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}">
-                                                                                                <div style="background: url('/demainWeArt/images/backgroundsSections/background-recording.jpg') no-repeat center / cover;" class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
+                                                                                                <div style="background: url('uploads/{{ article.photo }}') no-repeat center / cover;" class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
                                                                                                     <div class="justify-content-center mb-3">
                                                                                                         <div class="pt-3">
                                                                                                             <h5>{{ article.titre }}</h5>

@@ -2,7 +2,7 @@
 /* BULLE HOVER */
 
 .bulle{
-    min-height: 150px;
+    min-height: 194px;
     max-width: 170px;
     min-width: 170px;
 }
@@ -31,8 +31,8 @@
 @media (max-width: 575px) {
     .bulle{
 
-
         max-width: 100%;
+        width: 230px;
 
     }
 
