@@ -33,6 +33,9 @@ class AdministrationCategorieAdminController extends AbstractController
     public function supprimerArticle(Article $article, EntityManagerInterface $manager, $id)
     {
 
+        if($article->getPhoto()){
+        unlink('uploads/'.$article->getPhoto().'');
+        }
         $manager->remove($article);
 
         $manager->flush();

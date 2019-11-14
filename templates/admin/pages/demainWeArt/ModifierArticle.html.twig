@@ -16,7 +16,16 @@
 
             {{ form_row(formArticle.descriptif) }}
 
-
+            {{ form_row(formArticle.photo) }}
+    
+            <div>
+                <p>Photo actuelle : </p>
+                {% if article.photo %}
+                <img style="width: 250px" src="../../../uploads/{{ article.photo }}">
+                {% else %}
+                <p class="text-warning">Aucune photo pour cet article !</p>
+                {% endif %}
+            </div>
             {{ form_row(formArticle.contenu) }}
 
             <button style="background-color: #5cb85c; color: white; border: 2px solid #5cb85c; border-radius: 4px; padding: 15px" type="submit" class="btn btn-primary">Modifier</button>
