@@ -1,12 +1,10 @@
 
 .buttonEnSavoirPlus{
     height: 50px;
-    position: fixed;
-    bottom: 44px;
+    position: relative;
+    bottom: -60px;
     border-radius: 27px;
     opacity: 1;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
 }
 .buttonEnSavoirPlus:hover{
@@ -14,7 +12,7 @@
     opacity: 0.8;
 }
 .infosHeader{
-    padding-top: 90px;
+    padding-top: 87px;
     padding-bottom: 40px;
     line-height: 38px;
 }
@@ -37,7 +35,7 @@
 }
 
 .titreRecordingMenu{
-    font-size: 40px;
+    font-size: 34px;
     text-align: center;
     margin-left: -152px !important;
     padding-left: 0 !important;
@@ -98,7 +96,7 @@
 }
 
 .titreArtistLabelServicesMenu{
-    font-size: 40px;
+    font-size: 34px;
     text-align: center;
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -159,7 +157,7 @@
 }
 
 .titreTrainingMenu{
-    font-size: 40px;
+    font-size: 34px;
     text-align: center;
     margin-left: -226px !important;
     padding-left: 0 !important;
@@ -221,7 +219,7 @@
 }
 
 .titreEventsMenu{
-    font-size: 40px;
+    font-size: 34px;
     text-align: center;
     margin-left: 0 !important;
     padding-left: 0 !important;
@@ -326,6 +324,15 @@
 // Small devices (landscape phones, 576px and up)
 ============================================================*/
 @media (max-width: 767px){
+
+    .buttonEnSavoirPlus{
+        height: 50px;
+        position: relative;
+        bottom: -30px;
+        border-radius: 27px;
+        opacity: 1;
+
+    }
     /* RECORDING SECTION
 -------------------------------> */
     .descriptifEventsMenu, .descriptifArtistLabelServicesMenu, .descriptifRecordingMenu, .descriptifTrainingMenu{
@@ -334,7 +341,7 @@
         padding-bottom: 5px!important;
         padding-top: 5px!important;
 
-        top: 235px;
+        top: 211px;
 
     }
     .infosHeader{
