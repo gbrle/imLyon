@@ -85,7 +85,7 @@
                                                                                     {% for article in sousCategorie.article %}
                                                                                         <div class="ml-1 mr-1">
                                                                                             <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}">
-                                                                                                <div class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
+                                                                                                <div style="background: url('uploads/{{ article.photo }}') no-repeat center / cover;" class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
                                                                                                     <div class="justify-content-center">
                                                                                                         <div class="pt-3">
                                                                                                             <h5>{{ article.titre }}</h5>
@@ -107,7 +107,15 @@
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#artistLabelServicesCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
                                                                 {% for article in sousCategorie.article %}
-                                                                    <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
+                                                                    <a id="linkToRecordingStudio"
+
+                                                                        href="
+                                                                         {% if article.titre == 'Recording Studios REC-MIX-MASTER' %}
+                                                                                                        #recordingPage
+                                                                                                     {% else %}
+                                                                                                        {{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}
+                                                                        {% endif %}
+                                                                    "><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
                                                                 {% endfor %}
                                                             </div>
                                                         </div>

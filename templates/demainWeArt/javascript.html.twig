@@ -259,6 +259,17 @@ homeEvents.addEventListener('click', function (e) {
                             resetAll();
                         })
 
+
+// linkToRecordingStudio
+let linkToRecordingStudio = document.getElementById('linkToRecordingStudio');
+    linkToRecordingStudio.addEventListener('click', function (e) {
+    headerAboutSection.style.transitionDuration = "0";
+    headerAboutSection.style.height = "0vh";
+    sectionRecording.style.display = "block";
+    $.fn.pagepiling.setMouseWheelScrolling(false);
+    $.fn.pagepiling.setAllowScrolling(false);
+})
+
 </script>
 <script>
     var deleteLog = false;
