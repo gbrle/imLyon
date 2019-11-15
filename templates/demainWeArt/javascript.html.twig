@@ -24,15 +24,39 @@
         req.send(data);
     }
 
-    let formNewsLetter = document.getElementById('formNewsLetter');
-    formNewsLetter.addEventListener('click', function () {
-        let contentNewsletter = document.getElementById('contentNewsletter');
+    let formNewsLetterRecording = document.getElementById('formNewsLetterRecording');
+    formNewsLetterRecording.addEventListener('click', function () {
+        let contentNewsLetterRecording = document.getElementById('contentNewsLetterRecording');
 
-        let email = contentNewsletter.value;
-        ajaxPost("{{ path('postNewsletter') }}", email, function() {
-            alert('Votre inscription à la newsletter a bien été prise en compte')
+        let email = contentNewsLetterRecording.value;
+        ajaxPost("{{ path('postNewsletter') }}", email, function($callback) {
+
+            formNewsLetterRecording.value = "Inscrit(e) !";
         })
     })
+    let formNewsLetterArtist = document.getElementById('formNewsLetterArtist');
+    formNewsLetterArtist.addEventListener('click', function () {
+        let contentNewsLetterArtist = document.getElementById('contentNewsLetterArtist');
+
+        let email = contentNewsLetterArtist.value;
+        ajaxPost("{{ path('postNewsletter') }}", email, function() {
+
+            formNewsLetterArtist.value = "Inscrit(e) !";
+        })
+    })
+
+    let formNewsLetterEvent = document.getElementById('formNewsLetterEvent');
+    formNewsLetterEvent.addEventListener('click', function () {
+        let contentNewsLetterEvent = document.getElementById('contentNewsLetterEvent');
+
+        let email = contentNewsLetterEvent.value;
+        ajaxPost("{{ path('postNewsletter') }}", email, function() {
+
+            formNewsLetterEvent.value = "Inscrit(e) !";
+        })
+    })
+
+
     // AJAX POST NEWSLETTER !! END
 
 // Logic JS Recording Studios Page

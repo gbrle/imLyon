@@ -12,6 +12,7 @@
     <!--	Css Links
    ==================================================-->
     <link rel="stylesheet" href="../../demainWeArt/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../demainWeArt/css/jquery.pagepiling.css">
     <link rel="stylesheet" href="../../demainWeArt/css/font-awesome.min.css">
     <link rel="stylesheet" href="../../demainWeArt/fonts/flaticon.css">
     <link rel="stylesheet" href="../../demainWeArt/css/plugins.css">
@@ -207,9 +208,9 @@
                                 <div  style="background-color: {{ recordingStutios.couleurfooter }}" class="row rounded-top">
                                     <!-- Newsletter -->
                                     <div class="d-flex justify-content-center col-12 containerNewsletter">
-                                        <form accept-charset="UTF-8" action="https://www.sendicate.net/subscribe/xxxxxx" method="post" class="newsletter">
-                                            <input type="email" id="subscriber_email" name="subscriber[email]" value="" placeholder="E-mail" />
-                                            <input style="background: #B34575;" type="submit" name="commit" value="NEWSLETTER" disabled="disabled"/>
+                                        <form accept-charset="UTF-8"  class="newsletter">
+                                            <input type="email" id="contentNewsLetterPartenaires" name="formNewsLetterPartenaires" placeholder="E-mail" />
+                                            <input id="formNewsLetterPartenaires" style="background: #B34575;" type="button" name="formNewsLetterPartenaires" value="NEWSLETTER" disabled="disabled"/>
                                         </form>
                                     </div>
 
@@ -290,7 +291,36 @@
     var deleteLog = false;
     //	Pagepiling js
     //=====================================================
+    // AJAX POST NEWSLETTER !!
+    function ajaxPost(url, data, callback) {
+        let req = new XMLHttpRequest();
+        req.open("POST", url);
+        req.addEventListener("load", function () {
+            if (req.status >= 200 && req.status < 400) {
+                // Appelle la fonction callback en lui passant la réponse de la requête
+                callback(req.responseText);
+            } else {
+                console.error(req.status + " " + req.statusText + " " + url);
+            }
+        });
+        req.addEventListener("error", function () {
+            console.error("Erreur réseau avec l'URL " + url);
+        });
+        req.send(data);
+    }
 
+
+
+    let formNewsLetterPartenaires = document.getElementById('formNewsLetterPartenaires');
+    formNewsLetterPartenaires.addEventListener('click', function () {
+        let contentNewsLetterPartenaires = document.getElementById('contentNewsLetterPartenaires');
+
+        let email = contentNewsLetterPartenaires.value;
+        ajaxPost("{{ path('postNewsletter') }}", email, function() {
+
+            formNewsLetterPartenaires.value = "Inscrit(e) !";
+        })
+    })
 
     //	Sidebar Nav Menu js
     //=====================================================

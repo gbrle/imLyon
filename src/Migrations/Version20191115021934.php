@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20191027115035 extends AbstractMigration
+final class Version20191115021934 extends AbstractMigration
 {
     public function getDescription() : string
     {
@@ -22,7 +22,7 @@ final class Version20191027115035 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE categorie ADD description LONGTEXT DEFAULT NULL');
+        $this->addSql('CREATE UNIQUE INDEX UNIQ_7E8585C8A5E3B32D ON newsletter (ip)');
     }
 
     public function down(Schema $schema) : void
@@ -30,6 +30,6 @@ final class Version20191027115035 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE categorie DROP description');
+        $this->addSql('DROP INDEX UNIQ_7E8585C8A5E3B32D ON newsletter');
     }
 }
