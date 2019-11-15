@@ -341,10 +341,10 @@ if($contact.length){
             //$form.toggleClass( className, val != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( val ) );
 
             if(val != '' && /^([\w-\.]+@([\w-]+\.)+[\w-]{2,12})?$/.test( val )) {
-                $('.newsletter input[type="submit"]').removeAttr('disabled');
+                $('.newsletter input[type="button"]').removeAttr('disabled');
             }
             else {
-                $('.newsletter input[type="submit"]').attr('disabled', 'disabled');
+                $('.newsletter input[type="button"]').attr('disabled', 'disabled');
             }
         });
     });
