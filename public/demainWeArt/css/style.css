@@ -2455,7 +2455,7 @@ label.radios {
 /* NewsLetter */
 
 
-.newsletter:not( .newsletter--active ) input[type='submit']{
+.newsletter:not( .newsletter--active ) input[type='button']{
     /*display: none;*/
 }
 .containerNewsletter{
@@ -2477,7 +2477,7 @@ label.radios {
     height: 50px;
 }
 
-.newsletter input[type='submit']{
+.newsletter input[type='button']{
     border-radius: 0 24px 24px 0;
     padding: 0 20px;
     margin-left: -5px;
@@ -2494,12 +2494,12 @@ label.radios {
 
 }
 
-.newsletter input[type='submit']:disabled{
+.newsletter input[type='button']:disabled{
     color: white;
     cursor: no-drop;
 }
 
-.newsletter input[type='submit']:focus, .newsletter input[type='email']:focus{
+.newsletter input[type='button']:focus, .newsletter input[type='email']:focus{
     outline: none;
 }
 /* End NewsLetter */
@@ -3159,7 +3159,7 @@ label.radios {
     .newsletter input[type='email']{
         width: 120px;
     }
-    .newsletter input[type='submit']{
+    .newsletter input[type='button']{
         width: 120px;
 
 

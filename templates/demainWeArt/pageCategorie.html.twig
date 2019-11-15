@@ -214,9 +214,9 @@
                                 <div  style="background-color: {{ couleurFooter }}" class="row rounded-top">
                                     <!-- Newsletter -->
                                     <div class="d-flex justify-content-center col-12 containerNewsletter">
-                                        <form accept-charset="UTF-8" action="https://www.sendicate.net/subscribe/xxxxxx" method="post" class="newsletter">
-                                            <input type="email" id="subscriber_email" name="subscriber[email]" value="" placeholder="E-mail" />
-                                            <input style="background: #B34575;" type="submit" name="commit" value="NEWSLETTER" disabled="disabled"/>
+                                        <form accept-charset="UTF-8"  class="newsletter">
+                                            <input type="email" id="contentNewsLetterCategorie" name="formNewsLetterCategorie" placeholder="E-mail" />
+                                            <input id="formNewsLetterCategorie" style="background: #B34575;" type="button" name="formNewsLetterCategorie" value="NEWSLETTER" disabled="disabled"/>
                                         </form>
                                     </div>
 
@@ -298,19 +298,37 @@
     //	Pagepiling js
     //=====================================================
 
-    $(document).ready(function() {
-        $('#pagepiling').pagepiling({
-            menu: '#menu',
-            anchors: ['homePage', 'recordingPage', 'artistLabelServices', 'training', 'events','page6', 'page7', 'page8','page9'],
-            loopTop: false,
-            loopBottom: false,
-            keyboardScrolling: false,
-            scrollbars: false,
-
+    // AJAX POST NEWSLETTER !!
+    function ajaxPost(url, data, callback) {
+        let req = new XMLHttpRequest();
+        req.open("POST", url);
+        req.addEventListener("load", function () {
+            if (req.status >= 200 && req.status < 400) {
+                // Appelle la fonction callback en lui passant la réponse de la requête
+                callback(req.responseText);
+            } else {
+                console.error(req.status + " " + req.statusText + " " + url);
+            }
         });
+        req.addEventListener("error", function () {
+            console.error("Erreur réseau avec l'URL " + url);
+        });
+        req.send(data);
+    }
 
 
-    });
+
+    let formNewsLetterCategorie = document.getElementById('formNewsLetterCategorie');
+    formNewsLetterCategorie.addEventListener('click', function () {
+        let contentNewsLetterCategorie = document.getElementById('contentNewsLetterCategorie');
+
+        let email = contentNewsLetterCategorie.value;
+        ajaxPost("{{ path('postNewsletter') }}", email, function() {
+
+            formNewsLetterCategorie.value = "Inscrit(e) !";
+        })
+    })
+    // AJAX POST NEWSLETTER !! END
     //	Sidebar Nav Menu js
     //=====================================================
     function openNav() {

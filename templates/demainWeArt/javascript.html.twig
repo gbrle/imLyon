@@ -6,6 +6,59 @@
 <script src="demainWeArt/js/custom.js"></script>
 <script>
 
+    // AJAX POST NEWSLETTER !!
+    function ajaxPost(url, data, callback) {
+        let req = new XMLHttpRequest();
+        req.open("POST", url);
+        req.addEventListener("load", function () {
+            if (req.status >= 200 && req.status < 400) {
+                // Appelle la fonction callback en lui passant la réponse de la requête
+                callback(req.responseText);
+            } else {
+                console.error(req.status + " " + req.statusText + " " + url);
+            }
+        });
+        req.addEventListener("error", function () {
+            console.error("Erreur réseau avec l'URL " + url);
+        });
+        req.send(data);
+    }
+
+    let formNewsLetterRecording = document.getElementById('formNewsLetterRecording');
+    formNewsLetterRecording.addEventListener('click', function () {
+        let contentNewsLetterRecording = document.getElementById('contentNewsLetterRecording');
+
+        let email = contentNewsLetterRecording.value;
+        ajaxPost("{{ path('postNewsletter') }}", email, function($callback) {
+
+            formNewsLetterRecording.value = "Inscrit(e) !";
+        })
+    })
+    let formNewsLetterArtist = document.getElementById('formNewsLetterArtist');
+    formNewsLetterArtist.addEventListener('click', function () {
+        let contentNewsLetterArtist = document.getElementById('contentNewsLetterArtist');
+
+        let email = contentNewsLetterArtist.value;
+        ajaxPost("{{ path('postNewsletter') }}", email, function() {
+
+            formNewsLetterArtist.value = "Inscrit(e) !";
+        })
+    })
+
+    let formNewsLetterEvent = document.getElementById('formNewsLetterEvent');
+    formNewsLetterEvent.addEventListener('click', function () {
+        let contentNewsLetterEvent = document.getElementById('contentNewsLetterEvent');
+
+        let email = contentNewsLetterEvent.value;
+        ajaxPost("{{ path('postNewsletter') }}", email, function() {
+
+            formNewsLetterEvent.value = "Inscrit(e) !";
+        })
+    })
+
+
+    // AJAX POST NEWSLETTER !! END
+
 // Logic JS Recording Studios Page
 let moreRecordingStudios = document.getElementById('moreRecordingStudios');
 let headerAboutSection = document.getElementById('headerRecordingSection');
