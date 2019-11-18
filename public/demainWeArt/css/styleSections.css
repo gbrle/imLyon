@@ -11,15 +11,12 @@
     transition-duration: 1.3s;
     opacity: 0.8;
 }
-.infosHeader{
-    padding-top: 87px;
-    padding-bottom: 40px;
-    line-height: 38px;
-}
+
+
 /* RECORDING SECTION
 -------------------------------> */
 .backgroundRecordingStudioTitre, .backgroundArtisteLabelServicesTitre, .backgroundEventTitre, .backgroundTrainingTitre{
-    top: 334px!important;
+    top: 30%;
 }
 .backgroundRecordingStudioTitre{
     position: fixed;
@@ -35,10 +32,15 @@
 }
 
 .titreRecordingMenu{
+    padding-top: 36px;
+    color: white;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 0;
+    margin: 0;
     font-size: 34px;
     text-align: center;
-    margin-left: -152px !important;
-    padding-left: 0 !important;
 }
 
 .headerRecordingSection .containerHeaderAbout{
@@ -51,9 +53,15 @@
 }
 
 .menuRecordingSection{
+    background-image: url("../../demainWeArt/images/backgroundsSections/background-recording-section.jpg");
     height: 100%;
     display: none;
-    background: url("../../demainWeArt/images/backgroundsSections/background-recording-section.jpg") no-repeat center / cover;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 .footerRecordingSection{
     display: none;
@@ -73,7 +81,7 @@
     padding-bottom: 40px!important;
     padding-top: 40px!important;
     position: fixed;
-    top: 480px;
+    top: 55%;
     right: 0;
     width: 100%;
     background-color: rgba(140, 69, 117, .7);
@@ -83,12 +91,13 @@
 -------------------------------> */
 .backgroundArtisteLabelServicesTitre{
     position: fixed;
-    opacity: 0.7;
     background: url('/demainWeArt/images/homeMenu/artist.png') no-repeat center / cover;
     height:65px;
     width: 100%;
     left: 0;
+
 }
+
 .headerArtistLabelServicesSection .upStream{
     width: 139px;
     height: 28px;
@@ -96,10 +105,15 @@
 }
 
 .titreArtistLabelServicesMenu{
+    padding-top: 36px;
+    color: white;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 0;
+    margin: 0;
     font-size: 34px;
     text-align: center;
-    margin-left: 0 !important;
-    padding-left: 0 !important;
 }
 
 .headerArtistLabelServicesSection .containerHeaderAbout{
@@ -114,7 +128,12 @@
 .menuArtistLabelServicesSection{
     height: 100%;
     display: none;
-    background: url("../../demainWeArt/images/backgroundsSections/background-label-section.jpg") no-repeat center / cover;
+    background-image: url("../../demainWeArt/images/backgroundsSections/background-label-section.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .footerRecordingSection{
     display: none;
@@ -134,7 +153,7 @@
     padding-bottom: 40px!important;
     padding-top: 40px!important;
     position: fixed;
-    top: 480px;
+    top: 55%;
     right: 0;
     width: 100%;
 
@@ -157,10 +176,15 @@
 }
 
 .titreTrainingMenu{
+    padding-top: 36px;
+    color: white;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 0;
+    margin: 0;
     font-size: 34px;
     text-align: center;
-    margin-left: -226px !important;
-    padding-left: 0 !important;
 }
 
 .headerTrainingSection .containerHeaderAbout{
@@ -175,7 +199,12 @@
 .menuTrainingSection{
     height: 100%;
     display: none;
-    background: url("../../demainWeArt/images/backgroundsSections/background-training-section.jpg") no-repeat center / cover;
+    background-image: url("../../demainWeArt/images/backgroundsSections/background-training-section.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .footerTrainingSection{
     display: none;
@@ -195,7 +224,7 @@
     padding-bottom: 40px!important;
     padding-top: 40px!important;
     position: fixed;
-    top: 480px;
+    top: 55%;
     right: 0;
     width: 100%;
 
@@ -209,7 +238,6 @@
     background: url('/demainWeArt/images/homeMenu/event.png') no-repeat center / cover;
     height:65px;
     width: 100%;
-    top: 374px;
     left: 0;
 }
 .headerEventsSection .upStream{
@@ -219,10 +247,15 @@
 }
 
 .titreEventsMenu{
+    padding-top: 36px;
+    color: white;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 0;
+    margin: 0;
     font-size: 34px;
     text-align: center;
-    margin-left: 0 !important;
-    padding-left: 0 !important;
 }
 
 .headerEventsSection .containerHeaderAbout{
@@ -237,7 +270,12 @@
 .menuEventsSection{
     height: 100%;
     display: none;
-    background: url("../../demainWeArt/images/backgroundsSections/background-events-section.jpg") no-repeat center / cover;
+    background-image: url("../../demainWeArt/images/backgroundsSections/background-events-section.jpg");
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .footerEventsSection{
     display: none;
@@ -257,7 +295,7 @@
     padding-bottom: 40px!important;
     padding-top: 40px!important;
     position: fixed;
-    top: 480px;
+    top: 55%;
     right: 0;
     width: 100%;
 
@@ -271,51 +309,31 @@
 @media (max-width: 991px){
     /* RECORDING SECTION
 -------------------------------> */
+    .backgroundRecordingStudioTitre{
+        top: 25%;
+    }
+    .backgroundArtisteLabelServicesTitre{
+        top: 25%;
+    }
+    .backgroundTrainingTitre{
+        top: 25%;
+    }
+    .backgroundEventTitre{
+        top: 25%;
+    }
     .descriptifEventsMenu, .descriptifArtistLabelServicesMenu, .descriptifRecordingMenu, .descriptifTrainingMenu{
         padding-left: 35px!important;
         padding-right: 35px!important;
         padding-bottom: 35px!important;
         padding-top: 35px!important;
 
-        top: 292px;
+        top: 43%;
 
-    }
-    .backgroundRecordingStudioTitre{
-        display: none;
-    }.backgroundEventTitre{
-        display: none;
-    }
-    .backgroundArtisteLabelServicesTitre{
-        display: none;
-    }
-    .backgroundTrainingTitre{
-        display: none;
     }
     .upStream{
         display: none;
     }
-    .titreRecordingMenu{
-        padding-top: 15px;
-        margin-left: 0 !important;
-    }
-    /* ARTISTLABELSERVICES SECTION
--------------------------------> */
-    .titreArtistLabelServicesMenu{
-        padding-top: 15px;
-        margin-left: 0 !important;
-    }
-    /* TRAINING SECTION
--------------------------------> */
-    .titreTrainingMenu{
-        padding-top: 15px;
-        margin-left: 0 !important;
-    }
-    /* EVENTS SECTION
--------------------------------> */
-    .titreEventsMenu{
-        padding-top: 15px;
-        margin-left: 0 !important;
-    }
+
 }
 
 
@@ -324,6 +342,28 @@
 // Small devices (landscape phones, 576px and up)
 ============================================================*/
 @media (max-width: 767px){
+    /* TEXTE SHADOW TITRE */
+    .titreRecordingMenu, .titreArtistLabelServicesMenu, .titreTrainingMenu, .titreEventsMenu{
+        text-shadow: black 1px 0 10px;
+    }
+
+
+    .backgroundRecordingStudioTitre{
+        background: transparent;
+        top: 12%;
+    }
+    .backgroundEventTitre{
+        background: transparent;
+        top: 12%;
+    }
+    .backgroundArtisteLabelServicesTitre{
+        background: transparent;
+        top: 12%;
+    }
+    .backgroundTrainingTitre{
+        background: transparent;
+        top: 12%;
+    }
 
     .buttonEnSavoirPlus{
         height: 50px;
@@ -341,17 +381,13 @@
         padding-bottom: 5px!important;
         padding-top: 5px!important;
 
-        top: 211px;
+        top: 33%;
 
     }
     .infosHeader{
-        padding-top: 1px;
-        padding-bottom: 1px;
         line-height: 38px;
     }
-    .titreRecordingMenu{
-        margin-top: 0;
-    }
+
     .headerRecordingSection .upStream{
         width: 100px;
         height: 22px;
@@ -368,9 +404,7 @@
     }
     /* ARTISTLABELSERVICES SECTION
 -------------------------------> */
-    .titreArtistLabelServicesMenu{
-        margin-top: 0;
-    }
+
     .headerArtistLabelServicesSection .upStream{
         width: 100px;
         height: 22px;
@@ -387,9 +421,6 @@
     }
     /* TRAINING SECTION
 -------------------------------> */
-    .titreTrainingMenu{
-        margin-top: 0;
-    }
     .headerTrainingSection .upStream{
         width: 100px;
         height: 22px;
@@ -406,9 +437,6 @@
     }
     /* EVENTS SECTION
 -------------------------------> */
-    .titreEventsMenu{
-        margin-top: 0;
-    }
     .headerEventsSection .upStream{
         width: 100px;
         height: 22px;
