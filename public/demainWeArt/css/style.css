@@ -344,19 +344,20 @@ a:hover,a:focus,a.active{
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before{
 	margin-left: 0px !important;
 }
-.pp-scrollable{
-    height: 100vh;
-}
+
 .full_row{
   position: relative;
   width: 100%;
 }
-::-webkit-scrollbar{
-      width: 0 !important;
-    }
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px #ececec !important; 
-    }
+/*::-webkit-scrollbar{*/
+/*    width: 0!important;*/
+/*    display: none;!important;*/
+/*}*/
+
+/*::-webkit-scrollbar-track {*/
+/*  box-shadow: inset 0 0 5px #ececec !important;*/
+/*}*/
+
 .paddingCards{
     padding-right: 169px;
     padding-left: 100px;
@@ -2327,7 +2328,7 @@ label.radios {
 // Extra large devices (large desktops, 1200px and up)
 ============================================================*/
 .carousel-caption{
-    top: 38%;
+    top: 33%;
 }
 .carousel-caption p{
     font-size: 2em;
@@ -2396,7 +2397,7 @@ label.radios {
 }
 .page_article{
     padding-top: 57px;
-    padding-left: 100px;
+    padding-left: 60px;
     padding-right: 100px;
 }
 /* ROTATE MENU */
