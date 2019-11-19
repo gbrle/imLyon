@@ -29,6 +29,72 @@
     width: 80%;
 }
 
+.bulleFormation{
+    position: relative;
+    min-height: 350px;
+    max-width: 170px;
+    min-width: 260px;
+}
+.bulleFormation h1{
+    font-size: 12px;
+    line-height: 1px;
+}
+.bulleFormation h4{
+    font-size: 12px;
+    background: black;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 53%;
+    color: white;
+
+}
+.bulleFormation h3{
+    line-height: 1;
+    text-shadow: black 1px 0 10px;
+    font-size: 17px;
+    text-align: left;
+    width: 100%;
+    color: white;
+
+}
+.bulleFormation h5{
+    font-weight: normal;
+    padding: 4px 4px 4px 4px;
+    position: absolute;
+    top: 57%;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 10px;
+    color: white;
+    line-height: 15px;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    width: 80%;
+}
+.enteteBulleFormation{
+    padding-top: 63px;
+}
+.buttonsFormation{
+    width: 100%;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    position: absolute;
+    top: 92%;
+}
+.buttonsFormation button{
+    border-radius: 2px 2px 2px 2px;
+
+    border: 1px black solid;
+    padding: 2px 8px 2px 8px;
+    font-size: 12px;
+    color: white;
+    background: transparent;
+}
+.buttonsFormation button:hover {
+    background: black;
+    color: white;
+    cursor: help;
+
+}
 .linkFooter{
     margin-bottom: 1px;
     line-height: normal;

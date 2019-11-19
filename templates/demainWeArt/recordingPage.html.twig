@@ -122,7 +122,7 @@
                                                                         {% endfor %}
                                                                     </div>
                                                                 </div>
-                                                            {% elseif sousCategorie.format == "" %}
+                                                            {% elseif sousCategorie.format == "formation" %}
                                                                 <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
                                                                     <div class="card-body" style="border: transparent;">
                                                                         <div class="row paddingCards justify-content-center">
@@ -132,15 +132,21 @@
                                                                                         <div class="row justify-content-center">
                                                                                             {% for article in sousCategorie.article %}
                                                                                                 <div class="ml-1 mr-1">
-                                                                                                    <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}">
-                                                                                                        <div class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
-                                                                                                            <div class="justify-content-center">
-                                                                                                                <div class="pt-3">
-                                                                                                                    <h5>{{ article.titre }}</h5>
+
+                                                                                                        <div style="background: url('uploads/{{ article.photo }}') no-repeat;background-size: 100% 45%;" class="table text-center bg_deepblack color_secondery bulleFormation {{ sousCategorie.couleur }}">
+                                                                                                            <div class="justify-content-center mb-3">
+                                                                                                                <div class="enteteBulleFormation">
+                                                                                                                    <h4>FORMATION</h4>
+                                                                                                                    <h3>{{ article.titre }}</h3>
+                                                                                                                    <h5>{{ article.descriptif }}</h5>
+                                                                                                                    <div class="buttonsFormation d-flex justify-content-around">
+                                                                                                                        <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}"><button>EN SAVOIR PLUS</button></a>
+                                                                                                                        <button>VERSION PDF</button>
+                                                                                                                    </div>
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                    </a>
+
                                                                                                 </div>
                                                                                             {% endfor %}
                                                                                         </div>

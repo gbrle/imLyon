@@ -63,9 +63,21 @@ let moreRecordingStudios = document.getElementById('moreRecordingStudios');
 let headerAboutSection = document.getElementById('headerRecordingSection');
 let sectionRecording = document.getElementById('sectionRecording');
     moreRecordingStudios.addEventListener('click', function (e) {
-    headerAboutSection.style.transitionDuration = "1.3s";
-    headerAboutSection.style.height = "0vh";
-    sectionRecording.style.display = "block";
+
+        moreRecordingStudios.classList.add('animated');
+        moreRecordingStudios.classList.add('flip');
+        sectionRecording.style.display = "block";
+        setTimeout(function () {
+                headerAboutSection.style.transitionDuration = "1.3s";
+                headerAboutSection.style.height = "0vh";
+            setTimeout(function () {
+                moreRecordingStudios.classList.remove('animated');
+                moreRecordingStudios.classList.remove('flip');
+                }
+                , 200);
+            }
+            , 1150);
+
     $.fn.pagepiling.setMouseWheelScrolling(false);
     $.fn.pagepiling.setAllowScrolling(false);
     })
@@ -74,9 +86,22 @@ let moreArtistLabelServicesStudios = document.getElementById('moreArtistLabelSer
 let headerArtistLabelServicesSection = document.getElementById('headerArtistLabelServicesSection');
 let sectionArtistLabelServices = document.getElementById('ArtistLabelServices');
     moreArtistLabelServicesStudios.addEventListener('click', function (e) {
-    headerArtistLabelServicesSection.style.transitionDuration = "1.3s";
-    headerArtistLabelServicesSection.style.height = "0vh";
-    sectionArtistLabelServices.style.display = "block";
+
+
+        moreArtistLabelServicesStudios.classList.add('animated');
+        moreArtistLabelServicesStudios.classList.add('flip');
+        sectionArtistLabelServices.style.display = "block";
+        setTimeout(function () {
+                headerArtistLabelServicesSection.style.transitionDuration = "1.3s";
+                headerArtistLabelServicesSection.style.height = "0vh";
+                setTimeout(function () {
+                        moreArtistLabelServicesStudios.classList.remove('animated');
+                        moreArtistLabelServicesStudios.classList.remove('flip');
+                    }
+                    , 200);
+            }
+            , 1150);
+
     $.fn.pagepiling.setMouseWheelScrolling(false);
     $.fn.pagepiling.setAllowScrolling(false);
 })
@@ -86,11 +111,24 @@ let moreTraining = document.getElementById('moreTraining');
 let headerTrainingSection = document.getElementById('headerTrainingSection');
 let sectionTraining  = document.getElementById('Training');
     moreTraining.addEventListener('click', function (e) {
-    headerTrainingSection.style.transitionDuration = "1.3s";
-    headerTrainingSection.style.height = "0vh";
-    sectionTraining.style.display = "block";
-    $.fn.pagepiling.setMouseWheelScrolling(false);
-    $.fn.pagepiling.setAllowScrolling(false);
+
+
+        moreTraining.classList.add('animated');
+        moreTraining.classList.add('flip');
+        sectionTraining.style.display = "block";
+        setTimeout(function () {
+                headerTrainingSection.style.transitionDuration = "1.3s";
+                headerTrainingSection.style.height = "0vh";
+                setTimeout(function () {
+                        moreTraining.classList.remove('animated');
+                        moreTraining.classList.remove('flip');
+                    }
+                    , 200);
+            }
+            , 1150);
+
+        $.fn.pagepiling.setMouseWheelScrolling(false);
+        $.fn.pagepiling.setAllowScrolling(false);
 })
 
 // Logic JS Events Page
@@ -98,11 +136,24 @@ let moreEvents = document.getElementById('moreEvents');
 let headerEventsSection = document.getElementById('headerEventsSection');
 let sectionEvents  = document.getElementById('Events');
     moreEvents.addEventListener('click', function (e) {
-    headerEventsSection.style.transitionDuration = "1.3s";
-    headerEventsSection.style.height = "0vh";
-    sectionEvents.style.display = "block";
-    $.fn.pagepiling.setMouseWheelScrolling(false);
-    $.fn.pagepiling.setAllowScrolling(false);
+
+
+        moreEvents.classList.add('animated');
+        moreEvents.classList.add('flip');
+        sectionEvents.style.display = "block";
+        setTimeout(function () {
+                headerEventsSection.style.transitionDuration = "1.3s";
+                headerEventsSection.style.height = "0vh";
+                setTimeout(function () {
+                        moreEvents.classList.remove('animated');
+                        moreEvents.classList.remove('flip');
+                    }
+                    , 200);
+            }
+            , 1150);
+
+        $.fn.pagepiling.setMouseWheelScrolling(false);
+        $.fn.pagepiling.setAllowScrolling(false);
 })
 
 // Reset tous les liens
