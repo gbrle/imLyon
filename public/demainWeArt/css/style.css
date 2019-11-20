@@ -2877,6 +2877,9 @@ label.radios {
 // Small devices (landscape phones, 576px and up)
 ============================================================*/
 @media (max-width: 767px){
+    .titreTrainingMenu{
+        margin-left: 0!important;
+    }
     .textHomeMenuRecording{
         margin-left: 0;
     }
