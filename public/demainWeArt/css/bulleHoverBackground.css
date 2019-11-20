@@ -104,7 +104,7 @@
 .buttonsFormation button:hover {
     background: black;
     color: white;
-    cursor: help;
+    cursor: pointer;
 
 }
 .linkFooter{

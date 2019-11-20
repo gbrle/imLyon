@@ -47,7 +47,7 @@
                                 <div class="hauteurSousCat"></div>
 
                                 <div class="menuSousCat col-md-4 col-lg-4">
-                                    <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
+                                    <div class="myself color_secondery menuSticky" style="min-width: 337px; max-width: 337px">
                                         <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                         <div id="currentArtistLabelServices" class="rotating Rose"></div>
                                         <a href="#homePage"><h2  id="homeArtistLabelServices" class="Blanc petitTitreMenu">HOME</h2></a>
@@ -71,9 +71,9 @@
 
                                                 <!-- ------------------------CARDS BULLE---------------------- -->
                                                 {% for sousCategorie in artistLabelServices.souscategorie %}
-                                                    <div onclick="expendableBulleCategorie({{ sousCategorie.id }})" style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
+                                                    <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
                                                         <h2 class="container-buttonSousCat">
-                                                            <button id="idButton{{ sousCategorie.id }}" class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="false" aria-controls="collapseOne">
+                                                            <button onclick="expendableBulleCategorie({{ sousCategorie.id }})" id="idButton{{ sousCategorie.id }}" class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="false" aria-controls="collapseOne">
                                                                 {{ sousCategorie.titre |upper }}
                                                             </button>
                                                         </h2>
@@ -158,6 +158,56 @@
 
 
                                             </div>
+
+                                            <div class="container">
+                                                <div class="testimonial my_60">
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-lg-12">
+                                                            <!--	Start Title
+                                                            ================================-->
+                                                            <div class="main_title pl-0">
+                                                                <h2 class="title color_white testimonialTitre">Ils nous ont fait confiance</h2>
+                                                            </div>
+                                                            <!--	End Title
+                                                            ================================-->
+                                                        </div>
+                                                        <div class="col-md-12 col-lg-12">
+                                                            <div class="testimonial_item owl-carousel wow animated slideInUp">
+
+                                                                <div class="member_feedback p_30 bgRose color_secondery">
+                                                                    <div class="client_img"><img src="demainWeArt/images/testimonial/01.jpg" alt="image"></div>
+                                                                    <div class="star d-inline-block mt_30 color_default">
+
+                                                                    </div>
+                                                                    <h5 class="color_white mb_15">Aisha Lexi</h5>
+                                                                    <p class="Blanc">Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per aenean commodo sociosqu.</p>
+                                                                </div>
+
+                                                                <div class="member_feedback p_30 bgRose color_secondery">
+                                                                    <div class="client_img"><img src="demainWeArt/images/testimonial/01.jpg" alt="image"></div>
+                                                                    <div class="star d-inline-block mt_30 color_default">
+
+                                                                    </div>
+                                                                    <h5 class="color_white mb_15">Aisha Lexi</h5>
+                                                                    <p class="Blanc">Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per aenean commodo sociosqu.</p>
+                                                                </div>
+
+                                                                <div class="member_feedback p_30 bgRose color_secondery">
+                                                                    <div class="client_img"><img src="demainWeArt/images/testimonial/01.jpg" alt="image"></div>
+                                                                    <div class="star d-inline-block mt_30 color_default">
+
+                                                                    </div>
+                                                                    <h5 class="color_white mb_15">Aisha Lexi</h5>
+                                                                    <p class="Blanc">Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per aenean commodo sociosqu.</p>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
                                         </div>
                                     </div>
                                 </div>
