@@ -833,7 +833,7 @@ ul#menu li a{
     margin-top: 7%;
     /*background: url("../../images/homeMenu/recording.png") no-repeat scroll 0 100% / cover ;*/
     background: url("../images/homeMenu/recording.png") no-repeat center scroll;
-    width: 100%;
+    width: 105%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -855,7 +855,7 @@ ul#menu li a{
 }
 #slider .trainingMenu{
     background: url("../images/homeMenu/training.png") no-repeat center scroll;
-    width: 100%;
+    width: 110%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -909,6 +909,15 @@ ul#menu li a{
 /*===============================================================================
 12.		About
 =================================================================================*/
+.textHomeMenu{
+    padding-top: 5px;
+}
+.textHomeMenuRecording{
+    margin-left: -89px;
+}
+.textHomeMenuFormationTraining{
+    margin-left: -162px;
+}
 
 .personal_info ul li{
 	border-bottom: 1px solid;
@@ -2352,6 +2361,13 @@ label.radios {
 .petitTitreMenu{
     font-size: 16px;
 }
+.logoDemainMenu{
+    max-width: 300px !important;
+    height: 100% !important;
+    margin-top: 30px!important;
+    margin-bottom: -30px!important;
+    object-fit: fill !important;
+}
 
 /* STICKY */
 
@@ -2360,6 +2376,10 @@ label.radios {
     position: -webkit-sticky;
     position: sticky;
     top: -37px;
+}
+.menuSticky h2:hover{
+    transition-duration: 1s;
+    border-left: 1px white solid;
 }
 
 
@@ -2857,6 +2877,19 @@ label.radios {
 // Small devices (landscape phones, 576px and up)
 ============================================================*/
 @media (max-width: 767px){
+    .textHomeMenuRecording{
+        margin-left: 0;
+    }
+    #slider .recordingMenu{
+        width: 100%;
+
+    }
+    #slider .trainingMenu{
+        width: 100%;
+    }
+    .textHomeMenuFormationTraining{
+        margin-left: 0;
+    }
     .testimonialTitre{
         padding-left: 0!important;
         padding-bottom: 0;
