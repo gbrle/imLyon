@@ -5,7 +5,6 @@
 <script src="demainWeArt/js/jquery.pagepiling.min.js"></script>
 <script src="demainWeArt/js/custom.js"></script>
 <script>
-
     // AJAX POST NEWSLETTER !!
     function ajaxPost(url, data, callback) {
         let req = new XMLHttpRequest();
@@ -55,18 +54,79 @@
             formNewsLetterEvent.value = "Inscrit(e) !";
         })
     })
-
-
     // AJAX POST NEWSLETTER !! END
+
+
+// FUNCTION BULLE SOUS CATEGORIE EXPANDABLE
+
+    // je récupere toutes mes sous catégorie pour les refermer apres clique sur une autre
+    let all = document.getElementsByTagName('*');
+    let sousCats = [];
+    let sousCatsShow = [];
+    for (i=0;i<all.length;i++){
+        if (all[i].id.substr(0,8)==="idButton"){
+            sousCats.push(all[i])
+        }
+    }
+    for (i=0;i<all.length;i++){
+        if (all[i].id.substr(0,4)==="target"){
+            sousCatsShow.push(all[i])
+        }
+    }
+
+
+
+
+
+    function expendableBulleCategorie(id){
+        let bulle = document.getElementById('idButton'+id);
+        let bulleAttribut = document.getElementById('idButton'+id).getAttribute('aria-expanded');
+
+        for (i=0;i < sousCats.length;i++)
+        {
+            if(sousCats[i].getAttribute('aria-expanded') === "true" && 'idButton'+id !== sousCats[i].id){
+                sousCats[i].style.width = "75%";
+            }
+        }
+
+
+
+        if (bulleAttribut === "false"){
+            bulle.style.transitionDuration = "1.5s";
+            bulle.style.width = "100%";
+        } else {
+            bulle.style.transitionDuration = "1.5s";
+            bulle.style.width = "75%";
+
+        }
+
+    }
+
+
+// FUNCTION BULLE SOUS CATEGORIE EXPANDABLE END
+
+
 
 // Logic JS Recording Studios Page
 let moreRecordingStudios = document.getElementById('moreRecordingStudios');
 let headerAboutSection = document.getElementById('headerRecordingSection');
 let sectionRecording = document.getElementById('sectionRecording');
     moreRecordingStudios.addEventListener('click', function (e) {
-    headerAboutSection.style.transitionDuration = "1.3s";
-    headerAboutSection.style.height = "0vh";
-    sectionRecording.style.display = "block";
+
+        moreRecordingStudios.classList.add('animated');
+        moreRecordingStudios.classList.add('flip');
+        sectionRecording.style.display = "block";
+        setTimeout(function () {
+                headerAboutSection.style.transitionDuration = "1.3s";
+                headerAboutSection.style.height = "0vh";
+            setTimeout(function () {
+                moreRecordingStudios.classList.remove('animated');
+                moreRecordingStudios.classList.remove('flip');
+                }
+                , 200);
+            }
+            , 1150);
+
     $.fn.pagepiling.setMouseWheelScrolling(false);
     $.fn.pagepiling.setAllowScrolling(false);
     })
@@ -75,9 +135,22 @@ let moreArtistLabelServicesStudios = document.getElementById('moreArtistLabelSer
 let headerArtistLabelServicesSection = document.getElementById('headerArtistLabelServicesSection');
 let sectionArtistLabelServices = document.getElementById('ArtistLabelServices');
     moreArtistLabelServicesStudios.addEventListener('click', function (e) {
-    headerArtistLabelServicesSection.style.transitionDuration = "1.3s";
-    headerArtistLabelServicesSection.style.height = "0vh";
-    sectionArtistLabelServices.style.display = "block";
+
+
+        moreArtistLabelServicesStudios.classList.add('animated');
+        moreArtistLabelServicesStudios.classList.add('flip');
+        sectionArtistLabelServices.style.display = "block";
+        setTimeout(function () {
+                headerArtistLabelServicesSection.style.transitionDuration = "1.3s";
+                headerArtistLabelServicesSection.style.height = "0vh";
+                setTimeout(function () {
+                        moreArtistLabelServicesStudios.classList.remove('animated');
+                        moreArtistLabelServicesStudios.classList.remove('flip');
+                    }
+                    , 200);
+            }
+            , 1150);
+
     $.fn.pagepiling.setMouseWheelScrolling(false);
     $.fn.pagepiling.setAllowScrolling(false);
 })
@@ -87,11 +160,24 @@ let moreTraining = document.getElementById('moreTraining');
 let headerTrainingSection = document.getElementById('headerTrainingSection');
 let sectionTraining  = document.getElementById('Training');
     moreTraining.addEventListener('click', function (e) {
-    headerTrainingSection.style.transitionDuration = "1.3s";
-    headerTrainingSection.style.height = "0vh";
-    sectionTraining.style.display = "block";
-    $.fn.pagepiling.setMouseWheelScrolling(false);
-    $.fn.pagepiling.setAllowScrolling(false);
+
+
+        moreTraining.classList.add('animated');
+        moreTraining.classList.add('flip');
+        sectionTraining.style.display = "block";
+        setTimeout(function () {
+                headerTrainingSection.style.transitionDuration = "1.3s";
+                headerTrainingSection.style.height = "0vh";
+                setTimeout(function () {
+                        moreTraining.classList.remove('animated');
+                        moreTraining.classList.remove('flip');
+                    }
+                    , 200);
+            }
+            , 1150);
+
+        $.fn.pagepiling.setMouseWheelScrolling(false);
+        $.fn.pagepiling.setAllowScrolling(false);
 })
 
 // Logic JS Events Page
@@ -99,11 +185,24 @@ let moreEvents = document.getElementById('moreEvents');
 let headerEventsSection = document.getElementById('headerEventsSection');
 let sectionEvents  = document.getElementById('Events');
     moreEvents.addEventListener('click', function (e) {
-    headerEventsSection.style.transitionDuration = "1.3s";
-    headerEventsSection.style.height = "0vh";
-    sectionEvents.style.display = "block";
-    $.fn.pagepiling.setMouseWheelScrolling(false);
-    $.fn.pagepiling.setAllowScrolling(false);
+
+
+        moreEvents.classList.add('animated');
+        moreEvents.classList.add('flip');
+        sectionEvents.style.display = "block";
+        setTimeout(function () {
+                headerEventsSection.style.transitionDuration = "1.3s";
+                headerEventsSection.style.height = "0vh";
+                setTimeout(function () {
+                        moreEvents.classList.remove('animated');
+                        moreEvents.classList.remove('flip');
+                    }
+                    , 200);
+            }
+            , 1150);
+
+        $.fn.pagepiling.setMouseWheelScrolling(false);
+        $.fn.pagepiling.setAllowScrolling(false);
 })
 
 // Reset tous les liens
@@ -313,7 +412,7 @@ homeEvents.addEventListener('click', function (e) {
                         })
 
 
-// linkToRecordingStudio
+/*// linkToRecordingStudio
 let linkToRecordingStudio = document.getElementById('linkToRecordingStudio');
     linkToRecordingStudio.addEventListener('click', function (e) {
     headerAboutSection.style.transitionDuration = "0";
@@ -321,7 +420,7 @@ let linkToRecordingStudio = document.getElementById('linkToRecordingStudio');
     sectionRecording.style.display = "block";
     $.fn.pagepiling.setMouseWheelScrolling(false);
     $.fn.pagepiling.setAllowScrolling(false);
-})
+})*/
 
 </script>
 <script>
@@ -338,6 +437,7 @@ let linkToRecordingStudio = document.getElementById('linkToRecordingStudio');
             keyboardScrolling: false,
             scrollbars: false,
 
+
         });
 
 
@@ -345,7 +445,7 @@ let linkToRecordingStudio = document.getElementById('linkToRecordingStudio');
     //	Sidebar Nav Menu js
     //=====================================================
     function openNav() {
-        document.getElementById("mysidenav").style.width = "230px";
+        document.getElementById("mysidenav").style.width = "100%";
     }
     function closeNav() {
         document.getElementById("mysidenav").style.width = "0";

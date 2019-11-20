@@ -2,6 +2,7 @@
 /* BULLE HOVER */
 
 .bulle{
+    position: relative;
     min-height: 194px;
     max-width: 170px;
     min-width: 170px;
@@ -15,11 +16,97 @@
     line-height: 1px;
 }
 .bulle h5{
+    padding: 4px 4px 4px 4px;
+    position: absolute;
+    top: 83%;
+    border-radius: 4px 4px 4px 4px;
+    background-color: rgba(100, 0, 100, 0.5);
     font-size: 10px;
     color: white;
     line-height: 15px;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    width: 80%;
 }
 
+.bulleFormation{
+    position: relative;
+    min-height: 350px;
+    max-width: 170px;
+    min-width: 260px;
+}
+.bulleFormation:hover{
+    transition-duration: 0.9s;
+    opacity: 0.8;
+}
+.bulleFormation h1{
+    font-size: 12px;
+    line-height: 1px;
+}
+.bulleFormation h4{
+    font-size: 12px;
+    background: black;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 53%;
+    color: white;
+
+}
+.bulleFormation h3{
+    line-height: 1;
+    text-shadow: black 1px 0 10px;
+    font-size: 17px;
+    text-align: left;
+    width: 100%;
+    color: white;
+
+}
+.bulleFormation h5{
+    font-weight: normal;
+    padding: 4px 4px 4px 4px;
+    position: absolute;
+    top: 65%;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 10px;
+    color: white;
+    line-height: 15px;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    width: 80%;
+}
+.enteteBulleFormation{
+    padding-top: 63px;
+}
+.buttonsFormation{
+    width: 100%;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    position: absolute;
+    top: 92%;
+
+}
+.bulleFormation:hover button {
+    display: block;
+    transition-duration: 0.9s;
+
+
+}
+.buttonsFormation button{
+    display: none;
+    border-radius: 2px 2px 2px 2px;
+
+    border: 1px black solid;
+    padding: 2px 8px 2px 8px;
+    font-size: 12px;
+    color: white;
+    background: transparent;
+}
+.buttonsFormation button:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+
+}
 .linkFooter{
     margin-bottom: 1px;
     line-height: normal;

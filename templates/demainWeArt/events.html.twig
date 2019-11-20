@@ -13,11 +13,13 @@
                             <img alt="" class="upStream" src="demainWeArt/images/logo/upstream.png">
                         </div>
 
-                        <div class="backgroundEventTitre"></div>
+                        <div class="backgroundEventTitre">
+                            <h2 class="titreEventsMenu text-center infosHeader fontAvenirDemi">{{ event.titre }}</h2>
+                        </div>
 
 
                         <div class="text-center text-white mt-lg-5 mt-sm-2 container col-12 col-lg-7 col-md-7">
-                            <h2 class="titreEventsMenu text-center infosHeader fontAvenirDemi">{{ event.titre }}</h2>
+
                             <p class="text-center descriptifEventsMenu p-1 fontAvenirRegular font-weight-bold">
                                 {{ event.description }}
                                 <br>
@@ -43,8 +45,11 @@
                             <div class="row pt-5">
                                 <div class="hauteurSousCat"></div>
 
-                                <div class="menuSousCat col-md-3 col-lg-3">
-                                    <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
+                                <div class="menuSousCat col-md-4 col-lg-4">
+                                    <div class="">
+                                        <a href="/"><img alt="" class="logoDemainMenu" src="demainWeArt/images/logo/logo-demain.png"></a>
+                                    </div>
+                                    <div class="myself color_secondery menuSticky" style="min-width: 337px; max-width: 337px">
                                         <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                         <div id="currentEvents" class="rotating Rouge"></div>
                                         <a href="#homePage"><h2  id="homeEvents" class="Blanc petitTitreMenu">HOME</h2></a>
@@ -58,7 +63,7 @@
                                     </div>
                                 </div>
 
-                                <div class="md-pr-1 col-md-12 col-lg-9 col-sm-12 mb-5">
+                                <div class="col-lg-8 mb-5 marginTopSousCat">
                                     <div class="personal_info color_lightgray bg_transparent">
                                         <div class="accordion bg_transparent" id="eventsCollapse">
                                             <div style="border: transparent;" class="card bg_transparent">
@@ -70,7 +75,7 @@
                                                 {% for sousCategorie in event.souscategorie %}
                                                     <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
                                                         <h2 class="container-buttonSousCat">
-                                                            <button class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="true" aria-controls="collapseOne">
+                                                            <button onclick="expendableBulleCategorie({{ sousCategorie.id }})" id="idButton{{ sousCategorie.id }}" class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="false" aria-controls="collapseOne">
                                                                 {{ sousCategorie.titre |upper }}
                                                             </button>
                                                         </h2>
@@ -88,7 +93,7 @@
                                                                                         <div class="ml-1 mr-1">
                                                                                             <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}">
                                                                                                 <div style="background: url('uploads/{{ article.photo }}') no-repeat center / cover;" class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
-                                                                                                    <div class="justify-content-center">
+                                                                                                    <div class="justify-content-center mb-3">
                                                                                                         <div class="pt-3">
                                                                                                             <h5>{{ article.titre }}</h5>
                                                                                                         </div>
@@ -104,7 +109,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    {% else %}
+                                                    {% elseif sousCategorie.format == "list" %}
                                                         <!-- ------------------------CARDS LIST---------------------- -->
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
@@ -113,12 +118,100 @@
                                                                 {% endfor %}
                                                             </div>
                                                         </div>
+                                                    {% elseif sousCategorie.format == "formation" %}
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="{{ sousCategorie.id }}">
+                                                            <div class="card-body" style="border: transparent;">
+                                                                <div class="row paddingCards justify-content-center">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-lg-12">
+                                                                            <div class="price_table">
+                                                                                <div class="row justify-content-center">
+                                                                                    {% for article in sousCategorie.article %}
+                                                                                        <div class="ml-1 mr-1">
+
+                                                                                            <div style="background: url('uploads/{{ article.photo }}') no-repeat;background-size: 100% 45%;" class="table text-center bg_deepblack color_secondery bulleFormation {{ sousCategorie.couleur }}">
+                                                                                                <div class="justify-content-center mb-3">
+                                                                                                    <div class="enteteBulleFormation">
+                                                                                                        <h4>FORMATION</h4>
+                                                                                                        <h3>{{ article.titre }}</h3>
+                                                                                                        <h5>{{ article.descriptif }}</h5>
+                                                                                                        <div class="buttonsFormation d-flex justify-content-around">
+                                                                                                            <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}"><button>EN SAVOIR PLUS</button></a>
+                                                                                                            <button>VERSION PDF</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    {% endfor %}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
                                                     {% endif %}
                                                 {% endfor %}
 
 
 
                                             </div>
+
+                                            <div class="container">
+                                                <div class="testimonial my_60">
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-lg-12">
+                                                            <!--	Start Title
+                                                            ================================-->
+                                                            <div class="main_title pl-0">
+                                                                <h2 class="title color_white testimonialTitre">Ils nous ont fait confiance</h2>
+                                                            </div>
+                                                            <!--	End Title
+                                                            ================================-->
+                                                        </div>
+                                                        <div class="col-md-12 col-lg-12">
+                                                            <div class="testimonial_item owl-carousel wow animated slideInUp">
+
+                                                                <div class="member_feedback p_30 bgRouge color_secondery">
+                                                                    <div class="client_img"><img src="demainWeArt/images/testimonial/01.jpg" alt="image"></div>
+                                                                    <div class="star d-inline-block mt_30 color_default">
+
+                                                                    </div>
+                                                                    <h5 class="color_white mb_15">Aisha Lexi</h5>
+                                                                    <p class="Blanc">
+                                                                        <i class="fa fa-quote-left fa-2x" aria-hidden="true"></i>
+                                                                        sapien tortor. Sollic dictum ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per aenean commodo sociosqu.
+                                                                         <i class="fa fa-quote-right fa-2x" aria-hidden="true"></i>
+                                                                </div>
+
+                                                                <div class="member_feedback p_30 bgRouge color_secondery">
+                                                                    <div class="client_img"><img src="demainWeArt/images/testimonial/01.jpg" alt="image"></div>
+                                                                    <div class="star d-inline-block mt_30 color_default">
+
+                                                                    </div>
+                                                                    <h5 class="color_white mb_15">Aisha Lexi</h5>
+                                                                    <p class="Blanc">Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per aenean commodo sociosqu.</p>
+                                                                </div>
+
+                                                                <div class="member_feedback p_30 bgRouge color_secondery">
+                                                                    <div class="client_img"><img src="demainWeArt/images/testimonial/01.jpg" alt="image"></div>
+                                                                    <div class="star d-inline-block mt_30 color_default">
+
+                                                                    </div>
+                                                                    <h5 class="color_white mb_15">Aisha Lexi</h5>
+                                                                    <p class="Blanc">Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per aenean commodo sociosqu.</p>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -140,30 +233,30 @@
                                 <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-center text-sm-center text-lg-left text-white mt-5">
                                     <div class="col-12 d-flex flex-wrap justify-content-center">
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left pb-2">Home</h2>
+                                            <h2 class="pl-0 text-lg-left">Home</h2>
                                             <a href="{{ path('demainweart_page_contact') }}"><h3 class="small text-lg-left linkFooter">Contact</h3></a>
                                             <a href="{{ path('demainweart_page_partenaires') }}"><h3 class="small text-lg-left linkFooter">Partenaires</h3></a>
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left pb-2">Recording studios</h2>
+                                            <h2 class="pl-0 text-lg-left">Recording studios</h2>
                                             {% for recordingStutio in recordingStutios.sousCategorie %}
                                                 <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left pb-2">Artist & label services</h2>
+                                            <h2 class="pl-0 text-lg-left">Artist & label services</h2>
                                             {% for artistLabelServices in artistLabelServices.sousCategorie %}
                                                 <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left pb-2">Events</h2>
+                                            <h2 class="pl-0 text-lg-left">Events</h2>
                                             {% for event in event.sousCategorie %}
                                                 <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left pb-2">Formation & Training</h2>
+                                            <h2 class="pl-0 text-lg-left">Formation & Training</h2>
                                             {% for training in training.sousCategorie %}
                                                 <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
                                             {% endfor %}

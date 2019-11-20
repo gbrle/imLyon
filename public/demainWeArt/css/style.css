@@ -344,19 +344,20 @@ a:hover,a:focus,a.active{
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before{
 	margin-left: 0px !important;
 }
-.pp-scrollable{
-    height: 100vh;
-}
+
 .full_row{
   position: relative;
   width: 100%;
 }
-::-webkit-scrollbar{
-      width: 5px !important;
-    }
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 5px #ececec !important; 
-    }
+/*::-webkit-scrollbar{*/
+/*    width: 0!important;*/
+/*    display: none;!important;*/
+/*}*/
+
+/*::-webkit-scrollbar-track {*/
+/*  box-shadow: inset 0 0 5px #ececec !important;*/
+/*}*/
+
 .paddingCards{
     padding-right: 169px;
     padding-left: 100px;
@@ -481,6 +482,13 @@ footer h3{
 /*=======================================================================
 04.   Socal Media
 =========================================================================*/
+
+.testimonialTitre{
+    font-weight: normal;
+    padding-left: 44px!important;
+
+    padding-top: 86px;
+}
 .socal_media ul li{
   margin-bottom: 15px;
 }
@@ -491,7 +499,7 @@ footer h3{
   line-height: 42px;
   text-align: center;
   border-radius: 50%;
-  border: 5px solid;
+  border: 4px solid;
 }
 .socal_media_2 ul li{
   float: left;
@@ -639,6 +647,10 @@ footer h3{
 /*====================================================================
 08.   Nav Menu Css
 ======================================================================*/
+footer h2{
+    padding-top: 12px;
+    padding-bottom: 1px!important;
+}
 .navbar{
 	padding:0px;
 }
@@ -649,6 +661,9 @@ footer h3{
 }
 header{
   z-index: 11;
+}
+.marginTopSousCat{
+    margin-top: 56px;
 }
 .navbar-brand{
 	text-transform: uppercase;
@@ -815,10 +830,10 @@ ul#menu li a{
     object-fit: fill;
 }
 #slider .recordingMenu{
-    margin-top: 10%;
+    margin-top: 7%;
     /*background: url("../../images/homeMenu/recording.png") no-repeat scroll 0 100% / cover ;*/
     background: url("../images/homeMenu/recording.png") no-repeat center scroll;
-    width: 100%;
+    width: 105%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -840,7 +855,7 @@ ul#menu li a{
 }
 #slider .trainingMenu{
     background: url("../images/homeMenu/training.png") no-repeat center scroll;
-    width: 100%;
+    width: 110%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -894,6 +909,15 @@ ul#menu li a{
 /*===============================================================================
 12.		About
 =================================================================================*/
+.textHomeMenu{
+    padding-top: 5px;
+}
+.textHomeMenuRecording{
+    margin-left: -89px;
+}
+.textHomeMenuFormationTraining{
+    margin-left: -162px;
+}
 
 .personal_info ul li{
 	border-bottom: 1px solid;
@@ -1105,9 +1129,8 @@ ul#menu li a{
   line-height: 62px;
 }
 .owl-nav{
-  margin-top: 50px !important;
+  margin-top: 0 !important;
   text-align: center;
-  margin: 0 auto;
 }
 .owl-carousel .owl-nav button.owl-prev{
   margin-right: 10px;
@@ -1247,7 +1270,7 @@ ul#menu li a{
 18.   Pricing
 ==============================================================================*/
 .table{
-  border-radius: 20px;
+  border-radius: 4px;
   padding: 10px;
 
 }
@@ -1342,7 +1365,9 @@ ul#menu li a{
 ==============================================================================*/
 
 .member_feedback{
-  position: relative;
+    border-radius: 30px;
+
+    position: relative;
   margin: 60px 15px 10px 15px;
 }
 .member_feedback h5{
@@ -1377,7 +1402,7 @@ ul#menu li a{
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  opacity: 0.04;
+  opacity: 0.022;
   background-position: top right;
   overflow: hidden;
 }
@@ -1649,7 +1674,7 @@ nav ul li.page-item{
 27.  Blog Sidebar
 =================================================================================*/
 .hauteurSousCat{
-    height: 95vh;
+    height: 80vh;
 }
 .widget .socal_media ul li{
   float: left;
@@ -2320,7 +2345,7 @@ label.radios {
 // Extra large devices (large desktops, 1200px and up)
 ============================================================*/
 .carousel-caption{
-    top: 38%;
+    top: 33%;
 }
 .carousel-caption p{
     font-size: 2em;
@@ -2336,21 +2361,32 @@ label.radios {
 .petitTitreMenu{
     font-size: 16px;
 }
-.menuRecordingSection{
-    height: 100%;
-    display: none;
-    background: url("http://imlyon.co/wp-content/themes/fukasawa/content-recording-studios.jpg") no-repeat center / cover;
+.logoDemainMenu{
+    max-width: 300px !important;
+    height: 100% !important;
+    margin-top: 30px!important;
+    margin-bottom: -30px!important;
+    object-fit: fill !important;
 }
-.footerRecordingSection{
-    display: none;
-    margin-top: 150px;
 
-    width: 100%;
+/* STICKY */
+
+.menuSticky{
+    padding-top: 65px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -37px;
 }
+.menuSticky h2:hover{
+    transition-duration: 1s;
+    border-left: 1px white solid;
+}
+
+
 /* Buttons Sous catégorie */
 
 .container-buttonSousCat{
-    margin-right: 9rem;
+    margin-right: 2rem;
     text-align: right;
 }
 .card-header button{
@@ -2359,11 +2395,11 @@ label.radios {
     width: 75%;
     min-height: 34px;
 }
-.card-header button:focus{
+/*.card-header button:focus{
 
     width: 100%;
 
-}
+}*/
 .bulleSousCategorie{
     width: 100% !important;
 }
@@ -2388,7 +2424,8 @@ label.radios {
     border-radius: 25px 0 0 25px;
 }
 .page_article{
-    padding-left: 100px;
+    padding-top: 57px;
+    padding-left: 60px;
     padding-right: 100px;
 }
 /* ROTATE MENU */
@@ -2661,6 +2698,12 @@ label.radios {
 // Medium devices (tablets, 768px and up)
 ============================================================*/
 @media (max-width: 991px){
+    .marginTopSousCat{
+        margin-top: 0;
+    }
+    .page_article{
+        padding-top: 0;
+    }
     .paddingCards{
         padding-right: 26px;
         padding-left: 26px;
@@ -2683,11 +2726,17 @@ label.radios {
     .footerReseauxSociaux{
         border-left: 0;
     }
+
     .card-header h2{
-        margin-left: -136px;
+        padding-left: 0;
+
+    }
+    .card-header button{
+        width: 75%;
+
     }
     .card-header button:hover{
-        width: 83%;
+        width: 100%;
         opacity:0.7;
         transition-duration: 1s;
     }
@@ -2828,6 +2877,25 @@ label.radios {
 // Small devices (landscape phones, 576px and up)
 ============================================================*/
 @media (max-width: 767px){
+    .textHomeMenuRecording{
+        margin-left: 0;
+    }
+    #slider .recordingMenu{
+        width: 100%;
+
+    }
+    #slider .trainingMenu{
+        width: 100%;
+    }
+    .textHomeMenuFormationTraining{
+        margin-left: 0;
+    }
+    .testimonialTitre{
+        padding-left: 0!important;
+        padding-bottom: 0;
+        padding-top: 0;
+
+    }
     .card-body{
         padding-left: 5px !important;
     }
@@ -3001,6 +3069,9 @@ label.radios {
 // Extra small devices (portrait phones, less than 576px)
 ============================================================*/
 @media (max-width: 575px){
+    .owl-nav{
+        display: none;
+    }
 
     /* NewsLetter */
     .main {

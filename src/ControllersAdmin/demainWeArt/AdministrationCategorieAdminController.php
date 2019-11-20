@@ -80,6 +80,7 @@ class AdministrationCategorieAdminController extends AbstractController
                         'choices' => [
                             'Sous forme de liste' => 'list',
                             'Sous forme de bulle' => 'bulle',
+                            'Sous forme de formation' => 'formation',
                         ]
                     ])
                     ->add('couleur', ChoiceType::class, [

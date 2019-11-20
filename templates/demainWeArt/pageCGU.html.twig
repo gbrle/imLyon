@@ -32,8 +32,12 @@
             object-fit: fill !important;
         }
         .menuRecordingSection{
-            background: url("../../demainWeArt/images/backgroundsSections/background-recording-section.jpg") no-repeat center / cover !important;
-        }
+            background-image: url("../../demainWeArt/images/backgroundsSections/background-recording-section.jpg")!important;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;        }
     </style>
 
     <!-- Favicon
@@ -65,13 +69,13 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="flaticon-close-button"></i></a>
     {#    <a href="/"><i class="fa fa-home fa-2x pl-5" aria-hidden="true"></i></a>#}
     <ul id="menu">
-        <li data-menuanchor="homePage" id="homeRecordingResponsive"><a onclick="closeNav()" class="Blanc font-weight-bold" href="/#homePage"><i class="fa fa-home Blanc" aria-hidden="true"></i> Home</a></li>
-        <li data-menuanchor="recordingPage"><a onclick="closeNav()" class="Violet font-weight-bold" href="/#recordingPage">Recording Studio</a></li>
-        <li data-menuanchor="artistLabelServices" id="artistLabelServicesRecordingResponsive"><a onclick="closeNav()" class="Rose font-weight-bold" href="/#artistLabelServices">Artist & Label Services</a></li>
-        <li data-menuanchor="training" id="trainingRecordingResponsive"><a onclick="closeNav()" class="Orange font-weight-bold" href="/#training">Training</a></li>
-        <li data-menuanchor="events" id="eventRecordingResponsive"><a onclick="closeNav()" class="Rouge font-weight-bold" href="/#events">Events</a></li>
-        <li><a onclick="closeNav()" class="Blanc font-weight-bold" href="{{ path('demainweart_page_partenaires') }}">Partenaires</a></li>
-        <li><a onclick="closeNav()" class="Blanc font-weight-bold" href="{{ path('demainweart_page_contact') }}">Contact</a></li>
+        <li data-menuanchor="homePage" id="homeRecordingResponsive"><a onclick="closeNav()" class="Blanc font-weight-bold" href="/#homePage"><i class="fa fa-home Blanc" aria-hidden="true"></i> HOME</a></li>
+        <li data-menuanchor="recordingPage"><a onclick="closeNav()" class="Violet font-weight-bold" href="/#recordingPage">RECORDING STUDIOS</a></li>
+        <li data-menuanchor="artistLabelServices" id="artistLabelServicesRecordingResponsive"><a onclick="closeNav()" class="Rose font-weight-bold" href="/#artistLabelServices">ARTIST & LABEL SERVICES</a></li>
+        <li data-menuanchor="training" id="trainingRecordingResponsive"><a onclick="closeNav()" class="Orange font-weight-bold" href="/#training">FORMATION & TRAINING</a></li>
+        <li data-menuanchor="events" id="eventRecordingResponsive"><a onclick="closeNav()" class="Rouge font-weight-bold" href="/#events">EVENTS</a></li>
+        <li><a onclick="closeNav()" class="Blanc font-weight-bold" href="{{ path('demainweart_page_partenaires') }}">PARTENAIRES</a></li>
+        <li><a onclick="closeNav()" class="Blanc font-weight-bold" href="{{ path('demainweart_page_contact') }}">CONTACT</a></li>
         {#        <li data-menuanchor="page7"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page7">Team</a></li>#}
         {#        <li data-menuanchor="page8"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page8">Testimonialdadada</a></li>#}
         {#        <li data-menuanchor="page9"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page9">Contact</a></li>#}
@@ -127,8 +131,8 @@
                                 <div class="row pt-5">
                                     <div class="hauteurSousCat"></div>
 
-                                    <div class="menuSousCat col-md-3 col-lg-3">
-                                        <div class="myself color_secondery menu" style="min-width: 337px; max-width: 337px">
+                                    <div class="menuSousCat col-md-4 col-lg-4">
+                                        <div class="myself color_secondery menuSticky" style="min-width: 337px; max-width: 337px">
                                             <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                             <div id="currentPartenaires" class="rotating Blanc"></div>
                                             <a href="/"><h2  id="homeRecording" class="Blanc petitTitreMenu">HOME</h2></a>
@@ -142,7 +146,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="md-pr-1 col-md-12 col-lg-9 col-sm-12 mb-5">
+                                    <div class="col-lg-8 mb-5">
                                         <div class="personal_info color_lightgray bg_transparent">
                                             <div class="accordion bg_transparent" id="PartenaireIdCollapse">
                                                 <div style="border: transparent;" class="card bg_transparent">
@@ -152,7 +156,7 @@
 
                                                         <div style="border: transparent;" class="card-header bg_transparent" id="PartenaireId">
 
-                                                            <div class="d-block text-left pl-xl-5 pl-sm-0">
+                                                            <div class="d-block text-center pl-xl-5 pl-sm-0">
                                                                 <a href="/"><img alt="" class="logoDemain" src="../../demainWeArt/images/logo/logo-demain.png"></a>
                                                             </div>
 
@@ -170,24 +174,25 @@
                                                                         <div class="row">
                                                                             <div class="col-md-12 col-lg-12">
                                                                                 <div class="price_table">
-                                                                                    <div class="row justify-content-left ml-lg-2">
+                                                                                    <div class="row justify-content-left">
+                                                                                        <br>
+                                                                                        <br>
+<p>
+                                                                                        <span class="font-weight-bold pt-1">Conditions Générales d’Utilisation du site www.demainweart.com</span><br>
+                                                                                            <br>
+                                                                                        Préambule<br>                                                                                        <br>
 
-                                                                                        CGU DEMAIN WE ART
-                                                                                        <br><br>
-
-                                                                                        Conditions Générales d’Utilisation du site www.demainweart.com<br>
-                                                                                        Préambule<br>
                                                                                         IM LYON – DEMAIN WE ART (ci-après visé par La Société), en qualité d’éditeur et exploitante du site internet http://www.demainweart.com (ci-après dénommé le « Site Internet »), est une société spécialisée dans la production musicale en studio d’enregistrement, la délivrance de prestations de services destinées aux artistes et aux labels, la formation professionnelle continue et les initiations dans le domaine musicale, ainsi que l’organisation d’évènements en lien avec des projets musicaux, à destination de tout internaute qui se connecte et navigue sur le Site Internet, (ci-après visé par l’Utilisateur).
                                                                                         <br><br>
                                                                                         La consultation du Site Internet www.demainweart.com suppose l’acceptation sans réserve des présentes conditions d’utilisation.<br>
                                                                                         La Société se réserve la possibilité de mettre à jour les présentes Conditions Générales d’Utilisation du site à tout moment, en fonction de l’évolution du contenu du Site Internet et, le cas échéant, des contraintes de protection supplémentaires.<br>
                                                                                         La Société peut, à tout moment apporter des améliorations ou des changements aux services décrits sur ce site. Il est donc fortement conseillé à tout Utilisateur du site, de visiter cette page lors de chaque consultation du Site Internet.
                                                                                         <br><br>
-                                                                                        Article 1 – Droits de propriété intellectuelle<br>
+                                                                                        <span class="font-weight-bold">Article 1 – Droits de propriété intellectuelle</span><br>
                                                                                         La Société est titulaire de l’ensemble des droits de propriété intellectuelle afférents à la marque « Demain We Art » (numéro « en cours d’attribution par l’INPI »), au nom de domaine http://www.demainweart.com, à la charte graphique du Site Internet ainsi que son contenu et plus généralement à l’ensemble des marques figuratives ou non, illustrations, images, animations et logotypes figurant sur le site, les biens, les produits, leurs accessoires et leurs emballages, qu’ils soient déposés ou non. L’ensemble de ces éléments sont et demeurent la propriété exclusive de La Société.<br>
                                                                                         Toute reproduction totale ou partielle, modification ou utilisation de ces marques, illustrations, images et logotypes, pour quelque motif et sur quelque support que ce soit, sans accord exprès et préalable de La Société, est strictement interdite. Il en est de même de toute combinaison ou conjonction avec toute autre marque, symbole, logotype et plus généralement tout signe distinctif destiné à former un logo composite. Il en est de même pour tout droit d’auteur, dessins et modèles qui restent la propriété exclusive de La Société.
                                                                                         <br><br>
-                                                                                        Article 2 – Confidentialité, Sécurité et Traitement des données personnelles<br>
+                                                                                        <span class="font-weight-bold">Article 2 – Confidentialité, Sécurité et Traitement des données personnelles</span><br>
                                                                                         Les informations personnelles portées sur ce site sont enregistrées dans un fichier informatisé sécurisé.<br>
                                                                                         Nous ne traiterons ou n’utiliserons les données de l’Utilisateur que dans la mesure où cela est nécessaire à le contacter et assurer le traitement de ses demandes.<br>
                                                                                         Les informations personnelles de l’Utilisateur sont conservées pendant une durée qui ne saurait excéder 5 années après la fin de la relation contractuelle avec celui-ci, sauf si :<br>
@@ -197,10 +202,13 @@
                                                                                         L’Utilisateur peut, sous réserve de la production d’un justificatif d’identité valide, exercer ses droits en contactant nos services à l’adresse contact@demainweart.com, ou par courrier postal à IM Lyon – Demain We Art, 15 rue Prisca 69100 Villeurbanne.<br>
                                                                                         Pour toute information complémentaire ou réclamation, l’Utilisateur peut contacter la Commission Nationale de l’Informatique et des Libertés (plus d’informations sur http://www.cnil.fr).<br>
                                                                                         Enfin, nous informons l’Utilisateur de l’existence de la liste d’opposition au démarchage téléphonique « Bloctel », sur laquelle il peut s’inscrire (https://conso.bloctel.fr/).<br>
-                                                                                        Article 3 – Responsabilités<br>
+                                                                                        <br>
+                                                                                        <span class="font-weight-bold">Article 3 – Responsabilités</span><br>
                                                                                         L’Utilisateur reconnaît que la responsabilité de La Société ne pourra en aucun cas être engagée du fait d’une mauvaise utilisation qu’il ferait du Site Internet.<br>
                                                                                         En conséquence, sa responsabilité ne pourra en aucun cas être engagée pour cause d’indisponibilité du Site Internet et ce, qu’elle qu’en soit la cause.<br>
-
+                                                                                            <br>
+                                                                                            <br>
+</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -234,30 +242,30 @@
                                     <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-left text-sm-center text-lg-left text-white mt-5">
                                         <div class="col-12 d-flex flex-wrap justify-content-center">
                                             <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                                <h2 class="pl-0 text-lg-left pb-2">Home</h2>
+                                                <h2 class="pl-0 text-lg-left">Home</h2>
                                                 <a href="{{ path('demainweart_page_contact') }}"><h3 class="small text-lg-left linkFooter">Contact</h3></a>
                                                 <a href="{{ path('demainweart_page_partenaires') }}"><h3 class="small text-lg-left linkFooter">Partenaires</h3></a>
                                             </div>
                                             <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                                <h2 class="pl-0 text-lg-left pb-2">Recording studios</h2>
+                                                <h2 class="pl-0 text-lg-left">Recording studios</h2>
                                                 {% for recordingStutio in recordingStutios.sousCategorie %}
                                                     <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
                                                 {% endfor %}
                                             </div>
                                             <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                                <h2 class="pl-0 text-lg-left pb-2">Artist & label services</h2>
+                                                <h2 class="pl-0 text-lg-left">Artist & label services</h2>
                                                 {% for artistLabelServices in artistLabelServices.sousCategorie %}
                                                     <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
                                                 {% endfor %}
                                             </div>
                                             <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                                <h2 class="pl-0 text-lg-left pb-2">Events</h2>
+                                                <h2 class="pl-0 text-lg-left">Events</h2>
                                                 {% for event in event.sousCategorie %}
                                                     <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
                                                 {% endfor %}
                                             </div>
                                             <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                                <h2 class="pl-0 text-lg-left pb-2">Formation & Training</h2>
+                                                <h2 class="pl-0 text-lg-left">Formation & Training</h2>
                                                 {% for training in training.sousCategorie %}
                                                     <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
                                                 {% endfor %}
@@ -339,7 +347,7 @@
     //	Sidebar Nav Menu js
     //=====================================================
     function openNav() {
-        document.getElementById("mysidenav").style.width = "230px";
+        document.getElementById("mysidenav").style.width = "100%";
     }
     function closeNav() {
         document.getElementById("mysidenav").style.width = "0";

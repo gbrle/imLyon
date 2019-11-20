@@ -114,6 +114,11 @@ html, body {
     left: 20px;
 }
 .pp-scrollable{
+
     overflow-y: scroll;
-    height: 100%;
+    height: 100vh;
+}
+.pp-scrollable::-webkit-scrollbar{
+    width:0;
+    background-color:transparent;
 }

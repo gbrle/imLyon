@@ -2,6 +2,7 @@
 
 namespace App\ControllersAdmin;
 
+use App\Repository\NewsletterRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -10,13 +11,13 @@ class NewsLetterAdminController extends AbstractController
     /**
      * @Route("admin/newsletter", name="newsLetter_admin")
      */
-    public function index()
+    public function index(NewsletterRepository $newsletterRepository)
     {
 
-        $toto = "adad";
+        $nbBreInscrit = $newsletterRepository->findAll();
 
         return $this->render('admin/newsLetter.html.twig', [
-            'toto' => $toto,
+            'nbBreInscrit' => $nbBreInscrit,
         ]);
     }
 }

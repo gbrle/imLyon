@@ -241,8 +241,7 @@
 
     $('[data-fancybox="gallery"]').fancybox({
        animationEffect: "zoom-in-out",
-       transitionEffect: "slide",
-       transitionEffect: "slide",
+
     });
 
 //=====================================================================================
