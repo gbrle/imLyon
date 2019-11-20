@@ -35,6 +35,10 @@
     max-width: 170px;
     min-width: 260px;
 }
+.bulleFormation:hover{
+    transition-duration: 0.9s;
+    opacity: 0.8;
+}
 .bulleFormation h1{
     font-size: 12px;
     line-height: 1px;
@@ -79,8 +83,16 @@
     transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
     position: absolute;
     top: 92%;
+
+}
+.bulleFormation:hover button {
+    display: block;
+    transition-duration: 0.9s;
+
+
 }
 .buttonsFormation button{
+    display: none;
     border-radius: 2px 2px 2px 2px;
 
     border: 1px black solid;

@@ -137,7 +137,7 @@ ul#menu li a:hover,.twite i,.twite a:hover,.category_sidebar ul li:hover,
 .lds-spinner div,.socal_media ul li a,#pp-nav li .active span, .pp-slidesNav .active span,
 .carousel-indicators .active,.contact_icon,.widget_title:before,.progress-bar,.page-item.active .page-link,
 .page-link:hover,.tags ul li a:hover{
-	background-color: #ffb32f !important;
+	background-color: transparent !important;
 }
 ::-webkit-scrollbar-thumb{
 	background-color: #232323;

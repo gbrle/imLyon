@@ -70,16 +70,16 @@
 
                                                 <!-- ------------------------CARDS BULLE---------------------- -->
                                                 {% for sousCategorie in event.souscategorie %}
-                                                    <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
+                                                    <div onclick="expendableBulleCategorie({{ sousCategorie.id }})" style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
                                                         <h2 class="container-buttonSousCat">
-                                                            <button class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="true" aria-controls="collapseOne">
+                                                            <button id="idButton{{ sousCategorie.id }}" class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="false" aria-controls="collapseOne">
                                                                 {{ sousCategorie.titre |upper }}
                                                             </button>
                                                         </h2>
                                                     </div>
                                                     {% if sousCategorie.format == "bulle" %}
 
-                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="{{ sousCategorie.id }}">
                                                             <div class="card-body" style="border: transparent;">
                                                                 <div class="row paddingCards justify-content-center">
                                                                     <div class="row">
@@ -108,7 +108,7 @@
                                                         </div>
                                                     {% elseif sousCategorie.format == "list" %}
                                                         <!-- ------------------------CARDS LIST---------------------- -->
-                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
                                                                 {% for article in sousCategorie.article %}
                                                                     <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
@@ -116,7 +116,7 @@
                                                             </div>
                                                         </div>
                                                     {% elseif sousCategorie.format == "formation" %}
-                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#eventsCollapse" aria-labelledby="{{ sousCategorie.id }}">
                                                             <div class="card-body" style="border: transparent;">
                                                                 <div class="row paddingCards justify-content-center">
                                                                     <div class="row">

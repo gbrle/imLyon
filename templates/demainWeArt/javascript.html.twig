@@ -54,9 +54,58 @@
             formNewsLetterEvent.value = "Inscrit(e) !";
         })
     })
-
-
     // AJAX POST NEWSLETTER !! END
+
+
+// FUNCTION BULLE SOUS CATEGORIE EXPANDABLE
+
+    // je récupere toutes mes sous catégorie pour les refermer apres clique sur une autre
+    let all = document.getElementsByTagName('*');
+    let sousCats = [];
+    let sousCatsShow = [];
+    for (i=0;i<all.length;i++){
+        if (all[i].id.substr(0,8)==="idButton"){
+            sousCats.push(all[i])
+        }
+    }
+    for (i=0;i<all.length;i++){
+        if (all[i].id.substr(0,4)==="target"){
+            sousCatsShow.push(all[i])
+        }
+    }
+
+
+
+
+
+    function expendableBulleCategorie(id){
+        let bulle = document.getElementById('idButton'+id);
+        let bulleAttribut = document.getElementById('idButton'+id).getAttribute('aria-expanded');
+
+        for (i=0;i < sousCats.length;i++)
+        {
+            if(sousCats[i].getAttribute('aria-expanded') === "true" && 'idButton'+id !== sousCats[i].id){
+                sousCats[i].style.width = "75%";
+            }
+        }
+
+
+
+        if (bulleAttribut === "false"){
+            bulle.style.transitionDuration = "1.5s";
+            bulle.style.width = "100%";
+        } else {
+            bulle.style.transitionDuration = "1.5s";
+            bulle.style.width = "75%";
+
+        }
+
+    }
+
+
+// FUNCTION BULLE SOUS CATEGORIE EXPANDABLE END
+
+
 
 // Logic JS Recording Studios Page
 let moreRecordingStudios = document.getElementById('moreRecordingStudios');
@@ -363,7 +412,7 @@ homeEvents.addEventListener('click', function (e) {
                         })
 
 
-// linkToRecordingStudio
+/*// linkToRecordingStudio
 let linkToRecordingStudio = document.getElementById('linkToRecordingStudio');
     linkToRecordingStudio.addEventListener('click', function (e) {
     headerAboutSection.style.transitionDuration = "0";
@@ -371,7 +420,7 @@ let linkToRecordingStudio = document.getElementById('linkToRecordingStudio');
     sectionRecording.style.display = "block";
     $.fn.pagepiling.setMouseWheelScrolling(false);
     $.fn.pagepiling.setAllowScrolling(false);
-})
+})*/
 
 </script>
 <script>

@@ -71,16 +71,16 @@
 
                                                 <!-- ------------------------CARDS BULLE---------------------- -->
                                                 {% for sousCategorie in training.souscategorie %}
-                                                    <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
+                                                    <div onclick="expendableBulleCategorie({{ sousCategorie.id }})" style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
                                                         <h2 class="container-buttonSousCat">
-                                                            <button class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="true" aria-controls="collapseOne">
+                                                            <button id="idButton{{ sousCategorie.id }}" class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="false" aria-controls="collapseOne">
                                                                 {{ sousCategorie.titre |upper }}
                                                             </button>
                                                         </h2>
                                                     </div>
                                                     {% if sousCategorie.format == "bulle" %}
 
-                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#trainingCollapse" aria-labelledby="{{ sousCategorie.id }}">
                                                             <div class="card-body" style="border: transparent;">
                                                                 <div class="row paddingCards justify-content-center">
                                                                     <div class="row">
@@ -109,7 +109,7 @@
                                                         </div>
                                                     {% elseif sousCategorie.format == "list" %}
                                                         <!-- ------------------------CARDS LIST---------------------- -->
-                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#trainingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
                                                                 {% for article in sousCategorie.article %}
                                                                     <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
@@ -117,7 +117,7 @@
                                                             </div>
                                                         </div>
                                                     {% elseif sousCategorie.format == "formation" %}
-                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#trainingCollapse" aria-labelledby="{{ sousCategorie.id }}">
                                                             <div class="card-body" style="border: transparent;">
                                                                 <div class="row paddingCards justify-content-center">
                                                                     <div class="row">
@@ -157,6 +157,54 @@
 
 
 
+                                            </div>
+
+                                            <div class="container">
+                                                <div class="testimonial my_60">
+                                                    <div class="row">
+                                                        <div class="col-md-12 col-lg-12">
+                                                            <!--	Start Title
+                                                            ================================-->
+                                                            <div class="main_title pl-0">
+                                                                <h2 class="title color_white testimonialTitre">Ils nous ont fait confiance</h2>
+                                                            </div>
+                                                            <!--	End Title
+                                                            ================================-->
+                                                        </div>
+                                                        <div class="col-md-12 col-lg-12">
+                                                            <div class="testimonial_item owl-carousel wow animated slideInUp">
+
+                                                                <div class="member_feedback p_30 bgOrange color_secondery">
+                                                                    <div class="client_img"><img src="demainWeArt/images/testimonial/01.jpg" alt="image"></div>
+                                                                    <div class="star d-inline-block mt_30 color_default">
+
+                                                                    </div>
+                                                                    <h5 class="color_white mb_15">Aisha Lexi</h5>
+                                                                    <p class="Blanc">Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per aenean commodo sociosqu.</p>
+                                                                </div>
+
+                                                                <div class="member_feedback p_30 bgOrange color_secondery">
+                                                                    <div class="client_img"><img src="demainWeArt/images/testimonial/01.jpg" alt="image"></div>
+                                                                    <div class="star d-inline-block mt_30 color_default">
+
+                                                                    </div>
+                                                                    <h5 class="color_white mb_15">Aisha Lexi</h5>
+                                                                    <p class="Blanc">Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per aenean commodo sociosqu.</p>
+                                                                </div>
+
+                                                                <div class="member_feedback p_30 bgOrange color_secondery">
+                                                                    <div class="client_img"><img src="demainWeArt/images/testimonial/01.jpg" alt="image"></div>
+                                                                    <div class="star d-inline-block mt_30 color_default">
+
+                                                                    </div>
+                                                                    <h5 class="color_white mb_15">Aisha Lexi</h5>
+                                                                    <p class="Blanc">Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per aenean commodo sociosqu.</p>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
