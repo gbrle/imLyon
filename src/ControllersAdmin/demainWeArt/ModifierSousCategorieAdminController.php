@@ -27,6 +27,7 @@ class ModifierSousCategorieAdminController extends AbstractController
                     'Sous forme de liste' => 'list',
                     'Sous forme de bulle' => 'bulle',
                     'Sous forme de formation' => 'formation',
+                    'Sous forme de bannière' => 'banniere',
                 ]
             ])
             ->add('couleur', ChoiceType::class, [
