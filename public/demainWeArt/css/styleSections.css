@@ -19,7 +19,7 @@
     top: 30%;
 }
 .backgroundRecordingStudioTitre{
-    position: fixed;
+    position: absolute;
     background: url('/demainWeArt/images/homeMenu/recording.png') no-repeat center / cover;
     height:65px;
     width: 100%;
@@ -48,6 +48,7 @@
 }
 
 .headerRecordingSection{
+    position: relative;
     background: url("../../demainWeArt/images/backgroundsSections/background-recording.jpg") no-repeat center / cover;
     height: 100vh;
 }
@@ -60,7 +61,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
 
 }
 .footerRecordingSection{
@@ -80,7 +80,7 @@
     padding-right: 230px!important;
     padding-bottom: 40px!important;
     padding-top: 40px!important;
-    position: fixed;
+    position: absolute;
     top: 55%;
     right: 0;
     width: 100%;
@@ -90,7 +90,7 @@
 /* ARTISTLABELSERVICES SECTION
 -------------------------------> */
 .backgroundArtisteLabelServicesTitre{
-    position: fixed;
+    position: absolute;
     background: url('/demainWeArt/images/homeMenu/artist.png') no-repeat center / cover;
     height:65px;
     width: 100%;
@@ -133,7 +133,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
 }
 .footerRecordingSection{
     display: none;
@@ -152,7 +151,7 @@
     padding-right: 230px!important;
     padding-bottom: 40px!important;
     padding-top: 40px!important;
-    position: fixed;
+    position: absolute;
     top: 55%;
     right: 0;
     width: 100%;
@@ -163,7 +162,7 @@
 /* TRAINING SECTION
 -------------------------------> */
 .backgroundTrainingTitre{
-    position: fixed;
+    position: absolute;
     background: url('/demainWeArt/images/homeMenu/training.png') no-repeat center / cover;
     height:65px;
     width: 100%;
@@ -204,7 +203,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
 }
 .footerTrainingSection{
     display: none;
@@ -223,7 +221,7 @@
     padding-right: 230px!important;
     padding-bottom: 40px!important;
     padding-top: 40px!important;
-    position: fixed;
+    position: absolute;
     top: 55%;
     right: 0;
     width: 100%;
@@ -234,7 +232,7 @@
 /* EVENTS SECTION
 -------------------------------> */
 .backgroundEventTitre{
-    position: fixed;
+    position: absolute;
     background: url('/demainWeArt/images/homeMenu/event.png') no-repeat center / cover;
     height:65px;
     width: 100%;
@@ -275,7 +273,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
 }
 .footerEventsSection{
     display: none;
@@ -294,7 +291,7 @@
     padding-right: 230px!important;
     padding-bottom: 40px!important;
     padding-top: 40px!important;
-    position: fixed;
+    position: absolute;
     top: 55%;
     right: 0;
     width: 100%;

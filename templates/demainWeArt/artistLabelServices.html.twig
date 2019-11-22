@@ -19,9 +19,9 @@
                         </div>
 
 
-                        <div class="text-center text-white mt-lg-5 mt-sm-2 container col-12 col-lg-7 col-md-7">
+                        <div class="text-center text-white container col-12 col-lg-12 col-md-12 descriptifArtistLabelServicesMenu">
 
-                            <p class="text-center descriptifArtistLabelServicesMenu p-1 fontAvenirRegular font-weight-bold">
+                            <p class="text-center p-1 fontAvenirRegular font-weight-bold">
                                 {{ artistLabelServices.description }}
                                 <br>
                                 <button type="button" id="moreArtistLabelServicesStudios" class="buttonEnSavoirPlus btn btn-light">En savoir plus</button>
@@ -115,7 +115,11 @@
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#artistLabelServicesCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
                                                                 {% for article in sousCategorie.article %}
+                                                                    {% if article.titre == "Recording Studios REC-MIX-MASTER" %}
+                                                                    <a href="#recordingPage"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
+                                                                    {% else %}
                                                                     <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
+                                                                    {% endif %}
                                                                 {% endfor %}
                                                             </div>
                                                         </div>
@@ -136,14 +140,45 @@
                                                                                                         <h4>FORMATION</h4>
                                                                                                         <h3>{{ article.titre }}</h3>
                                                                                                         <h5>{{ article.descriptif }}</h5>
-                                                                                                        <div class="buttonsFormation d-flex justify-content-around">
-                                                                                                            <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}"><button>EN SAVOIR PLUS</button></a>
-                                                                                                            <button>VERSION PDF</button>
+                                                                                                        <div class="buttonsFormation">
+                                                                                                            <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}">
+                                                                                                                <button class="buttonEnsavoirPlusFormation">EN SAVOIR PLUS</button></a>
+                                                                                                            <button class="buttonPdfFormation">VERSION PDF</button>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
 
+                                                                                        </div>
+                                                                                    {% endfor %}
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    {% elseif sousCategorie.format == "banniere" %}
+                                                        <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
+                                                            <div class="card-body" style="border: transparent;">
+                                                                <div class="row paddingCards justify-content-center">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 col-lg-12">
+                                                                            <div class="price_table">
+                                                                                <div class="row justify-content-center">
+                                                                                    {% for article in sousCategorie.article %}
+                                                                                        <div class="ml-1 mr-1 col-lg-12">
+                                                                                            <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}">
+                                                                                                <div style="background: url('uploads/{{ article.photo }}') no-repeat;background-size: cover;" class="table text-center bg_deepblack color_secondery bulleBanniere">
+                                                                                                    <div class="justify-content-center mb-3">
+                                                                                                        <div class="enteteBulleFormation">
+                                                                                                            <h4>FORMATION</h4>
+                                                                                                            <h3>{{ article.titre }}</h3>
+                                                                                                            <h5>{{ article.descriptif }}</h5>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
                                                                                         </div>
                                                                                     {% endfor %}
                                                                                 </div>
@@ -269,8 +304,9 @@
                                     </h2>
                                 </div>
                                 <div class="col-12 text-white text-center mt-5">
-                                    <img class="logoMusicManufacturing" src="demainWeArt/images/logo/logo-music.png">
-                                </div>
+                                    <a href="https://www.imlyon.co">
+                                        <img alt="imLyon.co" class="logoMusicManufacturing" src="demainWeArt/images/logo/logo-music.png">
+                                    </a>                                </div>
                                 <div class="col-12 text-white text-center mt-5">
                                     imlyon.co 2019 - 2019 - <a href="{{ path('demainweart_page_mentions_legales') }}"> Mentions légales</a> - <a href="{{ path('demainweart_page_CGU') }}">CGU DemainWeArt</a>
                                 </div>

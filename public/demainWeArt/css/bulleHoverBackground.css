@@ -2,6 +2,7 @@
 /* BULLE HOVER */
 
 .bulle{
+    opacity: 0.9;
     position: relative;
     min-height: 194px;
     max-width: 170px;
@@ -30,33 +31,43 @@
 }
 
 .bulleFormation{
+    overflow: hidden;
+    background-color: rgba(31, 31, 31, 0.8) !important;
+    border-radius: 15px;
     position: relative;
     min-height: 350px;
     max-width: 170px;
     min-width: 260px;
-}
-.bulleFormation:hover{
-    transition-duration: 0.9s;
-    opacity: 0.8;
 }
 .bulleFormation h1{
     font-size: 12px;
     line-height: 1px;
 }
 .bulleFormation h4{
+    transition: width 1s;
+    top: 5px;
+    position: relative;
+    border-radius: 0 18px 18px 0;
     font-size: 12px;
-    background: black;
+    background-color: rgba(31, 31, 31, 1) !important;
     padding-top: 0;
+    left: -10px;
+    text-align: right;
     padding-bottom: 0;
-    width: 53%;
+    width: 40%;
+    padding-right: 14px;
     color: white;
+}
+.bulleFormation:hover h4{
+    width: 75%;
+    transition-duration: 1s;
 
 }
 .bulleFormation h3{
     line-height: 1;
     text-shadow: black 1px 0 10px;
-    font-size: 17px;
-    text-align: left;
+    font-size: 21px;
+    text-align: center;
     width: 100%;
     color: white;
 
@@ -65,9 +76,9 @@
     font-weight: normal;
     padding: 4px 4px 4px 4px;
     position: absolute;
-    top: 65%;
+    top: 67%;
     border-radius: 2px 2px 2px 2px;
-    font-size: 10px;
+    font-size: 15px;
     color: white;
     line-height: 15px;
     left: 50%; /* à 50%/50% du parent référent */
@@ -75,37 +86,109 @@
     width: 80%;
 }
 .enteteBulleFormation{
-    padding-top: 44px;
+    padding-top: 0;
 }
-.buttonsFormation{
+.buttonEnsavoirPlusFormation{
+    cursor: pointer;
+    font-size: 12px;
+    background-color: rgba(31, 31, 31, 1);
+    transition: left,background-color,color 1s;
+    top: 216px;
+    padding-right: 10px;
+    border: 0;
+    border-radius: 0 16px 16px 0;
+    position: relative;
+    left: -138px;
+    color: white;
+
+}
+.buttonEnsavoirPlusFormation:hover{
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+.bulleFormation:hover .buttonEnsavoirPlusFormation {
+    transition-duration: 1s;
+    left: -29px;
+}
+
+.buttonPdfFormation{
+    font-size: 12px;
+    cursor: pointer;
+    background-color: rgba(31, 31, 31, 1);
+    color: white;
+    transition: right,background-color,color 1s;
+    padding-left: 10px;
+    top: 216px;
+    border: 0;
+    border-radius: 16px 0 0 16px;
+    position: relative;
+    right: -120px;
+}
+.buttonPdfFormation:hover{
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+}
+.bulleFormation:hover .buttonPdfFormation {
+    transition-duration: 1s;
+    right: -29px;
+}
+.bulleBanniere{
+    overflow: hidden;
+    background-color: rgba(31, 31, 31, 0.8) !important;
+    border-radius: 15px;
+    position: relative;
+    min-height: 244px;
+    max-width: 170px;
+    min-width: 100%;
+}
+.bulleBanniere:hover{
+    opacity: 0.8;
+}
+.bulleFormation h1{
+    font-size: 12px;
+    line-height: 1px;
+}
+.bulleBanniere h4{
+    transition: width 1s;
+    top: 5px;
+    position: relative;
+    border-radius: 0 18px 18px 0;
+    font-size: 12px;
+    background-color: rgba(31, 31, 31, 1) !important;
+    padding-top: 0;
+    left: -10px;
+    text-align: right;
+    padding-bottom: 0;
+    width: 42%;
+    padding-right: 14px;
+    color: white;
+}
+.bulleBanniere:hover h4{
+    width: 52%;
+    transition-duration: 1s;
+
+}
+.bulleBanniere h3{
+    line-height: 1;
+    text-shadow: black 1px 0 10px;
+    font-size: 21px;
+    text-align: center;
     width: 100%;
+    color: white;
+
+}
+.bulleBanniere h5{
+    font-weight: normal;
+    padding: 4px 4px 4px 4px;
+    position: absolute;
+    top: 67%;
+    border-radius: 2px 2px 2px 2px;
+    font-size: 15px;
+    color: white;
+    line-height: 15px;
     left: 50%; /* à 50%/50% du parent référent */
     transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
-    position: absolute;
-    top: 92%;
-
-}
-.bulleFormation:hover button {
-    display: block;
-    transition-duration: 0.9s;
-
-
-}
-.buttonsFormation button{
-    display: none;
-    border-radius: 2px 2px 2px 2px;
-
-    border: 1px black solid;
-    padding: 2px 8px 2px 8px;
-    font-size: 12px;
-    color: white;
-    background: transparent;
-}
-.buttonsFormation button:hover {
-    background: black;
-    color: white;
-    cursor: pointer;
-
+    width: 80%;
 }
 .linkFooter{
     margin-bottom: 1px;
