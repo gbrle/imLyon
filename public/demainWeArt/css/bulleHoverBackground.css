@@ -64,12 +64,17 @@
 
 }
 .bulleFormation h3{
+    top: 27%;
+    padding: 4px 4px 4px 4px;
+    position: absolute;
     line-height: 1;
     text-shadow: black 1px 0 10px;
     font-size: 21px;
     text-align: center;
-    width: 100%;
     color: white;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    width: 80%;
 
 }
 .bulleFormation h5{
@@ -93,11 +98,12 @@
     font-size: 12px;
     background-color: rgba(31, 31, 31, 1);
     transition: left,background-color,color 1s;
-    top: 216px;
+    top: 246px;
+    padding-right: 10px;
     border: 0;
-    border-radius: 16px 16px 16px 16px;
+    border-radius: 0 16px 16px 0;
     position: relative;
-    left: 0px;
+    left: -138px;
     color: white;
 
 }
@@ -105,7 +111,10 @@
     background-color: rgba(255, 255, 255, 1);
     color: black;
 }
-
+.bulleFormation:hover .buttonEnsavoirPlusFormation {
+    transition-duration: 1s;
+    left: -29px;
+}
 
 .buttonPdfFormation{
     font-size: 12px;
@@ -114,14 +123,19 @@
     color: white;
     transition: right,background-color,color 1s;
     padding-left: 10px;
-    top: 216px;
+    top: 246px;
     border: 0;
-    border-radius: 16px 16px 16px 16px;
+    border-radius: 16px 0 0 16px;
     position: relative;
+    right: -120px;
 }
 .buttonPdfFormation:hover{
     background-color: rgba(255, 255, 255, 1);
     color: black;
+}
+.bulleFormation:hover .buttonPdfFormation {
+    transition-duration: 1s;
+    right: -29px;
 }
 .bulleBanniere{
     overflow: hidden;
