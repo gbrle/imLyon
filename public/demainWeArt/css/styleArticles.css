@@ -49,6 +49,54 @@ Table of CSS Content arrage with every section name
 	Typography links 
  	Import Google Fonts
 =====================================================================================*/
+
+
+.panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #EEEEEE;
+}
+
+.panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0 20px 20px 0;
+    color: #212121;
+    border-color: #EEEEEE;
+}
+.logoDemain{
+    width: 270px !important;
+    height: 75px !important;
+    margin-top: 5px!important;
+    margin-bottom: 30px!important;
+    object-fit: fill !important;
+}
+.panel-title {
+    font-size: 14px;
+}
+
+.panel-title > a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.more-less {
+    float: right;
+    color: #212121;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #EEEEEE;
+}
+.demo{
+    margin-left: 0;
+}
+
+/* ----- v CAN BE DELETED v ----- */
+
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800,800i|Poppins:400,400i,600,600i,700,700i,800,800i");
 
 /*===================================================================================
@@ -308,24 +356,9 @@ a:hover,a:focus,a.active{
 *, ::after, ::before{
 	 outline: none !important;
 }
-.btn:focus,.btn:active {
-   outline: none !important;
-   box-shadow: none;
-}
-.btn{
-    padding: 10px 30px;
-    font-size: 14px;
-    font-family: 'Open Sans', sans-serif;
-    border-radius: 0px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.btn_info{
-  font-style: italic;
-  text-transform: capitalize;
-  padding: 0px;
-}
+
+
+
 .w_60{
 	width: 60%;
 }
@@ -2390,12 +2423,7 @@ label.radios {
     margin-right: 2rem;
     text-align: right;
 }
-.card-header button{
-    border: transparent;
-    border-radius: 120px 0 0 120px;
-    width: 75%;
-    min-height: 34px;
-}
+
 /*.card-header button:focus{
 
     width: 100%;
@@ -2405,30 +2433,14 @@ label.radios {
     width: 100% !important;
 }
 
-.card-header button:hover{
-    width: 100%;
-    opacity:0.7;
-    transition-duration: 1s;
-}
-.logoDemain{
-    width: 270px !important;
-    height: 75px !important;
-    margin-bottom: 30px!important;
-    margin-top: 5px!important;
-    object-fit: fill !important;
-}
-.logoDemainHome{
-    width: 430px !important;
-    height: 110px !important;
-    object-fit: fill !important;
-}
+
 .logoDemainContainer{
     text-align: left;
     padding-top: 50px;
     padding-left: 50px;
 }
-.contenueArticle h2{
-    padding-left: 0!important;
+.contenueArticle{
+
 }
 .titreArticle{
     font-weight: unset;
@@ -2440,6 +2452,22 @@ label.radios {
     padding-top: 57px;
     padding-left: 60px;
     padding-right: 100px;
+}
+.page_article .btn-link{
+    color: black;
+}
+.page_article .btn-link:hover{
+    text-decoration: none;
+    opacity: 0.8;
+}
+.page_article h2{
+    padding-left: 0;
+    font-style: normal;
+    font-family: "Avenir Next LT Pro Demi";
+
+}
+.page_article .container{
+    padding-left: 0;
 }
 /* ROTATE MENU */
 #currentRecording {
@@ -2593,11 +2621,6 @@ label.radios {
 // Large devices (desktops, 992px and up)
 ============================================================*/
 @media (max-width: 1199px){
-    .logoDemainHome{
-        width: 262px !important;
-        height: 80px !important;
-        margin-top: 30px;
-    }
 
     .menuSection{
         width: 100%;
@@ -2745,19 +2768,8 @@ label.radios {
         border-left: 0;
     }
 
-    .card-header h2{
-        padding-left: 0;
 
-    }
-    .card-header button{
-        width: 75%;
 
-    }
-    .card-header button:hover{
-        width: 100%;
-        opacity:0.7;
-        transition-duration: 1s;
-    }
     .container-buttonSousCat{
         margin-right: 0;
         text-align: right;
