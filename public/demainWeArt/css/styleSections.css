@@ -347,19 +347,19 @@
 
     .backgroundRecordingStudioTitre{
         background: transparent;
-        top: 21%;
+        top: 16%;
     }
     .backgroundEventTitre{
         background: transparent;
-        top: 21%;
+        top: 16%;
     }
     .backgroundArtisteLabelServicesTitre{
         background: transparent;
-        top: 21%;
+        top: 16%;
     }
     .backgroundTrainingTitre{
         background: transparent;
-        top: 21%;
+        top: 16%;
         width: 100%;
     }
 
@@ -379,7 +379,7 @@
         padding-bottom: 5px!important;
         padding-top: 5px!important;
 
-        top: 43%;
+        top: 38%;
 
     }
     .infosHeader{
