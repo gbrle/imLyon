@@ -11,7 +11,9 @@
     let acceptedPolitique = document.getElementById('acceptedPolitique');
 
     acceptedPolitique.addEventListener('click', function () {
-        politique.classList.add('d-none');
+        acceptedPolitique.classList.add('animated');
+        acceptedPolitique.classList.add('rubberBand');
+        politique.classList.add('bounceOutLeft');
     })
 
     $('#79').on('shown.bs.collapse', function () {
