@@ -35,8 +35,8 @@
     background-color: rgba(31, 31, 31, 0.8) !important;
     border-radius: 15px;
     position: relative;
-    min-height: 350px;
-    max-width: 170px;
+    min-height: 403px;
+
     min-width: 260px;
 }
 .bulleFormation h1{
@@ -82,12 +82,12 @@
     position: absolute;
     top: 67%;
     border-radius: 2px 2px 2px 2px;
-    font-size: 15px;
+    font-size: 12px;
     color: white;
     line-height: 15px;
     left: 50%; /* à 50%/50% du parent référent */
     transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
-    width: 80%;
+    width: 98%;
 }
 .enteteBulleFormation{
     padding-top: 0;
@@ -97,7 +97,7 @@
     font-size: 12px;
     background-color: rgba(31, 31, 31, 1);
     transition: left,background-color,color 1s;
-    top: 246px;
+    top: 306px;
     padding-right: 10px;
     border: 0;
     border-radius: 0 16px 16px 0;
@@ -122,7 +122,7 @@
     color: white;
     transition: right,background-color,color 1s;
     padding-left: 10px;
-    top: 246px;
+    top: 306px;
     border: 0;
     border-radius: 16px 0 0 16px;
     position: relative;

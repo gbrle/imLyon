@@ -63,12 +63,7 @@
     background-size: cover;
 
 }
-.footerRecordingSection{
-    display: none;
-    margin-top: 150px;
 
-    width: 100%;
-}
 
 .headerRecordingSection .logoDemain{
     width: 332px;
@@ -136,9 +131,15 @@
 }
 .footerRecordingSection{
     display: none;
-    margin-top: 150px;
-
-    width: 100%;
+}
+.footerArtistSection{
+    display: none;
+}
+.footerEventsSection{
+    display: none;
+}
+.footerTrainingSection{
+    display: none;
 }
 
 .headerArtistLabelServicesSection .logoDemain{
@@ -204,12 +205,7 @@
     background-position: center center;
     background-size: cover;
 }
-.footerTrainingSection{
-    display: none;
-    margin-top: 150px;
 
-    width: 100%;
-}
 
 .headerTrainingSection .logoDemain{
     width: 332px;
@@ -274,12 +270,7 @@
     background-position: center center;
     background-size: cover;
 }
-.footerEventsSection{
-    display: none;
-    margin-top: 150px;
 
-    width: 100%;
-}
 
 .headerEventsSection .logoDemain{
     width: 332px;
@@ -374,6 +365,7 @@
     /* RECORDING SECTION
 -------------------------------> */
     .descriptifEventsMenu, .descriptifArtistLabelServicesMenu, .descriptifRecordingMenu, .descriptifTrainingMenu{
+        font-size: 12px;
         padding-left: 5px!important;
         padding-right: 5px!important;
         padding-bottom: 5px!important;
