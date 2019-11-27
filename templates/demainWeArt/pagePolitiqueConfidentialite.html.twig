@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!--===== Meta Tag =====-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="Runaway - Personal Portfolio HTML Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="business, agency, blog, cv, creative, html, one page, personal, portfolio, resume, responsive, bootstrap, photography, designer, developer">
+    <meta name="author" content="root">
+
+    <!--	Css Links
+   ==================================================-->
+    <link rel="stylesheet" href="../../demainWeArt/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../demainWeArt/css/jquery.pagepiling.css">
+    <link rel="stylesheet" href="../../demainWeArt/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../demainWeArt/fonts/flaticon.css">
+    <link rel="stylesheet" href="../../demainWeArt/css/plugins.css">
+    <link rel="stylesheet" href="../../demainWeArt/css/style.css">
+    <link rel="stylesheet" href="../../demainWeArt/css/styleSections.css">
+    <link rel="stylesheet" href="../../demainWeArt/css/colorsSousCats.css">
+    <link rel="stylesheet" href="../../demainWeArt/css/bulleHoverBackground.css">
+    <link rel="stylesheet" href="../../demainWeArt/css/color.css" id="color-change">
+
+    <style type="text/css" media="screen">
+
+        .logoDemain{
+            width: 270px !important;
+            height: 75px !important;
+            margin-top: 5px!important;
+            margin-bottom: 30px!important;
+            object-fit: fill !important;
+        }
+        .menuRecordingSection{
+            background-image: url("../../demainWeArt/images/backgroundsSections/background-recording-section.jpg")!important;
+
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    </style>
+
+    <!-- Favicon
+   ==================================================-->
+    <link rel="icon" type="image/png" sizes="32x32" href="../../demainWeArt/images/favicon.ico">
+
+    <!--	Title
+  ==================================================-->
+    <title>Runaway - Personal Portfolio HTML Template</title>
+
+</head>
+<body id="top" class="page-load">
+<!--	Preloader
+==================================================-->
+<div class="preloader">
+    <div class="lds-css ng-scope">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Menu Responsive==================================================-->
+<nav id="mysidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="flaticon-close-button"></i></a>
+    {#    <a href="/"><i class="fa fa-home fa-2x pl-5" aria-hidden="true"></i></a>#}
+    <ul id="menu">
+        <li data-menuanchor="homePage" id="homeRecordingResponsive"><a onclick="closeNav()" class="Blanc font-weight-bold" href="/#homePage"><i class="fa fa-home Blanc" aria-hidden="true"></i> HOME</a></li>
+        <li data-menuanchor="recordingPage"><a onclick="closeNav()" class="Violet font-weight-bold" href="/#recordingPage">RECORDING STUDIOS</a></li>
+        <li data-menuanchor="artistLabelServices" id="artistLabelServicesRecordingResponsive"><a onclick="closeNav()" class="Rose font-weight-bold" href="/#artistLabelServices">ARTIST & LABEL SERVICES</a></li>
+        <li data-menuanchor="training" id="trainingRecordingResponsive"><a onclick="closeNav()" class="Orange font-weight-bold" href="/#training">FORMATION & TRAINING</a></li>
+        <li data-menuanchor="events" id="eventRecordingResponsive"><a onclick="closeNav()" class="Rouge font-weight-bold" href="/#events">EVENTS</a></li>
+        <li><a onclick="closeNav()" class="Blanc font-weight-bold" href="{{ path('demainweart_page_partenaires') }}">PARTENAIRES</a></li>
+        <li><a onclick="closeNav()" class="Blanc font-weight-bold" href="{{ path('demainweart_page_contact') }}">CONTACT</a></li>
+        {#        <li data-menuanchor="page7"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page7">Team</a></li>#}
+        {#        <li data-menuanchor="page8"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page8">Testimonialdadada</a></li>#}
+        {#        <li data-menuanchor="page9"><a onclick="closeNav()" class="Blanc font-weight-bold" href="#page9">Contact</a></li>#}
+    </ul>
+</nav>
+
+{#<div class="sidebar bg_deepblack">#}
+{#    <div class="logo text-center"><a href="#page1"><img class="nav-logo" src="images/logo/29.png" alt="logo"></a></div>#}
+{#    <span style="cursor:pointer" onclick="openNav()">&#9776;</span>#}
+{#    <div class="socal_media mt_60">#}
+{#        <ul>#}
+{#            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>#}
+{#            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>#}
+{#            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>#}
+{#            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>#}
+{#            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>#}
+{#        </ul>#}
+{#    </div>#}
+{#</div>#}
+<div class="contact_massage bg_transparent d-flex align-items-center" style="cursor:pointer" onclick="openNav()">
+    <a href="#"><i class="fa fa-bars fa-1x text-white" aria-hidden="true"></i></a>
+</div>
+
+<!--
+=======================================================-->
+
+
+
+
+
+
+
+
+    <!--	Start Recording Stdios
+    ===================================================-->
+    <div id="recordingPage" class="section bg_black pp-scrollable">
+        <div class="container-fluid pl-0 pr-0">
+
+            <div class="about2">
+                <div class="col-md-12 col-lg-12">
+                    <div class="row">
+
+                        <div class="col-md-12 col-lg-12 menuRecordingSection d-block" id="sectionRecording">
+                            <div class="about_myself pr-sm-5 pl-sm-5">
+                                <!--	Start Title
+                                ================================-->
+                                {#                                    <div class="main_title my_60">#}
+                                {#                                        <h2 class="title color_white">About Me</h2>#}
+                                {#                                        <p class="mt_15 color_lightgray">Interdum a etiam sagittis vehicula porta. Massa felis eros quam blandit nulla dolor habitant.</p>#}
+                                {#                                    </div>#}
+                                <!--	End Title
+                                ================================-->
+                                <div class="row pt-5">
+                                    <div class="hauteurSousCat"></div>
+
+                                    <div class="menuSousCat col-md-4 col-lg-4">
+                                        <div class="">
+                                            <a href="/"><img alt="" class="logoDemainMenu" src="../../demainWeArt/images/logo/logo-demain.png"></a>
+                                        </div>
+                                        <div class="myself color_secondery menuSticky" style="min-width: 337px; max-width: 337px">
+                                            <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
+                                            <div id="currentPartenaires" class="rotating Blanc"></div>
+                                            <a href="/"><h2  id="homeRecording" class="Blanc petitTitreMenu">HOME</h2></a>
+                                            <a href="/#recordingPage"><h2 class="Violet">RECORDING STUDIOS</h2></a>
+                                            <a href="/#artistLabelServices"><h2  id="artistLabelServicesRecording" class="Rose">ARTIST & LABEL SERVICES</h2></a>
+                                            <a href="/#training"><h2  id="trainingRecording" class="Orange">FORMATION & TRAINING</h2></a>
+                                            <a href="/#events"><h2 id="eventRecording" class="Rouge">EVENTS</h2></a>
+                                            <h2 class="Blanc petitTitreMenu">PARTENAIRES</h2>
+                                            <a href="{{ path('demainweart_page_contact') }}"><h2 class="Blanc petitTitreMenu">CONTACT</h2></a>
+                                            <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-8 mb-5">
+                                        <div class="personal_info color_lightgray bg_transparent">
+                                            <div class="accordion bg_transparent" id="PartenaireIdCollapse">
+                                                <div style="border: transparent;" class="card bg_transparent">
+
+
+                                                    <!-- ------------------------CARDS BULLE---------------------- -->
+
+                                                        <div style="border: transparent;" class="card-header bg_transparent mt-lg-4" id="PartenaireId">
+
+                                                            <div class="d-block text-center pl-xl-0 pl-sm-0">
+                                                                <a href="/"><img alt="" class="logoDemain d-lg-none" src="../../demainWeArt/images/logo/logo-demain.png"></a>
+                                                            </div>
+
+                                                            <h2 class="container-buttonSousCat">
+                                                                <button class="bulleSousCategorie text-left bg_transparent text-white bgRose pl-3 bgBlanc" type="button" data-toggle="collapse" data-target="#targetPartenaireId" aria-expanded="true" aria-controls="collapseOne">
+                                                                    MENTIONS LEGALES
+                                                                </button>
+                                                            </h2>
+                                                        </div>
+
+
+                                                            <div style="border: transparent" id="targetPartenaireId" class="bg_transparent collapse show" data-parent="#PartenaireIdCollapse" aria-labelledby="PartenaireId">
+                                                                <div class="card-body" style="border: transparent;">
+                                                                    <div class="row paddingCards justify-content-left">
+
+                                                                            <div class="col-md-12 col-lg-12">
+                                                                                <div class="price_table">
+                                                                                    <div class=" justify-content-left ml-lg-2 mt-4">
+
+                                                                                        BIENVENUE SUR LE SITE WWW.DEMAINWEART.COM
+                                                                                        <br><br>
+
+                                                                                        La société DEMAINWEART (ci-après identifiée comme « Nous ») souhaite vous donner, en tant que Client une visibilité sur le traitement de vos données à caractère personnel (vos « Données ») et sur vos droits au titre de la règlementation applicable en la matière.
+                                                                                        <br>
+                                                                                        La présente politique s’applique à l’ensemble des services proposés par DEMAINWEART, notamment lorsque vous créez votre compte Client ou effectuez des réservations de formation sur notre site internet WWW.DEMAINWEART.COM (« Site internet »).
+                                                                                        <br>
+                                                                                        Nous pouvons modifier la Charte en mettant à jour cette page. Ainsi, nous vous invitons à la consulter régulièrement pour vous assurer que vous êtes d’accord avec ses éventuelles modifications.
+                                                                                        <br>
+                                                                                        Nous considérons que vous avez accepté cette Charte dès lors que vous utilisez nos services.
+                                                                                        <br>
+                                                                                        Pour toute question relative à la Charte, vous pouvez nous contacter sur notre Site internet en utilisant le formulaire de contact prévu à cet effet ou par voie postale à DEMAINWEART – 15 rue Prisca – 69100 Villeurbanne.
+                                                                                        <br><br>
+                                                                                        SOMMAIRE<br><br>
+                                                                                        Qui sommes-nous ?<br>
+                                                                                        Qui est responsable du traitement des vos Données ?<br>
+                                                                                        Quels types de Données collectons-nous ?<br>
+                                                                                        Pourquoi traitons-nous vos Données / à quelles fins traitons-nous vos Données ?<br>
+                                                                                        Êtes-vous tenu de nous fournir vos Données ?<br>
+                                                                                        Comment recueillons-nous votre consentement ?<br>
+                                                                                        Quelle est la durée de conservation de vos Données ?<br>
+                                                                                        Cookies<br>
+                                                                                        Qui sont les destinataires de vos Données ?<br>
+                                                                                        Avec qui partageons-nous vos Données ?<br>
+                                                                                        Vers quels pays transférons-nous vos Données ?<br>
+                                                                                        Quelles mesures sont mises en oeuvre afin de garantir la sécurité de vos Données ?<br>
+                                                                                        Quels sont vos droits et comment les exercer ?<br>
+                                                                                        Soumettre une plainte auprès de la CNIL<br><br>
+                                                                                        1. Qui sommes-nous ?<br><br>
+                                                                                        DEMAINWEART est une société française (R.C.S LYON 394 744 874) qui met en place des services dans l’ensemble de ses centres de formation. D’autre part, la société DEMAINWEART assure la gestion du Site internet WWW.DEMAINWEART.COM et la gestion de la relation client.
+                                                                                        <br><br>
+                                                                                        2. Qui est responsable du traitement de vos Données ?<br>
+                                                                                        Le responsable du traitement de vos Données est la société DEMAINWEART (RCS Lyon  850 867 771), dont le siège social est situé au 15 rue Prisca 69100 Villeurbanne.
+                                                                                        <br><br>
+                                                                                        3. Quels types de Données collectons-nous ?<br>
+                                                                                        Nous vous proposons différents types de services afin de vous permettre de profiter au mieux de votre expérience de navigation et de réservation et pour lesquels nous recueillons différents types d’informations vous concernant.
+                                                                                        <br>
+                                                                                        Nous pouvons collecter les Données suivantes :
+                                                                                        <br>
+                                                                                        Lorsque vous créez votre compte Client (en remplissant le formulaire sur le Site internet) : vos noms et prénom, code postal, date de naissance, adresse e-mail, numéro de téléphone ainsi que vos préférences de notification.
+                                                                                        <br>
+                                                                                        Lorsque vous effectuez une réservation, un achat en ligne ou un abonnement : la formation choisie, l’école (ville) concernée, votre mode de paiement, les informations transactionnelles, l’adresse e-mail à laquelle est envoyée votre réservation ; ainsi que vos Données d’état civil, les Données d’historique concernant vos achats et réservations en ligne.
+                                                                                        <br>
+                                                                                        Lorsque vous vous abonnez à notre newsletter : votre adresse e-mail.
+                                                                                        <br>
+                                                                                        Ces sites web pourraient collecter des données sur vous, utiliser des cookies, embarquer des outils de suivis tiers, suivre vos interactions avec ces contenus embarqués si vous disposez d’un compte connecté sur leur site web.
+                                                                                        <br><br>
+                                                                                        4. Pourquoi traitons-nous vos Données / à quelles fins traitons-nous vos Données ?
+                                                                                        Nous utilisons et traitons vos Données pour plusieurs raisons :
+                                                                                        <br>
+                                                                                        la gestion de votre compte Client en ligne (enregistrement et traitement de vos réservations en ligne, accès à votre historique de réservation ; enregistrement et traitement de vos demandes d’information ou de réclamations en ligne auprès de notre service Client…) ;<br>
+                                                                                        la gestion de votre contrat d’abonnement ;<br>
+                                                                                        l’envoi d’informations et d’offres personnalisées (envoi de la programmation de nos formations, organisation d’événements…) ;<br>
+                                                                                        l’organisation d’opérations promotionnelles notamment à travers les réseaux sociaux ;<br>
+                                                                                        la réalisation d’études statistiques notamment pour répondre au mieux à vos attentes ;<br>
+                                                                                        l’amélioration du Site internet et de votre navigation.<br>
+                                                                                        Par ailleurs, nous pouvons être amenés à conserver et à traiter vos Données à des fins de lutte contre la fraude et de prévention contre les incidents de paiement ainsi que pour assurer la défense de nos intérêts en cas de litige ou d’action de justice.
+                                                                                        <br><br>
+                                                                                        5. Êtes-vous tenu de nous fournir vos Données ?<br>
+                                                                                        Il n’existe aucune obligation légale vous imposant de nous communiquer des informations vous concernant. Toutefois, nous ne pouvons pas vous fournir le service demandé si vous ne communiquez pas les informations présentées comme étant obligatoires sur nos formulaires de collecte.
+                                                                                        <br>
+                                                                                        Par ailleurs, vous restez libre de nous communiquer les Données identifiées comme facultatives dont la collecte nous permettra d’améliorer le service proposé.
+                                                                                        <br><br>
+                                                                                        6. Comment recueillons-nous votre consentement ?<br>
+                                                                                        Nous ne collectons, traitons et exploitons vos Données qu’après avoir obtenu un consentement clair, explicite et non équivoque de votre part.
+                                                                                        <br>
+                                                                                        Nous collectons ainsi votre consentement dans les différentes situations suivantes :
+                                                                                        <br>
+                                                                                        lors de la création du compte Client ;<br>
+                                                                                        lors de la souscription à un contrat d’abonnement ;<br>
+                                                                                        lors de l’acceptation de cookies de navigation web (cf. 8. Les cookies) ;
+                                                                                        <br>pour vous proposer des services personnalisés.<br><br>
+                                                                                        7. Quelle est la durée de conservation de vos Données ?<br>
+                                                                                        Vos Données sont conservées pendant toute la durée de la relation contractuelle ou de la souscription à un service puis pendant une durée nécessaire pour assurer la gestion de la fin du contrat ou du service et préserver nos intérêts en cas de litige ou d’action en justice. Nous veillons à ce que la durée de conservation soit raisonnable au regard de la finalité de cette conversation.
+                                                                                        <br>
+                                                                                        Nous vous présentons ci-après les différentes durées de conservation de vos Données par service proposé.
+                                                                                        <br>
+                                                                                        utilisation du compte Client en ligne : pendant toute la durée d’utilisation puis 3 ans à compter de la dernière activité ;
+                                                                                        réservation en ligne de formation et achats en ligne : 5 ans et 3 mois à l’issue de la transaction ;
+                                                                                        gestion d’un contrat d’abonnement : pendant la durée du contrat et 5 ans et 3 mois à compter de la résiliation du contrat ;
+                                                                                        gestion des demandes au service Clients : 5 ans et 3 mois à l’issue de la demande ;
+                                                                                        envoi d’informations et d’offres personnalisées, abonnement à la newsletter : jusqu’au retrait du consentement ;
+                                                                                        organisation d’opérations promotionnelles, notamment à travers les réseaux sociaux : 5 ans et 3 mois à l’issue la fin de l’opération ;
+                                                                                        lutte contre la fraude et la prévention contre les incidents de paiement : 5 ans et 3 mois après le dernier paiement ;
+                                                                                        exercice ou défense d’un droit en justice : 5 ans et 3 mois après le dernier paiement.
+                                                                                        <br><br>8. Cookies<br>
+                                                                                        Lorsque vous visitez notre Site internet, des cookies sont susceptibles d’être déposés et lus dans le navigateur de votre ordinateur ou votre terminal.
+                                                                                        <br>
+                                                                                        Ces cookies nous permettent de collecter automatiquement des Données afin de :
+                                                                                        <br>
+                                                                                        permettre la navigation sur notre Site internet ;<br>
+                                                                                        suivre notre navigation et de mesurer l’audience ;<br>
+                                                                                        personnaliser votre navigation ;<br>
+                                                                                        <br>Vous proposer de la publicité correspondant à vos centres d’intérêts.
+                                                                                        <br>La durée maximale de conservation des cookies est de 13 (treize) mois à compter de leur dépôt sur votre navigateur ou terminal. À l’expiration de ce délai, un nouveau consentement sera requis. Vous pouvez à tout moment supprimer manuellement ces cookies.
+                                                                                        <br>
+                                                                                        Les cookies sont déposés soit directement par nous soit par des tiers en fonction des choix que vous avez émis précédemment auprès des sites gérés par des tiers.
+                                                                                        <br>
+                                                                                        Pour en savoir plus sur ces cookies et sur la façon dont vous pouvez les désactiver, nous vous invitons à consulter :
+                                                                                        <br><br>
+                                                                                        <br>Google Analytics : https://support.google.com/analytics/answer/181881?hl=fr
+                                                                                        <br>Webediad : https://fr.webedia-group.com/cookies
+                                                                                        <br>Facebook : https://www.facebook.com/ads/preferences/?entry_product=ad_settings_screen
+                                                                                        <br>Nous vous informons que vous pouvez également paramétrer la gestion des cookies en configurant votre navigateur.
+                                                                                        <br><br>
+                                                                                        <br>Pour Internet Explorer : https://support.microsoft.com/fr-fr/help/17442/windows-internet-explorer-delete-manage-cookies
+                                                                                        <br> Pour Safari : https://support.apple.com/fr-fr/guide/safari/sfri11471/mac
+                                                                                        <br> Pour Chrome : https://support.google.com/chrome/answer/95647?hl=fr&hlrm=en
+                                                                                        <br>Pour Firefox : https://support.mozilla.org/fr/kb/autoriser-bloquer-cookies-preferences-sites?redirectlocale=fr&redirectslug=Activer+et+désactiver+les+cookies
+                                                                                        <br>Pour Opera : https://help.opera.com/en/latest/web-preferences/#cookies
+                                                                                        <br>Pour effectuer cette configuration sur votre mobile ou tablette, nous vous invitons à consulter les liens ci-dessous :
+                                                                                        <br>
+                                                                                        <br>  iOS : https://support.apple.com/fr-fr/HT201265
+                                                                                        <br> Android : http://www.wikihow.com/Disable-Cookies#Android_Devices
+                                                                                        <br><br> 9. Qui sont les destinataires de vos Données ?
+                                                                                        <br> DEMAINWEART est destinataire de vos Données en tant que responsable de traitement.
+                                                                                        <br><br>
+                                                                                        10. Avec qui partageons-nous vos Données ?
+                                                                                        <br>  Nous nous assurons que nos sous-traitants présentent les garanties suffisantes pour assurer la mise en oeuvre des mesures de sécurité et de confidentialité des Données auxquelles ils ont accès dans l’exercice de leurs missions telles que définies par la réglementation applicable en la matière.
+                                                                                        <br>
+                                                                                        Nous partageons vos Données avec des prestataires extérieurs qui nous aident à gérer les services que nous vous proposons, notamment le Site internet, le service Client, les prestations de paiement. L’intervention de chacun de ces prestataires extérieurs est strictement limitée à la prestation qu’il exécute pour notre compte.
+                                                                                        <br><br>
+                                                                                        11. Vers quels pays transférons-nous vos Données ?
+                                                                                        <br> Nous conservons vos Données principalement dans l’Union Européenne.
+                                                                                        <br>
+                                                                                        Une partie de vos Données est transférée aux États-Unis à des fins d’hébergement.
+                                                                                        <br><br>
+                                                                                        12. Quelles mesures sont mises en oeuvre afin de garantir la sécurité de vos Données ?
+                                                                                        <br>Nous mettons en oeuvre des mesures techniques et organisationnelles appropriées afin de garantir un niveau de sécurité de vos Données adapté aux risques de perte, accès, modification, altération, divulgation ou destruction non autorisée de celles-ci.
+                                                                                        <br>
+                                                                                        L’accès à vos Données est strictement encadré et réservé aux salariés de DEMAINWEART et de ses sous-traitants.
+                                                                                        <br>
+                                                                                        Conformément à la réglementation en vigueur, DEMAINWEART met en oeuvre des procédures de sauvegarde physique et électronique des Données collectées sur le Site internet.
+                                                                                        <br>
+                                                                                        Nous attirons votre attention sur le fait que DEMAINWEART ne maîtrise pas les risques liés au fonctionnement d’internet, et notamment la survenance d’événements ponctuels pouvant entraîner la perte de Données ou l’atteinte à la confidentialité de celles transitant sur le Site internet.
+                                                                                        <br>
+                                                                                        DEMAINWEART ne saurait être tenu responsable en cas d’interruption de l’accès au Site internet pour des raisons de forces majeures ou indépendantes à sa volonté.
+                                                                                        <br>
+                                                                                        Toute atteinte à la sécurité et/ou à la confidentialité de vos Données fera l’objet d’une communication à votre attention ainsi qu’à celle de la Commission nationale de l’informatique et des Libertés dans les meilleurs délais, lorsque la réglementation applicable en la matière l’exige.
+                                                                                        <br><br>
+                                                                                        13. Quels sont vos droits et comment les exercer ?
+                                                                                        En tant que personne concernée vous disposez d’un droit d’accès à vos Données, d’un droit de rectification de vos Données lorsqu’elles sont inexactes, d’un droit à l’effacement de vos Données, d’un droit d’opposition et de limitation du traitement de vos Données, et d’un droit à la portabilité de vos Données c’est-à-dire du droit de recevoir les Données que vous nous avez communiquées dans un format structuré, couramment utilisé et lisible par ordinateur et de les transmettre à un autre responsable de traitement.
+                                                                                        <br>
+                                                                                        Si vous disposez d’un compte Client en ligne, vous pouvez exercer directement votre droit d’accès et de rectification de vos Données en vous connectant à votre compte Client sur le Site internet WWW.DEMAINWEART.COM.
+                                                                                        <br>
+                                                                                        Pour toute autre demande, vous pouvez nous contacter :
+                                                                                        <br>
+                                                                                        <br>via les formulaires de contact sur notre site internet ;
+                                                                                        <br>  ou par voie postale à : DEMAINWEART – 15 rue Prisca – 69100 Villeurbanne.
+                                                                                        <br> Afin de traiter efficacement votre demande, nous vous remercions de nous préciser vos nom et prénom, adresse e-mail et date de naissance ainsi que, de joindre une copie de votre pièce d’identité. Il faudra également préciser dans votre demande si vous souhaitez recevoir la réponse par voie postale ou par voie électronique. À défaut de précision, nous vous répondrons par voie électronique.
+                                                                                        <br>
+                                                                                        Nous vous répondrons dans les meilleurs délais et en tour état de cause dans un délai d’un mois à compter de la réception de votre demande pourra t être prolongé d’un mois supplémentaire selon la demande.
+                                                                                        <br><br>
+                                                                                        14. Soumettre une plainte auprès de la CNIL
+                                                                                        <br>Si vous estimez que nous n’avons pas traité vos Données conformément à la réglementation en matière de protection des Données personnelles, vous avez la possibilité d’introduire une plainte auprès de la CNIL : https://www.cnil.fr/fr/plaintes.
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <footer class="container-fluid">
+                            <div  style="background-color: {{ recordingStutios.couleurfooter }}" class="row rounded-top">
+                                <!-- Newsletter -->
+                                <div class="d-flex justify-content-center col-12 containerNewsletter">
+                                    <form accept-charset="UTF-8"  class="newsletter">
+                                        <input type="email" id="contentNewsLetterMentionsLegales" name="formNewsLetterMentionsLegales" placeholder="E-mail" />
+                                        <input id="formNewsLetterMentionsLegales" style="background: #B34575;" type="button" name="formNewsLetterMentionsLegales" value="NEWSLETTER" disabled="disabled"/>
+                                    </form>
+
+                                </div>
+
+
+
+
+                                <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-left text-sm-center text-lg-left text-white mt-lg-5 mt-sm-1">
+                                    <div class="col-12 d-flex flex-wrap justify-content-center">
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left">Home</h2>
+                                            <a href="{{ path('demainweart_page_contact') }}"><h3 class="small text-lg-left linkFooter">Contact</h3></a>
+                                            <a href="{{ path('demainweart_page_partenaires') }}"><h3 class="small text-lg-left linkFooter">Partenaires</h3></a>
+                                        </div>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left">Recording studios</h2>
+                                            {% for recordingStutio in recordingStutios.sousCategorie %}
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left">Artist & label services</h2>
+                                            {% for artistLabelServices in artistLabelServices.sousCategorie %}
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left">Events</h2>
+                                            {% for event in event.sousCategorie %}
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                            <h2 class="pl-0 text-lg-left">Formation & Training</h2>
+                                            {% for training in training.sousCategorie %}
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-sm-12 text-white text-sm-center text-lg-center mt-5">
+                                    <h2 class="pl-0">
+                                        <a href="https://www.facebook.com/demainweart/" target="_blank"><i class="pl-3 pr-3 fa fa-facebook-official" aria-hidden="true"> Rejoignez nous sur Facebook</i></a>
+                                        <a href="https://www.instagram.com/demainweart/" target="_blank"><i class="pl-3 pr-3 fa fa-instagram" aria-hidden="true"> Suivez nous sur Instagram</i></a>
+                                    </h2>
+                                </div>
+                                <div class="col-12 text-white text-center mt-5">
+                                    <a href="https://www.imlyon.co">
+                                        <img alt="imLyon.co" class="logoMusicManufacturing" src="../../demainWeArt/images/logo/logo-music.png">
+                                    </a>
+                                </div>
+                                <div class="col-12 text-white text-center mt-5">
+                                    imlyon.co 2019 - 2019 - <a href="{{ path('demainweart_page_mentions_legales') }}"> Mentions légales</a> - <a href="{{ path('demainweart_page_CGU') }}">CGU DemainWeArt</a>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!--	End Contact
+    ===================================================-->
+
+<!--	Js Links
+===================================================-->
+<script src="../../demainWeArt/js/jquery.min.js"></script>
+<script src="../../demainWeArt/js/popper.min.js"></script>
+<script src="../../demainWeArt/js/bootstrap.min.js"></script>
+<script src="../../demainWeArt/js/plugins.js"></script>
+<script src="../../demainWeArt/js/jquery.pagepiling.min.js"></script>
+<script src="../../demainWeArt/js/custom.js"></script>
+<script>
+    var deleteLog = false;
+    //	Pagepiling js
+    //=====================================================
+    // AJAX POST NEWSLETTER !!
+    function ajaxPost(url, data, callback) {
+        let req = new XMLHttpRequest();
+        req.open("POST", url);
+        req.addEventListener("load", function () {
+            if (req.status >= 200 && req.status < 400) {
+                // Appelle la fonction callback en lui passant la réponse de la requête
+                callback(req.responseText);
+            } else {
+                console.error(req.status + " " + req.statusText + " " + url);
+            }
+        });
+        req.addEventListener("error", function () {
+            console.error("Erreur réseau avec l'URL " + url);
+        });
+        req.send(data);
+    }
+
+
+
+    let formNewsLetterMentionsLegales= document.getElementById('formNewsLetterMentionsLegales');
+    formNewsLetterMentionsLegales.addEventListener('click', function () {
+        let contentNewsLetterMentionsLegales = document.getElementById('contentNewsLetterMentionsLegales');
+
+        let email = contentNewsLetterMentionsLegales.value;
+        ajaxPost("{{ path('postNewsletter') }}", email, function() {
+
+            formNewsLetterMentionsLegales.value = "Inscrit(e) !";
+        })
+    })
+
+    //	Sidebar Nav Menu js
+    //=====================================================
+    function openNav() {
+        document.getElementById("mysidenav").style.width = "100%";
+    }
+    function closeNav() {
+        document.getElementById("mysidenav").style.width = "0";
+    }
+</script>
+</body>
+</html>

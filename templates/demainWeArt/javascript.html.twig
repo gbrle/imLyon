@@ -6,6 +6,14 @@
 <script src="demainWeArt/js/custom.js"></script>
 <script>
 
+
+    let politique = document.getElementById('politique');
+    let acceptedPolitique = document.getElementById('acceptedPolitique');
+
+    acceptedPolitique.addEventListener('click', function () {
+        politique.classList.add('d-none');
+    })
+
     $('#79').on('shown.bs.collapse', function () {
         this.scrollIntoView();
 
