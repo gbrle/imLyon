@@ -58,10 +58,10 @@ Table of CSS Content arrage with every section name
 }
 
 .panel-default > .panel-heading {
+    margin-bottom: 5px;
+    border: 1px black solid;
     padding: 0;
-    border-radius: 0 20px 20px 0;
-    color: #212121;
-    border-color: #EEEEEE;
+    color: black;
 }
 .logoDemain{
     width: 270px !important;
@@ -71,10 +71,13 @@ Table of CSS Content arrage with every section name
     object-fit: fill !important;
 }
 .panel-title {
+    margin-bottom: 0;
     font-size: 14px;
+    color: black;
 }
 
 .panel-title > a {
+    color: black;
     display: block;
     padding: 5px;
     text-decoration: none;
@@ -84,14 +87,24 @@ Table of CSS Content arrage with every section name
     float: right;
     color: #212121;
 }
+.panel-body{
+    color: grey;
+}
 
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    padding-bottom: 10px;
+    padding-top: 5px;
     border-top-color: #EEEEEE;
 }
 .demo{
     margin-left: 0;
 }
-
+.flecheCollapse{
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+}
 /* ----- v CAN BE DELETED v ----- */
 
 
@@ -2449,19 +2462,46 @@ label.radios {
     border-radius: 25px 0 0 25px;
 }
 .page_article{
+    border-radius: 26px;
     padding-top: 57px;
+    padding-bottom: 57px;
     padding-left: 60px;
-    padding-right: 100px;
+    padding-right: 60px;
+    margin-left: 74px;
+}
+.page_article a{
+    line-height: 23px;
+    color: black;
+}
+.page_article .card{
+    border: 0;
+}
+.page_article .card-header{
+    background-color: transparent;
+    border-bottom: 0;
+}
+.page_article .card-body{
+    max-width: 300px;
+    margin-bottom: 21px;
+    padding: 15px;
+    background-color: red;
+}
+.page_article .card-text{
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.page_article a:hover,a:focus,a.active{
+
 }
 .page_article .btn-link{
     color: black;
 }
-.page_article .btn-link:hover{
-    text-decoration: none;
-    opacity: 0.8;
+.page_article .panel-body{
+    line-height: 16px;
 }
+
 .page_article h2{
-    padding-left: 0;
     font-style: normal;
     font-family: "Avenir Next LT Pro Demi";
 
@@ -2743,15 +2783,18 @@ label.radios {
         margin-top: 0;
     }
     .page_article{
-        padding-top: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        margin-left: 0;
+
     }
     .paddingCards{
         padding-right: 26px;
         padding-left: 26px;
     }
     .page_article{
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .contenueArticle, .titreArticle{
         padding-left: 0;

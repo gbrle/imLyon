@@ -5,6 +5,13 @@
 <script src="demainWeArt/js/jquery.pagepiling.min.js"></script>
 <script src="demainWeArt/js/custom.js"></script>
 <script>
+
+    $('#79').on('shown.bs.collapse', function () {
+        this.scrollIntoView();
+
+    });
+
+
     // AJAX POST NEWSLETTER !!
     function ajaxPost(url, data, callback) {
         let req = new XMLHttpRequest();
@@ -108,6 +115,7 @@
 
 
 // Logic JS Recording Studios Page
+let footerRecordingSection = document.getElementById('footerRecordingSection');
 let moreRecordingStudios = document.getElementById('moreRecordingStudios');
 let headerAboutSection = document.getElementById('headerRecordingSection');
 let sectionRecording = document.getElementById('sectionRecording');
@@ -116,6 +124,8 @@ let sectionRecording = document.getElementById('sectionRecording');
         moreRecordingStudios.classList.add('animated');
         moreRecordingStudios.classList.add('flip');
         sectionRecording.style.display = "block";
+        footerRecordingSection.style.display = "block";
+
         setTimeout(function () {
                 headerAboutSection.style.transitionDuration = "1.3s";
                 headerAboutSection.style.height = "0vh";
@@ -131,6 +141,7 @@ let sectionRecording = document.getElementById('sectionRecording');
     $.fn.pagepiling.setAllowScrolling(false);
     })
 // Logic JS Artist Label Section Page
+let footerArtistSection = document.getElementById('footerArtistSection');
 let moreArtistLabelServicesStudios = document.getElementById('moreArtistLabelServicesStudios');
 let headerArtistLabelServicesSection = document.getElementById('headerArtistLabelServicesSection');
 let sectionArtistLabelServices = document.getElementById('ArtistLabelServices');
@@ -140,6 +151,7 @@ let sectionArtistLabelServices = document.getElementById('ArtistLabelServices');
         moreArtistLabelServicesStudios.classList.add('animated');
         moreArtistLabelServicesStudios.classList.add('flip');
         sectionArtistLabelServices.style.display = "block";
+        footerArtistSection.style.display = "block";
         setTimeout(function () {
                 headerArtistLabelServicesSection.style.transitionDuration = "1.3s";
                 headerArtistLabelServicesSection.style.height = "0vh";
@@ -156,6 +168,7 @@ let sectionArtistLabelServices = document.getElementById('ArtistLabelServices');
 })
 
 // Logic JS Traning Page
+let footerTrainingSection = document.getElementById('footerTrainingSection');
 let moreTraining = document.getElementById('moreTraining');
 let headerTrainingSection = document.getElementById('headerTrainingSection');
 let sectionTraining  = document.getElementById('Training');
@@ -165,6 +178,7 @@ let sectionTraining  = document.getElementById('Training');
         moreTraining.classList.add('animated');
         moreTraining.classList.add('flip');
         sectionTraining.style.display = "block";
+        footerTrainingSection.style.display = "block";
         setTimeout(function () {
                 headerTrainingSection.style.transitionDuration = "1.3s";
                 headerTrainingSection.style.height = "0vh";
@@ -181,6 +195,7 @@ let sectionTraining  = document.getElementById('Training');
 })
 
 // Logic JS Events Page
+let footerEventsSection = document.getElementById('footerEventsSection');
 let moreEvents = document.getElementById('moreEvents');
 let headerEventsSection = document.getElementById('headerEventsSection');
 let sectionEvents  = document.getElementById('Events');
@@ -190,6 +205,7 @@ let sectionEvents  = document.getElementById('Events');
         moreEvents.classList.add('animated');
         moreEvents.classList.add('flip');
         sectionEvents.style.display = "block";
+        footerEventsSection.style.display = "block";
         setTimeout(function () {
                 headerEventsSection.style.transitionDuration = "1.3s";
                 headerEventsSection.style.height = "0vh";
@@ -212,6 +228,7 @@ function resetAll(){
         setTimeout(function () {
                 headerAboutSection.style.height = "100vh";
                 sectionRecording.style.display = "none";
+                footerRecordingSection.style.display ="none";
             }
             , 800);
 
@@ -220,6 +237,7 @@ function resetAll(){
         setTimeout(function () {
                 headerArtistLabelServicesSection.style.height = "100vh";
                 sectionArtistLabelServices.style.display = "none";
+                footerArtistSection.style.display = "none";
             }
             , 800);
     }
@@ -227,6 +245,7 @@ function resetAll(){
         setTimeout(function () {
                 headerTrainingSection.style.height = "100vh";
                 sectionTraining.style.display = "none";
+                footerTrainingSection.style.display ="none";
             }
             , 800);
     }
@@ -234,6 +253,7 @@ function resetAll(){
         setTimeout(function () {
                 headerEventsSection.style.height = "100vh";
                 sectionEvents.style.display = "none";
+                footerEventsSection.style.display ="none";
             }
             , 800);
     }

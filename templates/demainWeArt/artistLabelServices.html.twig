@@ -89,7 +89,7 @@
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#artistLabelServicesCollapse" aria-labelledby="{{ sousCategorie.id }}">
                                                             <div class="card-body" style="border: transparent;">
                                                                 <div class="row paddingCards justify-content-center">
-                                                                    <div class="row">
+
                                                                         <div class="col-md-12 col-lg-12">
                                                                             <div class="price_table">
                                                                                 <div class="row justify-content-center">
@@ -109,7 +109,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -130,7 +130,7 @@
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#artistLabelServicesCollapse" aria-labelledby="{{ sousCategorie.id }}">
                                                             <div class="card-body" style="border: transparent;">
                                                                 <div class="row paddingCards justify-content-center">
-                                                                    <div class="row">
+
                                                                         <div class="col-md-12 col-lg-12">
                                                                             <div class="price_table">
                                                                                 <div class="row justify-content-center">
@@ -157,7 +157,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -165,7 +165,7 @@
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#recordingCollapse" aria-labelledby="{{ sousCategorie.id }}">
                                                             <div class="card-body" style="border: transparent;">
                                                                 <div class="row paddingCards justify-content-center">
-                                                                    <div class="row">
+
                                                                         <div class="col-md-12 col-lg-12">
                                                                             <div class="price_table">
                                                                                 <div class="row justify-content-center">
@@ -187,7 +187,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -254,68 +254,69 @@
                                 </div>
                             </div>
                         </div>
-                        <footer class="container-fluid">
-                            <div  style="background-color: rgba(179, 69, 117, .6);" class="row rounded-top">
-                                <!-- Newsletter -->
-                                <div class="d-flex justify-content-center col-12 containerNewsletter">
-                                    <form accept-charset="UTF-8"  class="newsletter">
-                                        <input type="email" id="contentNewsLetterArtist" name="formNewsLetterArtist" placeholder="E-mail" />
-                                        <input id="formNewsLetterArtist" style="background: #B34575;" type="button" name="formNewsLetterArtist" value="NEWSLETTER" disabled="disabled"/>
-                                    </form>
-                                </div>
+
+                    </div>
+                    <footer class="container-fluid footerArtistSection" id="footerArtistSection">
+                        <div  style="background-color: rgba(179, 69, 117, .6);" class="row rounded-top">
+                            <!-- Newsletter -->
+                            <div class="d-flex justify-content-center col-12 containerNewsletter">
+                                <form accept-charset="UTF-8"  class="newsletter">
+                                    <input type="email" id="contentNewsLetterArtist" name="formNewsLetterArtist" placeholder="E-mail" />
+                                    <input id="formNewsLetterArtist" style="background: #B34575;" type="button" name="formNewsLetterArtist" value="NEWSLETTER" disabled="disabled"/>
+                                </form>
+                            </div>
 
 
 
 
-                                <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-center text-sm-center text-lg-left text-white mt-5">
-                                    <div class="col-12 d-flex flex-wrap justify-content-center">
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left">Home</h2>
-                                            <a href="{{ path('demainweart_page_contact') }}"><h3 class="small text-lg-left linkFooter">Contact</h3></a>
-                                            <a href="{{ path('demainweart_page_partenaires') }}"><h3 class="small text-lg-left linkFooter">Partenaires</h3></a>
-                                        </div>
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left">Recording studios</h2>
-                                            {% for recordingStutio in recordingStutios.sousCategorie %}
-                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
-                                            {% endfor %}
-                                        </div>
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left">Artist & label services</h2>
-                                            {% for artistLabelServices in artistLabelServices.sousCategorie %}
-                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
-                                            {% endfor %}
-                                        </div>
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left">Events</h2>
-                                            {% for event in event.sousCategorie %}
-                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
-                                            {% endfor %}
-                                        </div>
-                                        <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
-                                            <h2 class="pl-0 text-lg-left">Formation & Training</h2>
-                                            {% for training in training.sousCategorie %}
-                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
-                                            {% endfor %}
-                                        </div>
+                            <div class="col-lg-12 col-sm-12 d-flex flex-wrap text-sm-left text-sm-center text-lg-left text-white mt-lg-5 mt-sm-1">
+                                <div class="col-12 d-flex flex-wrap justify-content-center">
+                                    <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                        <h2 class="pl-0 text-lg-left">Home</h2>
+                                        <a href="{{ path('demainweart_page_contact') }}"><h3 class="small text-lg-left linkFooter">Contact</h3></a>
+                                        <a href="{{ path('demainweart_page_partenaires') }}"><h3 class="small text-lg-left linkFooter">Partenaires</h3></a>
+                                    </div>
+                                    <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                        <h2 class="pl-0 text-lg-left">Recording studios</h2>
+                                        {% for recordingStutio in recordingStutios.sousCategorie %}
+                                            <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                        <h2 class="pl-0 text-lg-left">Artist & label services</h2>
+                                        {% for artistLabelServices in artistLabelServices.sousCategorie %}
+                                            <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                        <h2 class="pl-0 text-lg-left">Events</h2>
+                                        {% for event in event.sousCategorie %}
+                                            <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
+                                        <h2 class="pl-0 text-lg-left">Formation & Training</h2>
+                                        {% for training in training.sousCategorie %}
+                                            <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
+                                        {% endfor %}
                                     </div>
                                 </div>
-                                <div class="col-lg-12 col-sm-12 text-white text-sm-center text-lg-center mt-5">
-                                    <h2 class="pl-0">
-                                        <a href="https://www.facebook.com/demainweart/" target="_blank"><i class="pl-3 pr-3 fa fa-facebook-official" aria-hidden="true"> Rejoignez nous sur Facebook</i></a>
-                                        <a href="https://www.instagram.com/demainweart/" target="_blank"><i class="pl-3 pr-3 fa fa-instagram" aria-hidden="true"> Suivez nous sur Instagram</i></a>
-                                    </h2>
-                                </div>
-                                <div class="col-12 text-white text-center mt-5">
-                                    <a href="https://www.imlyon.co">
-                                        <img alt="imLyon.co" class="logoMusicManufacturing" src="demainWeArt/images/logo/logo-music.png">
-                                    </a>                                </div>
-                                <div class="col-12 text-white text-center mt-5">
-                                    imlyon.co 2019 - 2019 - <a href="{{ path('demainweart_page_mentions_legales') }}"> Mentions légales</a> - <a href="{{ path('demainweart_page_CGU') }}">CGU DemainWeArt</a>
-                                </div>
                             </div>
-                        </footer>
-                    </div>
+                            <div class="col-lg-12 col-sm-12 text-white text-sm-center text-lg-center mt-5">
+                                <h2 class="pl-0">
+                                    <a href="https://www.facebook.com/demainweart/" target="_blank"><i class="pl-3 pr-3 fa fa-facebook-official" aria-hidden="true"> Rejoignez nous sur Facebook</i></a>
+                                    <a href="https://www.instagram.com/demainweart/" target="_blank"><i class="pl-3 pr-3 fa fa-instagram" aria-hidden="true"> Suivez nous sur Instagram</i></a>
+                                </h2>
+                            </div>
+                            <div class="col-12 text-white text-center mt-5">
+                                <a href="https://www.imlyon.co">
+                                    <img alt="imLyon.co" class="logoMusicManufacturing" src="demainWeArt/images/logo/logo-music.png">
+                                </a>                                </div>
+                            <div class="col-12 text-white text-center mt-5">
+                                imlyon.co 2019 - 2019 - <a href="{{ path('demainweart_page_mentions_legales') }}"> Mentions légales</a> - <a href="{{ path('demainweart_page_CGU') }}">CGU DemainWeArt</a>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
