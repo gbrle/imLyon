@@ -77,13 +77,15 @@
                                                     <a href="/"><img alt="" class="logoDemain d-lg-none" src="../../demainWeArt/images/logo/logo-demain.png"></a>
                                                 </div>
                                                 {% for sousCategorie in training.souscategorie %}
-                                                    <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
-                                                        <h2 class="container-buttonSousCat">
-                                                            <button onclick="expendableBulleCategorie({{ sousCategorie.id }})" id="idButton{{ sousCategorie.id }}" class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="false" aria-controls="collapseOne">
-                                                                {{ sousCategorie.titre |upper }}
-                                                            </button>
-                                                        </h2>
-                                                    </div>
+                                                    {% if sousCategorie.statut == true %}
+                                                        <div style="border: transparent;" class="card-header bg_transparent" id="{{ sousCategorie.id }}">
+                                                            <h2 class="container-buttonSousCat">
+                                                                <button onclick="expendableBulleCategorie({{ sousCategorie.id }})" id="idButton{{ sousCategorie.id }}" class="text-left bg_transparent text-white pl-3 {{ sousCategorie.couleur }}" type="button" data-toggle="collapse" data-target="#target{{ sousCategorie.id }}" aria-expanded="false" aria-controls="collapseOne">
+                                                                    {{ sousCategorie.titre |upper }}
+                                                                </button>
+                                                            </h2>
+                                                        </div>
+                                                    {% endif %}
                                                     {% if sousCategorie.format == "bulle" %}
 
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#trainingCollapse" aria-labelledby="{{ sousCategorie.id }}">
@@ -94,6 +96,7 @@
                                                                             <div class="price_table">
                                                                                 <div class="row justify-content-center">
                                                                                     {% for article in sousCategorie.article %}
+                                                                                        {% if article.statut == true %}
                                                                                         <div class="ml-1 mr-1">
                                                                                             <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}">
                                                                                                 <div style="background: url('uploads/{{ article.photo }}') no-repeat center / cover;" class="table text-center bg_deepblack color_secondery bulle {{ sousCategorie.couleur }}">
@@ -105,6 +108,7 @@
                                                                                                 </div>
                                                                                             </a>
                                                                                         </div>
+                                                                                        {% endif %}
                                                                                     {% endfor %}
                                                                                 </div>
                                                                             </div>
@@ -118,7 +122,9 @@
                                                         <div style="border: transparent" id="target{{ sousCategorie.id }}" class="bg_transparent collapse hidden" data-parent="#trainingCollapse" aria-labelledby="{{ sousCategorie.id }}" >
                                                             <div class="card-body" style="border: transparent;padding-left: 85px">
                                                                 {% for article in sousCategorie.article %}
+                                                                    {% if article.statut == true %}
                                                                     <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}"><div><i class="{{ sousCategorie.couleur|slice(2) }} d-inline fa fa-plus-circle pt-1 pb-1" aria-hidden="true"> </i><p class="d-inline">{{ article.titre }}</p></div></a>
+                                                                    {% endif %}
                                                                 {% endfor %}
                                                             </div>
                                                         </div>
@@ -131,6 +137,7 @@
                                                                             <div class="price_table">
                                                                                 <div class="row justify-content-center">
                                                                                     {% for article in sousCategorie.article %}
+                                                                                        {% if article.statut == true %}
                                                                                         <div class="ml-1 mr-1">
 
                                                                                             <div style="background: url('uploads/{{ article.photo }}') no-repeat;background-size: 100% 45%;" class="table text-center bg_deepblack color_secondery bulleFormation {{ sousCategorie.couleur }}">
@@ -147,8 +154,8 @@
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
-
                                                                                         </div>
+                                                                                        {% endif %}
                                                                                     {% endfor %}
                                                                                 </div>
                                                                             </div>
@@ -166,6 +173,7 @@
                                                                             <div class="price_table">
                                                                                 <div class="row justify-content-center">
                                                                                     {% for article in sousCategorie.article %}
+                                                                                        {% if article.statut == true %}
                                                                                         <div class="ml-1 mr-1 col-lg-12">
                                                                                             <a href="{{ path('demainweart_page_article', {'slugifyTitre': article.slugifyTitre}) }}">
                                                                                                 <div style="background: url('uploads/{{ article.photo }}') no-repeat;background-size: cover;" class="table text-center bg_deepblack color_secondery bulleBanniere">
@@ -179,6 +187,7 @@
                                                                                                 </div>
                                                                                             </a>
                                                                                         </div>
+                                                                                        {% endif %}
                                                                                     {% endfor %}
                                                                                 </div>
                                                                             </div>
@@ -273,25 +282,33 @@
                                     <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                         <h2 class="pl-0 text-lg-left">Recording studios</h2>
                                         {% for recordingStutio in recordingStutios.sousCategorie %}
-                                            <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                            {% if recordingStutio.statut == true %}
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                            {% endif %}
                                         {% endfor %}
                                     </div>
                                     <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                         <h2 class="pl-0 text-lg-left">Artist & label services</h2>
                                         {% for artistLabelServices in artistLabelServices.sousCategorie %}
-                                            <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                            {% if artistLabelServices.statut == true %}
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                            {% endif %}
                                         {% endfor %}
                                     </div>
                                     <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                         <h2 class="pl-0 text-lg-left">Events</h2>
                                         {% for event in event.sousCategorie %}
-                                            <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
+                                            {% if event.statut == true %}
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
+                                            {% endif %}
                                         {% endfor %}
                                     </div>
                                     <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                         <h2 class="pl-0 text-lg-left">Formation & Training</h2>
                                         {% for training in training.sousCategorie %}
-                                            <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
+                                            {% if training.statut == true %}
+                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
+                                            {% endif %}
                                         {% endfor %}
                                     </div>
                                 </div>

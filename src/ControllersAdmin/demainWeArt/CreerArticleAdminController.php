@@ -57,6 +57,7 @@ class CreerArticleAdminController extends AbstractController
 
             $article->setSlugifyTitre($slugify->slugify($article->getTitre()));
             $article->setSousCategorie($sousCategorie);
+            $article->setStatut(true);
 
             if($formArticle->get('photo')->getData() !== null){
             $file = $formArticle->get('photo')->getData();
