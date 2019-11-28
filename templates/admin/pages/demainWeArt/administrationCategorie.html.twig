@@ -98,6 +98,11 @@
                                             <tr>
                                                 <td>{{ listeSousCategorie.titre }}</td>
                                                 <td>
+                                                    {% if listeSousCategorie.statut == 0 %}
+                                                    <a href="{{ path('statut_sous_categorie', {'id': listeSousCategorie.id}) }}"><i style="font-size: 23px; padding-right: 80px;" class="text-danger fa fa-check" aria-hidden="true"><span style="font-size: 12px">Activer</span></i></a>
+                                                    {% else %}
+                                                        <a href="{{ path('statut_sous_categorie', {'id': listeSousCategorie.id}) }}"><i style="font-size: 23px; padding-right: 80px;" class="text-success fa fa-check" aria-hidden="true"><span style="font-size: 12px">Désactiver</span></i></a>
+                                                    {% endif %}
                                                     <a href="{{ path('modifier_sous_categorie', {'id': listeSousCategorie.id}) }}"><i style="font-size: 23px; padding-right: 80px;" class="text-warning fa fa-pencil-square-o" aria-hidden="true"><span style="font-size: 12px">Modifier</span></i></a>
                                                     <a href="{{ path('demainWeArt_administration_supprimer_categorie', {'id': listeSousCategorie.id}) }}"><i style="font-size: 23px;" class="text-danger fa fa-trash" aria-hidden="true"><span style="font-size: 12px">Supprimer</span></i></a>
                                                 </td>
@@ -147,6 +152,11 @@
                                                 <td>{{ listeSousCategorie.titre }}</td>
                                                 <td>{{ article.titre }}</td>
                                                 <td>
+                                                    {% if article.statut == 0 %}
+                                                        <a href="{{ path('statut_article', {'id': article.id}) }}"><i style="font-size: 23px; padding-right: 80px;" class="text-danger fa fa-check" aria-hidden="true"><span style="font-size: 12px">Activer</span></i></a>
+                                                    {% else %}
+                                                        <a href="{{ path('statut_article', {'id': article.id}) }}"><i style="font-size: 23px; padding-right: 80px;" class="text-success fa fa-check" aria-hidden="true"><span style="font-size: 12px">Désactiver</span></i></a>
+                                                    {% endif %}
                                                     <a href="{{ path('modifier_article', {'id': article.id}) }}"><i style="font-size: 23px;padding-right: 80px;" class="text-warning fa fa-pencil-square-o" aria-hidden="true"><span style="font-size: 12px">Modifier</span></i></a>
                                                     <a href="{{ path('demainWeArt_administration_supprimer_article', {'id': article.id}) }}"><i style="font-size: 23px;" class="text-danger fa fa-trash" aria-hidden="true"><span style="font-size: 12px">Supprimer</span></i></a>
                                                 </td>

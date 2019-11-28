@@ -67,6 +67,11 @@ class Article
      */
     private $slugifyTitre;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $statut;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -188,6 +193,18 @@ class Article
     public function setSlugifyTitre(?string $slugifyTitre): self
     {
         $this->slugifyTitre = $slugifyTitre;
+
+        return $this;
+    }
+
+    public function getStatut(): ?bool
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(?bool $statut): self
+    {
+        $this->statut = $statut;
 
         return $this;
     }

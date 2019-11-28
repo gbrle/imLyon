@@ -137,13 +137,13 @@
                                         </div>
                                         <div class="myself color_secondery menuSticky" style="min-width: 337px; max-width: 337px">
                                             <h2 class="mb-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
-                                            <div id="currentPartenaires" class="rotating Blanc"></div>
+                                            {#                                            <div id="currentRecording" class="rotating Violet"></div>#}
                                             <a href="/"><h2  id="homeRecording" class="Blanc petitTitreMenu">HOME</h2></a>
                                             <a href="/#recordingPage"><h2 class="Violet">RECORDING STUDIOS</h2></a>
                                             <a href="/#artistLabelServices"><h2  id="artistLabelServicesRecording" class="Rose">ARTIST & LABEL SERVICES</h2></a>
                                             <a href="/#training"><h2  id="trainingRecording" class="Orange">FORMATION & TRAINING</h2></a>
                                             <a href="/#events"><h2 id="eventRecording" class="Rouge">EVENTS</h2></a>
-                                            <h2 class="Blanc petitTitreMenu">PARTENAIRES</h2>
+                                            <a href="{{ path('demainweart_page_partenaires') }}"><h2 class="Blanc petitTitreMenu">PARTENAIRES</h2></a>
                                             <a href="{{ path('demainweart_page_contact') }}"><h2 class="Blanc petitTitreMenu">CONTACT</h2></a>
                                             <h2 class="mt-2" style="margin-left: 81px;border-top: 1px solid white"></h2>
                                         </div>
@@ -254,25 +254,33 @@
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                             <h2 class="pl-0 text-lg-left">Recording studios</h2>
                                             {% for recordingStutio in recordingStutios.sousCategorie %}
-                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                                {% if recordingStutio.statut == true %}
+                                                    <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': recordingStutio.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ recordingStutio.titre }}</h3></a>
+                                                {% endif %}
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                             <h2 class="pl-0 text-lg-left">Artist & label services</h2>
                                             {% for artistLabelServices in artistLabelServices.sousCategorie %}
-                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                                {% if artistLabelServices.statut == true %}
+                                                    <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': artistLabelServices.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ artistLabelServices.titre }}</h3></a>
+                                                {% endif %}
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                             <h2 class="pl-0 text-lg-left">Events</h2>
                                             {% for event in event.sousCategorie %}
-                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
+                                                {% if event.statut == true %}
+                                                    <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': event.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ event.titre }}</h3></a>
+                                                {% endif %}
                                             {% endfor %}
                                         </div>
                                         <div class="pr-3 col-lg-2 col-sm-12 text-sm-left text-lg-left">
                                             <h2 class="pl-0 text-lg-left">Formation & Training</h2>
                                             {% for training in training.sousCategorie %}
-                                                <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
+                                                {% if training.statut == true %}
+                                                    <a href="{{ path('demainweart_page_categorie', {'slugifyTitre': training.slugifyTitre}) }}"><h3 class="small text-lg-left linkFooter">{{ training.titre }}</h3></a>
+                                                {% endif %}
                                             {% endfor %}
                                         </div>
                                     </div>

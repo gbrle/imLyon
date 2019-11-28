@@ -52,6 +52,11 @@ class SousCategorie
      */
     private $slugifyTitre;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $statut;
+
     public function __construct()
     {
         $this->article = new ArrayCollection();
@@ -150,6 +155,18 @@ class SousCategorie
     public function setSlugifyTitre(?string $slugifyTitre): self
     {
         $this->slugifyTitre = $slugifyTitre;
+
+        return $this;
+    }
+
+    public function getStatut(): ?bool
+    {
+        return $this->statut;
+    }
+
+    public function setStatut(?bool $statut): self
+    {
+        $this->statut = $statut;
 
         return $this;
     }

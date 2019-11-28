@@ -75,4 +75,34 @@ class ModifierSousCategorieAdminController extends AbstractController
             'sousCategorie' => $sousCategorie,
         ]);
     }
+
+    /**
+     * @Route("admin/demainWeArt/statutSousCategorie/{id}", name="statut_sous_categorie")
+     */
+    public function statutSousCategorie(SousCategorie $sousCategorie, ObjectManager $manager)
+    {
+
+        if($sousCategorie->getStatut() === false){
+        $sousCategorie->setStatut(true);
+
+
+
+        $manager->persist($sousCategorie);
+        $manager->flush();
+
+        $this->addFlash('message', 'La sous-catégorie "' . $sousCategorie->getTitre() . '" est activée');
+        } else {
+            $sousCategorie->setStatut(false);
+
+
+
+            $manager->persist($sousCategorie);
+            $manager->flush();
+
+            $this->addFlash('message', 'La sous-catégorie "' . $sousCategorie->getTitre() . '" est désactivée');
+        }
+
+        return $this->redirectToRoute('demainWeArt_home');
+
+    }
 }

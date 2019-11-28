@@ -94,4 +94,34 @@ class ModifierArticleAdminController extends AbstractController
             'article' => $article
         ]);
     }
+
+    /**
+     * @Route("admin/demainWeArt/statutArticle/{id}", name="statut_article")
+     */
+    public function statutArticle(Article $article, ObjectManager $manager)
+    {
+
+        if($article->getStatut() === false){
+            $article->setStatut(true);
+
+
+
+            $manager->persist($article);
+            $manager->flush();
+
+            $this->addFlash('message', 'L\'article "' . $article->getTitre() . '" est activée');
+        } else {
+            $article->setStatut(false);
+
+
+
+            $manager->persist($article);
+            $manager->flush();
+
+            $this->addFlash('message', 'L\'article "' . $article->getTitre() . '" est désactivée');
+        }
+
+        return $this->redirectToRoute('demainWeArt_home');
+
+    }
 }

@@ -113,7 +113,7 @@ class AdministrationCategorieAdminController extends AbstractController
 
             $sousCategorie->setSlugifyTitre($slugify->slugify($sousCategorie->getTitre()));
             $sousCategorie->setCategorie($categorie);
-
+            $sousCategorie->setStatut(true);
 
             $manager->persist($sousCategorie);
             $manager->flush();
