@@ -6,6 +6,7 @@ use App\Entity\Article;
 use App\Entity\Categorie;
 use App\Entity\SousCategorie;
 use App\Repository\CategorieRepository;
+use App\Repository\TestimonialRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -13,7 +14,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class HomePageController extends AbstractController
 {
     /**
-     * @Route("/homeComming", name="homeComming")
+     * @Route("/", name="homeComming")
      */
     public function homeComing()
     {
@@ -24,11 +25,12 @@ class HomePageController extends AbstractController
 
 
     /**
-     * @Route("/", name="home_demainWeArt")
+     * @Route("/demain", name="home_demainWeArt")
      */
-    public function index(CategorieRepository $categorieRepository)
+    public function index(CategorieRepository $categorieRepository, TestimonialRepository $testimonialRepository)
     {
-
+        //TESTIMONIALS
+        $testimonial = $testimonialRepository->findAll();
         // CATEGORIES
         $recordingStutios = $categorieRepository->findBy(['titre' => 'RECORDING STUDIOS']);
         $artistLabelServices = $categorieRepository->findBy(['titre' => 'ARTIST & LABEL SERVICES']);
@@ -43,6 +45,7 @@ class HomePageController extends AbstractController
             'artistLabelServices' => $artistLabelServices[0],
             'training' => $training[0],
             'event' => $event[0],
+            'testimonials' => $testimonial,
         ]);
     }
 }
