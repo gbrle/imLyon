@@ -8,6 +8,7 @@ use App\Entity\SousCategorie;
 use App\Repository\CategorieRepository;
 use Cocur\Slugify\SlugifyInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -21,7 +22,7 @@ class ModifierArticleAdminController extends AbstractController
     /**
      * @Route("admin/demainWeArt/modifierArticle/{id}", name="modifier_article")
      */
-    public function index(Article $article, Request $request, ObjectManager $manager, SlugifyInterface $slugify)
+    public function index(Article $article, Request $request, EntityManagerInterface $manager, SlugifyInterface $slugify)
     {
 
         $formArticle = $this->createFormBuilder($article)
@@ -98,7 +99,7 @@ class ModifierArticleAdminController extends AbstractController
     /**
      * @Route("admin/demainWeArt/statutArticle/{id}", name="statut_article")
      */
-    public function statutArticle(Article $article, ObjectManager $manager)
+    public function statutArticle(Article $article, EntityManagerInterface $manager)
     {
 
         if($article->getStatut() === false){

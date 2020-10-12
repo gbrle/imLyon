@@ -10,6 +10,7 @@ use App\Entity\Testimonial;
 use App\Repository\CategorieRepository;
 use Cocur\Slugify\SlugifyInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -23,7 +24,7 @@ class CreerTestimonialController extends AbstractController
     /**
      * @Route("admin/demainWeArt/creerTestimonial", name="creer_Testimonial")
      */
-    public function index(Request $request, ObjectManager $manager)
+    public function index(Request $request, EntityManagerInterface $manager)
     {
 
         // Start Créer Form Article ----------------->

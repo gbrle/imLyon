@@ -14,7 +14,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class HomePageController extends AbstractController
 {
     /**
-     * @Route("/", name="homeComming")
+     * @Route("/comming", name="homeComming")
      */
     public function homeComing()
     {
@@ -25,7 +25,7 @@ class HomePageController extends AbstractController
 
 
     /**
-     * @Route("/demain", name="home_demainWeArt")
+     * @Route("/", name="home_demainWeArt")
      */
     public function index(CategorieRepository $categorieRepository, TestimonialRepository $testimonialRepository)
     {

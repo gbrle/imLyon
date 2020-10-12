@@ -9,6 +9,7 @@ use App\Entity\SousCategorie;
 use App\Repository\CategorieRepository;
 use Cocur\Slugify\SlugifyInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -22,7 +23,7 @@ class CreerArticleAdminController extends AbstractController
     /**
      * @Route("admin/demainWeArt/creerArticle/{id}", name="creer_article")
      */
-    public function index(SousCategorie $sousCategorie, Request $request, ObjectManager $manager, SlugifyInterface $slugify)
+    public function index(SousCategorie $sousCategorie, Request $request, EntityManagerInterface $manager, SlugifyInterface $slugify)
     {
 
         // Start Créer Form Article ----------------->

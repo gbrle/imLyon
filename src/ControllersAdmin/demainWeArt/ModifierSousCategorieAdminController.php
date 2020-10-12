@@ -7,6 +7,7 @@ use App\Entity\SousCategorie;
 use App\Repository\CategorieRepository;
 use Cocur\Slugify\SlugifyInterface;
 use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,7 +18,7 @@ class ModifierSousCategorieAdminController extends AbstractController
     /**
      * @Route("admin/demainWeArt/modifierSousCategorie/{id}", name="modifier_sous_categorie")
      */
-    public function index(SousCategorie $sousCategorie, Request $request, ObjectManager $manager, SlugifyInterface $slugify)
+    public function index(SousCategorie $sousCategorie, Request $request, EntityManagerInterface $manager, SlugifyInterface $slugify)
     {
 
         $formSousCategorie = $this->createFormBuilder($sousCategorie)
@@ -79,7 +80,7 @@ class ModifierSousCategorieAdminController extends AbstractController
     /**
      * @Route("admin/demainWeArt/statutSousCategorie/{id}", name="statut_sous_categorie")
      */
-    public function statutSousCategorie(SousCategorie $sousCategorie, ObjectManager $manager)
+    public function statutSousCategorie(SousCategorie $sousCategorie, EntityManagerInterface $manager)
     {
 
         if($sousCategorie->getStatut() === false){

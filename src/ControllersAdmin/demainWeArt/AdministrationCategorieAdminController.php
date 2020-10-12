@@ -64,7 +64,7 @@ class AdministrationCategorieAdminController extends AbstractController
     /**
      * @Route("admin/demainWeArt/administrationCatagorie/{titre}", name="demainWeArt_administration_categorie")
      */
-    public function index(Categorie $categorie, Request $request, ObjectManager $manager, SlugifyInterface $slugify)
+    public function index(Categorie $categorie, Request $request, EntityManagerInterface $manager, SlugifyInterface $slugify)
     {
         // Liste Sous-catégorie
         $listeSousCategories = $categorie->getSousCategorie();

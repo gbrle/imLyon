@@ -26,7 +26,7 @@ class HomePageAdminController extends AbstractController
     /**
      * @Route("postNewsletter", name="postNewsletter")
      */
-    public function postNewsletter(Request $request, ObjectManager $em)
+    public function postNewsletter(Request $request, EntityManagerInterface $em)
     {
         try{
         $subscript = new Newsletter();

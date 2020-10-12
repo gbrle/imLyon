@@ -6,16 +6,14 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
-    config.extraPlugins = 'widgetselection, button, toolbar, notification, dialogui, dialog, clipboard, lineutils, widget, bootstrapBuilder';
+    config.extraPlugins = 'bootstrapBuilder';
+    config.contentsCss = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css';
+    config.mj_variables_bootstrap_css_path = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css';
+    config.mj_variables_bootstrap_js_path = 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js';
     config.allowedContent = true;
-    config.contentsCss = 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
-    config.mj_variables_bootstrap_css_path = 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
-    config.mj_variables_bootstrap_js_path = 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js';
-    config.mj_variables_bootstrap_popper_js_path = 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js';
-    config.bootstrapBuilder_container_extra_large = 1140;
-    config.bootstrapBuilder_container_large = 960;
-    config.bootstrapBuilder_container_medium = 720;
-    config.bootstrapBuilder_container_small = 540;
+    config.bootstrapBuilder_container_large_desktop = 1170;
+    config.bootstrapBuilder_container_desktop = 970;
+    config.bootstrapBuilder_container_tablet = 750;
     config.bootstrapBuilder_grid_columns = 12;
     config.bootstrapBuilder_ckfinder_version = 3;
     config.bootstrapBuilder_ckfinder_path = '/bundles/ckfinder/ckfinder.js';
@@ -38,4 +36,3 @@ CKEDITOR.replace( 'editor1', {
     filebrowserWindowWidth : '1000',
     filebrowserWindowHeight : '700'
 });
-
